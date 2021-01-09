@@ -41,14 +41,9 @@
 <p>The small, empty paper envelope, its work done, now sits in a recycling can in our kitchen. It awaits its new life, wondering what it might become.</p>
 
     
-    <details class="alt-text">
-      <summary>
-        Photograph
-      </summary>
-					<figure>
-						<img width="100%" src="/projects/alt-text/images/0001.jpg" alt="Small, pale green sprouts stretching out of a bed of dark, brown soil. At its top, each sprout branches into two, round, bright green leaves.">
-					</figure>
-    </details>
+			<figure class="alt-text">
+				<img class="blurred" src="/projects/alt-text/images/0001.jpg" alt="Small, pale green sprouts stretching out of a bed of dark, brown soil. At its top, each sprout branches into two, round, bright green leaves.">
+			</figure>
 
     <img class="endmark" src="/images/endmark.svg" />
   </article>
@@ -69,6 +64,12 @@
 
     </header>
   </main>
+  <script>
+    document.getElementsByClassName("blurred")[0].onclick = function (e) {
+      console.log('click');
+      this.classList.toggle('blurred');
+    }
+  </script>
 
     <footer class="sans">
         
