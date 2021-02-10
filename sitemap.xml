@@ -1,9 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-story-of-the-lost-child/</loc>
+    <loc>https://www.matthewhowell.net/projects/alt-text/0006/</loc>
+    <lastmod>2021-02-07T12:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.matthewhowell.net/notes/2021/slightly-nicer-footnotes-for-the-web/</loc>
+    <lastmod>2021-01-31T14:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.matthewhowell.net/projects/alt-text/0005/</loc>
+    <lastmod>2021-01-31T12:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2021-01-26T12:15:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.matthewhowell.net/projects/alt-text/0004/</loc>
+    <lastmod>2021-01-25T12:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.matthewhowell.net/projects/alt-text/0003/</loc>
+    <lastmod>2021-01-17T12:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.matthewhowell.net/projects/alt-text/0002/</loc>
+    <lastmod>2021-01-10T12:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2021-01-09T12:15:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.matthewhowell.net/projects/alt-text/0001/</loc>
+    <lastmod>2021-01-06T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.matthewhowell.net/projects/alt-text/</loc>
+    <lastmod>2021-01-05T20:20:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.matthewhowell.net/notes/2021/</loc>
+    <lastmod>2021-01-01T11:20:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-12-30T12:15:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-12-23T12:15:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-12-11T12:15:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-11-05T12:15:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-10-20T12:15:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
     <lastmod>2020-09-01T12:15:00-05:00</lastmod>
   </url>
   
@@ -13,37 +93,37 @@
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/wolf-in-white-van/</loc>
+    <loc></loc>
     <lastmod>2020-04-10T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/tehanu/</loc>
+    <loc></loc>
     <lastmod>2020-03-11T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-farthest-shore/</loc>
+    <loc></loc>
     <lastmod>2020-02-27T22:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-tombs-of-atuan/</loc>
+    <loc></loc>
     <lastmod>2020-02-16T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/a-wizard-of-earthsea/</loc>
+    <loc></loc>
     <lastmod>2020-02-06T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/mother-night/</loc>
+    <loc></loc>
     <lastmod>2020-01-28T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-underground-railroad/</loc>
+    <loc></loc>
     <lastmod>2020-01-20T12:15:00-05:00</lastmod>
   </url>
   
@@ -53,12 +133,22 @@
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-witch-elm/</loc>
+    <loc></loc>
     <lastmod>2020-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/pachinko/</loc>
+    <loc>https://www.matthewhowell.net/projects/</loc>
+    <lastmod>2020-01-05T20:20:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.matthewhowell.net/notes/2020/</loc>
+    <lastmod>2020-01-01T11:20:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
     <lastmod>2019-10-13T12:15:00-05:00</lastmod>
   </url>
   
@@ -68,7 +158,7 @@
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/those-who-leave-and-those-who-stay/</loc>
+    <loc></loc>
     <lastmod>2019-09-13T12:15:00-05:00</lastmod>
   </url>
   
@@ -88,22 +178,22 @@
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-story-of-my-new-name/</loc>
+    <loc></loc>
     <lastmod>2019-06-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/little-fires-everywhere/</loc>
+    <loc></loc>
     <lastmod>2019-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/my-brilliant-friend/</loc>
+    <loc></loc>
     <lastmod>2019-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/until-the-celebration/</loc>
+    <loc></loc>
     <lastmod>2018-09-01T12:15:00-05:00</lastmod>
   </url>
   
@@ -168,27 +258,27 @@
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/and-all-between/</loc>
+    <loc></loc>
     <lastmod>2018-06-01T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/below-the-root/</loc>
+    <loc></loc>
     <lastmod>2018-03-01T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/everything-i-never-told-you/</loc>
+    <loc></loc>
     <lastmod>2018-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/frankenstein/</loc>
+    <loc></loc>
     <lastmod>2018-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/lincoln-in-the-bardo/</loc>
+    <loc></loc>
     <lastmod>2018-01-13T12:15:00-05:00</lastmod>
   </url>
   
@@ -203,52 +293,52 @@
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/colorless-tsukuru-tazaki-and-his-years-of-pilgrimage/</loc>
+    <loc></loc>
     <lastmod>2017-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/dear-life/</loc>
+    <loc></loc>
     <lastmod>2017-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/homegoing/</loc>
+    <loc></loc>
     <lastmod>2017-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/number9dream/</loc>
+    <loc></loc>
     <lastmod>2017-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/slade-house/</loc>
+    <loc></loc>
     <lastmod>2017-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-bone-clocks/</loc>
+    <loc></loc>
     <lastmod>2017-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-stories-of-your-life-and-others/</loc>
+    <loc></loc>
     <lastmod>2017-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-thousand-autumns-of-jacob-de-zoet/</loc>
+    <loc></loc>
     <lastmod>2017-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-wind-up-bird-chronicles/</loc>
+    <loc></loc>
     <lastmod>2017-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-decagon-house-murders/</loc>
+    <loc></loc>
     <lastmod>2016-12-13T12:15:00-05:00</lastmod>
   </url>
   
@@ -263,37 +353,37 @@
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/civilwarland-in-bad-decline/</loc>
+    <loc></loc>
     <lastmod>2016-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/fox-8/</loc>
+    <loc></loc>
     <lastmod>2016-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/inherent-vice/</loc>
+    <loc></loc>
     <lastmod>2016-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/jailbird/</loc>
+    <loc></loc>
     <lastmod>2016-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/mother-night/</loc>
+    <loc></loc>
     <lastmod>2016-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-thing-around-your-neck/</loc>
+    <loc></loc>
     <lastmod>2016-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/watership-down/</loc>
+    <loc></loc>
     <lastmod>2016-01-13T12:15:00-05:00</lastmod>
   </url>
   
@@ -313,33 +403,288 @@
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/and-then-there-were-none/</loc>
+    <loc></loc>
     <lastmod>2015-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/god-bless-you-mr.-rosewater/</loc>
+    <loc></loc>
     <lastmod>2015-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/mr.-penumbras-24-hour-bookstore/</loc>
+    <loc></loc>
     <lastmod>2015-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/murder-on-the-orient-express/</loc>
+    <loc></loc>
     <lastmod>2015-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/tenth-of-december/</loc>
+    <loc></loc>
     <lastmod>2015-01-13T12:15:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.matthewhowell.net/reading/the-murder-of-roger-ackroyd/</loc>
+    <loc></loc>
     <lastmod>2015-01-13T12:15:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2014-12-31T10:14:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.matthewhowell.net/projects/positives/</loc>
+    <lastmod>2014-01-01T20:20:20-05:00</lastmod>
   </url>
   
   <url>

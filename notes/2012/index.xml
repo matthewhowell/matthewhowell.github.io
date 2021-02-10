@@ -13,6 +13,190 @@
     
     
     <item>
+      <title>Slightly Nicer Footnotes for the Web</title>
+      <link>https://www.matthewhowell.net/notes/2021/slightly-nicer-footnotes-for-the-web/</link>
+      <pubDate>Sun, 31 Jan 2021 14:14:16 -0500</pubDate>
+      
+      <guid>https://www.matthewhowell.net/notes/2021/slightly-nicer-footnotes-for-the-web/</guid>
+      <description>&lt;p&gt;I read, primarily, on the Web. In that reading, I routinely encounter pieces of writing that include annotations.&lt;/p&gt;
+&lt;p&gt;And annotations are &lt;em&gt;good&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;They are a useful tool for writers, offering an efficient way support and clarify their words.&lt;/p&gt;
+&lt;p&gt;In traditional print media, annotations are often cumbersome. Footnotes require physical space at the bottom of pages and endnotes require additional pages. Both require a context switch from the reader that can interrupt a point or a narrative.&lt;/p&gt;
+&lt;p&gt;On the Web, though, &lt;em&gt;annotations could be better!&lt;/em&gt; They should be better. The Web is a beautiful place for words and we should always be pushing toward a better reading experience.&lt;/p&gt;
+&lt;p&gt;Today, to that end, I am introducing &lt;a href=&#34;https://www.reasonable.work/footnotes&#34;&gt;Reasonable Footnotes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Reasonable Footnotes is a small piece of free software that transforms most website footnotes into &lt;em&gt;slightly nicer&lt;/em&gt; website footnotes.&lt;/p&gt;
+&lt;p&gt;For specifics, including a getting started guide, examples, and documentation, please visit &lt;a href=&#34;https://www.reasonable.work/footnotes&#34;&gt;the Reasonable Footnotes website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And if you&amp;rsquo;re curious about the motivation for the project, please read on as I make an effort to answer the first question that I ask of myself whenever I try to make something.&lt;/p&gt;
+&lt;h2 id=&#34;why-does-this-exist&#34;&gt;Why does this exist?&lt;/h2&gt;
+&lt;p&gt;Reasonable Footnotes exists to make website footnotes &lt;em&gt;slightly nicer&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Reasonable Footnotes should make Web footnotes work better for more people.&lt;/p&gt;
+&lt;h3 id=&#34;website-footnotes-today&#34;&gt;Website footnotes, today&lt;/h3&gt;
+&lt;p&gt;HTML does not include a dedicated footnote or annotation element. So, footnotes on the Web are website features, not browser features. They are not standardized and there are many ways of implementing HTML footnotes. One specific method is popular enough that I&amp;rsquo;m comfortable calling it the &lt;em&gt;nearly default Web footnote implementation&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;It looks something like this: a small superscript link (a reference mark) will jump the reader farther down the page to a &lt;em&gt;Footnotes&lt;/em&gt; section. The reader can then read the footnote and then click another link to jump them back to the reference mark in the main text.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt; Here is a sentence that is followed by a &lt;em&gt;footnote reference mark&lt;/em&gt;.&lt;sup&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;why-is-reasonable-footnotes-better&#34;&gt;Why is Reasonable Footnotes better?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;It improves the user experience by displaying the footnote without forcing a context switch on the reader&lt;/li&gt;
+&lt;li&gt;It improves accessibility by defaulting a handful of sane decisions&lt;/li&gt;
+&lt;li&gt;It does no harm by progressively enhancing existing footnotes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;why-might-it-be-worse&#34;&gt;Why might it be worse?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;It requires JavaScript[^]&lt;/li&gt;
+&lt;li&gt;It does not work in older browser (specifically Internet Explorer)[^]&lt;/li&gt;
+&lt;li&gt;Reading experience, like most experience, is subjective. You may not like the way it works and looks.[^]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h3&gt;
+&lt;p&gt;Here&amp;rsquo;s an example of a Reasonable Footnote. [^]&lt;/p&gt;
+&lt;h4 id=&#34;features&#34;&gt;Features&lt;/h4&gt;
+&lt;p&gt;Out of the box, with very limited fuss, Reasonable Footnotes should:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Work with existing footnote markup&lt;/li&gt;
+&lt;li&gt;Allow keyboard navigation of footnotes (traversing, opening, and closing)&lt;/li&gt;
+&lt;li&gt;Allow multiple footnotes to be open at once&lt;/li&gt;
+&lt;li&gt;Allow footnote content to be highlighted and copied&lt;/li&gt;
+&lt;li&gt;Include accessibility metadata in markup (titles, aria attributes)&lt;/li&gt;
+&lt;li&gt;Include reasonably attractive footnote styles&lt;/li&gt;
+&lt;li&gt;Include either inline or bottom&lt;/li&gt;
+&lt;li&gt;Include print styles for footnotes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;goals&#34;&gt;Goals&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Reasonable Footnotes should make Web footnotes work better for more people. That&amp;rsquo;s it. That&amp;rsquo;s the goal.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Let&amp;rsquo;s define better footnotes. Specifically, it sets out to improve two issues with existing Web footnotes.&lt;/p&gt;
+&lt;h3 id=&#34;work-better&#34;&gt;Work Better&lt;/h3&gt;
+&lt;p&gt;Reasonable Footnotes should solve as many of the problems with existing HTML footnotes as possible. Problems like…&lt;/p&gt;
+&lt;p&gt;Chief among them: HTML does not include a dedicated annotation or footnote element. So, annotations on the Web are website features, not browser features.&lt;/p&gt;
+&lt;p&gt;As one might expect, this leads to a variety of user experiences when interacting with footnotes on websites. Some are pretty good, others are less good.&lt;/p&gt;
+&lt;h3 id=&#34;for-more-people&#34;&gt;For More People&lt;/h3&gt;
+&lt;p&gt;The first problem with having lots of competing implementations of footnotes is that not all implementors are going to have the resources and motivation to take accessibility seriously.&lt;/p&gt;
+&lt;p&gt;For those making the argument that an HTML &amp;lt;footnote&amp;gt; element should exist, inaccessible footnote implementations should convince most reasonable people.&lt;/p&gt;
+&lt;p&gt;Reasonable Footnotes should never make existing less accessible and will forever try to make existing footnotes more accessible.&lt;/p&gt;
+&lt;h4 id=&#34;heading&#34;&gt;&lt;/h4&gt;
+&lt;p&gt;So, out of the box, without any fuss, Reasonable Footnotes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Works with most existing footnote markup&lt;/li&gt;
+&lt;li&gt;Allows keyboard navigation (tab through footnote buttons, space bar to open)&lt;/li&gt;
+&lt;li&gt;Allows multiple footnotes to be open at once&lt;/li&gt;
+&lt;li&gt;Allows footnote content to be highlighted/copied&lt;/li&gt;
+&lt;li&gt;Includes print styles for footnotes&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Keyboard navigable
+Multiple footnotes open at once
+Footnote text is selectable
+Works without javascript (though not as well)&lt;/p&gt;
+&lt;h4 id=&#34;user-experience&#34;&gt;User Experience&lt;/h4&gt;
+&lt;p&gt;Even responsible footnote markup can, and often will, present poor user experiences.&lt;/p&gt;
+&lt;p&gt;The most common footnote implementation on the Web is to use a pair of &amp;lt;a&amp;gt; elements. The reference mark (usually a superscript footnote number) links to a location farther down the page, scrolling the user to the footnote content. There, at the end of the footnote content the user will find a link that will return them to the reference mark.&lt;/p&gt;
+&lt;p&gt;This idea, which is in fact noted in the HTML spec itself, is workable, but unpleasant.&lt;/p&gt;
+&lt;p&gt;It feels more like an endnote in a long book, which require the reader to leave the page they&amp;rsquo;re on, locate a note in a different part of the book and then return.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s jarring. It also removes the note from its context.&lt;/p&gt;
+&lt;p&gt;Reasonable Footnotes should never make the reading experience worse and will forever try to make it nicer.&lt;/p&gt;
+&lt;h4 id=&#34;consistency&#34;&gt;Consistency&lt;/h4&gt;
+&lt;h3 id=&#34;why-not-use&#34;&gt;Why not use…&lt;/h3&gt;
+&lt;h4 id=&#34;bigfootjs&#34;&gt;Bigfoot.js&lt;/h4&gt;
+&lt;p&gt;Bigfoot.js is great and this project owes a heavy debt of gratitude to it.&lt;/p&gt;
+&lt;p&gt;Bigfoot.js is, however, a product of a slightly different era in Web development and it requires jquery&lt;/p&gt;
+&lt;p&gt;Reasonable Footnotes will&lt;/p&gt;
+&lt;h3 id=&#34;2-be-very-easy-to-install-and-use&#34;&gt;2: Be Very Easy to Install and Use&lt;/h3&gt;
+&lt;p&gt;Reasonable Footnotes should be absolutely simple to install and use.&lt;/p&gt;
+&lt;h3 id=&#34;3-be-very-fast&#34;&gt;3: Be Very Fast&lt;/h3&gt;
+&lt;p&gt;Reasonable Footnotes (which is a bit of JavaScript) should be tiny, fast, and have zero dependencies.&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;Here, I will describe some problems with common implementations of Web annotations and propose solutions to each.&lt;/p&gt;
+&lt;p&gt;The Web is human history&amp;rsquo;s most effective beautiful tool for text&lt;/p&gt;
+&lt;p&gt;But, often, interacting with annotations on the Web is less than ideal. Footnotes are most often implemented as an anchor link that will jump the reader from the annotation, down the page to the note. Then require another click to return to the main text.&lt;/p&gt;
+&lt;p&gt;This works, but it&amp;rsquo;s unpleasant. It creates a context switch that can make&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Context switch Move location around the page
+Web annotations usually mimic the experience of endnotes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Multiple open at once&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Block content&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Not accessible&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keyboard controls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Not selectable&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Not printable&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Popup footnotes are bad because Reasons:
+- blocks content underneath the footnote
+- problems with neighboring footnotes (forces closure)
+- remove positioning code and CSS&lt;/p&gt;
+&lt;p&gt;HTML doesn&amp;rsquo;t have a built-in footnote
+Browsers won&amp;rsquo;t save us
+Functionality, in pure HTML is, limited
+summary/detail
+#anchor links
+Javascript solutions range in quality
+Bigfoot is pretty great
+Not recently updated
+Requires jquery
+Accessibility concerns
+Animations&lt;/p&gt;
+&lt;p&gt;Better, smaller, faster javascript solution
+Reasonable Footnotes
+Goals it achieves&lt;/p&gt;
+&lt;p&gt;Examples.&lt;/p&gt;
+&lt;p&gt;A very good implementation
+&lt;a href=&#34;http://www.bigfootjs.com&#34;&gt;http://www.bigfootjs.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;w3C&lt;/p&gt;
+&lt;p&gt;The official HTML spec does not include a &amp;lt;footnote&amp;gt; element. There are some options
+&lt;a href=&#34;https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#footnotes&#34;&gt;https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#footnotes&lt;/a&gt;
+As the W3C spec notes, &amp;ldquo;HTML does not have a dedicated mechanism for marking up footnotes.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Web footnotes are functional.&lt;/p&gt;
+&lt;p&gt;No one seems to be working on this problem&lt;/p&gt;
+&lt;p&gt;Bigfoot.js
+littlefoot.js&lt;/p&gt;
+&lt;p&gt;Improve a few things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;context switching, disorientation&lt;/li&gt;
+&lt;li&gt;accessibility&lt;/li&gt;
+&lt;li&gt;visual presentation and consistent ux&lt;/li&gt;
+&lt;li&gt;large JS dependencies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;accessibly
+drop in replacement
+fast
+compatible&lt;/p&gt;
+&lt;!-- 
+Greasemonkey? probably not
+[^1]: Test of reasonable footnotes.
+[^2]: When I talk about annotations, I&#39;m primarily describing *footnotes* or *endnotes*. The distinction between those two is muddled on most websites, but I think that *footnotes* is a bit more accurate. And it&#39;s certainly the more common usage. So, footnotes!
+[^3]: This strategy for marking up footnotes has been around for a long time. As far as I can tell, it was first described [here](https://daringfireball.net/2005/07/footnotes) by John Gruber. It&#39;s popular enough that&#39;s it&#39;s the default implementation of most blogs and static site generators and is even specifically mentioned in [this W3C working draft](https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#footnotes). --&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.plagiarism.org/article/what-are-footnotes&#34;&gt;https://www.plagiarism.org/article/what-are-footnotes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://danielpost.com/articles/making-hugos-footnotes-accessible/&#34;&gt;https://danielpost.com/articles/making-hugos-footnotes-accessible/&lt;/a&gt;
+&lt;a href=&#34;https://www.sitepoint.com/accessible-footnotes-css/&#34;&gt;https://www.sitepoint.com/accessible-footnotes-css/&lt;/a&gt;&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Here is an example footnote. The little arrow that follows this footnote is the link back to the reference mark. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>Personal Values</title>
       <link>https://www.matthewhowell.net/notes/2016/personal-values/</link>
       <pubDate>Tue, 23 Feb 2016 20:06:12 +0700</pubDate>
