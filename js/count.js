@@ -1,6 +1,5 @@
 const sample = Math.floor(Math.random() * Math.floor(2));
 if (sample === 1) {
-	window.goatcounter = {endpoint: 'https://matthewhowell.goatcounter.com/count'}
 	// GoatCounter: https://www.goatcounter.com
 	// This file (and *only* this file) is released under the ISC license:
 	// https://opensource.org/licenses/ISC
