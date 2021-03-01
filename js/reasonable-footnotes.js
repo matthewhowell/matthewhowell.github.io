@@ -8,10 +8,10 @@
 		if (window.navigator.userAgent.match(/MSIE|Trident/) !== null) {
 			return false;
 		}
-	
+
 		// private methods and properties
 		let rfn = {};
-	
+
 		// public methods and properties
 		let exports = {};
 		
@@ -23,11 +23,6 @@
 		// by passing an object literal with alternative values
 		exports.config = {
 				
-			// define where the footnote will be displayed when open
-			// default: inline
-			// inline: displays the footnote in the flow of the text, reflow when opened/closed
-			display: 'inline',
-	
 			// footnoteButtonText
 			// define the text for the footnote button
 			// default: original
@@ -46,14 +41,12 @@
 			// true: when the escape key is pressed, all open footnotes will be closed
 			// false: no action bound to the escape key
 			keyClosesFootnotes: true,
+			
+			// closeFootnotesKeyCode
+			// default: 27
+			// any other reasonable keycode
 			closeFootnotesKeyCode: 27,
 	
-			// allowMultipleOpenFootnotes
-			// only works for inline display, bottom display is always single footnote open
-			// default: true
-			// true: allows multiple footnotes to be in open state
-			// false: allows only a single footnotes to be in the open state
-			allowMultipleOpenFootnotes: true,
 	
 			// hideOriginalFootnotes
 			// default: true
@@ -69,8 +62,14 @@
 			// false: leave all footnote backlinks
 			removeFootnoteBacklinks: true,
 			
-			// prefers-reduced-motion: reduce
-			// window.matchMedia('(prefers-reduced-motion: reduce)')
+			// alwaysVisibleForReduceMotion
+			// allow the 'prefers-reduced-motion' media query to dictate footnote behavior
+			// this respects the person's OS setting
+			// normal footnote open includes a small button animation and a document reflow
+			// leaving this set to true will remove these two 'motions'
+			// default: true
+			// true: footnotes will always be visible, open state
+			// false: allow normal footnote open/close behaviors
 			alwaysVisibleForReduceMotion: true,
 			
 			// existing markup details, example below
@@ -97,7 +96,7 @@
 				// in this case, the footnoteLinkPrefix is "fn:"
 				// to obtain a footnoteLinkPrefix, simple identify a footnote link
 				// and remove the unique id (usually just a number) from the href
-				footnoteLinkPrefix: 'fn:',
+				footnoteLinkPrefix: '#fn:',
 		
 				// footnoteContentPrefix
 				footnoteContentPrefix: 'fn:',
@@ -116,15 +115,30 @@
 			rfnContainerClass: 'rfn-inline-container',
 			rfnButtonClass: 'rfn-button',
 			rfnSpanClass: 'rfn-content',
+			
+			// define where the footnote will be displayed when open
+			// previously, this accepted 'top' and 'bottom' values
+			// no more, for now, inline only
+			// default: inline
+			// inline: displays the footnote in the flow of the text, reflow when opened/closed
+			display: 'inline',
+	
+			// allowMultipleOpenFootnotes
+			// only works for inline display, bottom display is always single footnote open
+			// default: true
+			// true: allows multiple footnotes to be in open state
+			// false: allows only a single footnotes to be in the open state
+			allowMultipleOpenFootnotes: true,
+			
 		};
 	
-		// return the current internal next rfnId
+		// return the current, internal next rfnId
 		// this can be thought of as the uuid for footnotes within the entire document
 		exports.getRfnId = function () {
 			return rfn.rfnId;
 		};
 	
-		// a reasonable beginning footnotes uuid
+		// a reasonable beginning footnotes rfnId
 		// needs to be an integer
 		rfn.rfnId = 1;
 	
@@ -135,16 +149,18 @@
 			return rfn.rfnId;
 		};
 	
-		// escape key handler to close open footnotes
-		rfn.escapeKeyHandler = function (event) {
+		// key handler to close open footnotes
+		rfn.closeKeyHandler = function (event) {
 			event = event || window.event;
-			// if keydown event was triggered by escape key
+			// if keydown event was triggered by defined close key
 			if (event.keyCode == exports.config.closeFootnotesKeyCode) {
 				// close all open inline footnotes
 				closeAllFootnotes();
 			}
 		};
-	
+
+		// determine if the	'prefers-reduced-motion' media query is returning the 'reduce' value
+		// this will change the behavior of reasonable footnotes
 		rfn.reduceMotionMediaQuery = function () {
 			const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 			if (mediaQuery.matches === true) {
@@ -152,6 +168,7 @@
 			}
 			return false;
 		}
+
 		// returns collection of footnote links
 		// this is primary unit that we operate on
 		// assume footnote links to element that will contain the footnote content
@@ -159,25 +176,23 @@
 			return document.getElementsByClassName(exports.config.footnoteLinkClass);
 		};
 	
-		// return a string where a prefix is removed
-		// "prefixexamplestring", "prefix" -> "examplestring"
+		// return a string with a prefix is removed
+		// ("prefixexamplestring", "prefix") -> "examplestring"
 		rfn.getStringSuffix = function (string, stringPrefix) {
-			return string.substring(stringPrefix.length + 1, string.length);
+			return string.substring(stringPrefix.length, string.length);
 		};
 	
 		// close a single footnote element
 		const closeFootnote = function (element) {
 	
-			// update aria-expanded attribute
-			// TODO better get note.number
-			const noteNumber = element.getAttribute('id').split('-')[2];
+			const noteNumber = rfn.getStringSuffix(element.getAttribute('id'), 'rfn-content-');
 	
 			const button = document.getElementById('rfn-button-' + noteNumber);
 			
 			// https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/#aria-expanded
 			button.setAttribute('aria-expanded', 'false');
 			button.classList.remove('open');
-			button.innerText = button.getAttribute('data-text');
+			// button.innerText = button.getAttribute('data-text');
 
 			// remove visible class to hide footnote element
 			element.classList.remove('visible');
@@ -217,9 +232,10 @@
 	
 		const openFootnoteButton = function (footnoteButton) { 
 			footnoteButton.setAttribute('data-text', footnoteButton.innerText);
-			footnoteButton.innerText = exports.config.openFootnoteButtonText;
 			footnoteButton.classList.add('open');
 
+			// footnoteButton.innerText = exports.config.openFootnoteButtonText;
+			
 			// toggle aria-expanded
 			// https://atomiks.github.io/tippyjs/v6/accessibility/
 			footnoteButton.setAttribute('aria-expanded', 'true');
@@ -295,6 +311,9 @@
 				
 				// the current note
 				const note = {};
+				
+				// TODO move all note elements into object
+				// Note.init() or something
 				
 				// get the current rfnid, unique within the page
 				note.id = exports.getRfnId();
@@ -384,18 +403,13 @@
 	
 				// create the buttonClickHandler function for each button
 				const buttonClickHandler = function (e, button) {
-					note.number = rfn.getStringSuffix(
-						button.getAttribute('id'),
-						exports.config.rfnButtonClass
-					);
-					const noteSpan = document.getElementById(
-						'rfn-content-' + note.number
-					);
-					const noteIsOpen = noteSpan.classList.contains('visible');
+					note.number = rfn.getStringSuffix(button.getAttribute('id'), 'rfn-button-');
+					note.span = document.getElementById('rfn-content-' + note.number);
+					note.isOpen = note.span.classList.contains('visible');
 	
 					// if open, close our footnote and exit
-					if (noteIsOpen) {
-						closeFootnote(noteSpan);
+					if (note.isOpen) {
+						closeFootnote(note.span);
 						return;
 					}
 	
@@ -407,12 +421,14 @@
 					}
 	
 					// then open the clicked footnote
-					openFootnote(noteSpan, button);
+					openFootnote(note.span, button);
 				};
 	
 				// add onclick event to each footnote button
 				newNoteButton.onclick = function (e) {
 					if (exports.config.alwaysVisibleForReduceMotion && rfn.reduceMotionMediaQuery() ) {
+						// reduce motion by eliminating the onclick handler
+						// open 
 						return;						
 					}
 					buttonClickHandler(e, this);
@@ -424,10 +440,9 @@
 				removeFootnoteBacklinks();
 			}
 	
-			// on escape keydown, close all open footnotes
+			// on close keydown, close all open footnotes
 			if (exports.config.keyClosesFootnotes) {
-				// adds event listener to
-				document.addEventListener('keydown', rfn.escapeKeyHandler);
+				document.addEventListener('keydown', rfn.closeKeyHandler);
 			}
 		};
 	
