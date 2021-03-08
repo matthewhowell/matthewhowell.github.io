@@ -72,7 +72,7 @@
     
     <section>
       <figure class="alt-text">
-  			<img class="blurred" src="/projects/alt-text/images/0005.jpg" alt="Northern looking train tracks disappearing in the distance.">
+  			<img tabindex="1" class="blurred" src="/projects/alt-text/images/0005.jpg" alt="Northern looking train tracks disappearing in the distance.">
   		</figure>  
     </section>
     
@@ -85,7 +85,6 @@
 
   <script>
     document.getElementsByClassName("blurred")[0].onclick = function (e) {
-      console.log('click');
       this.classList.toggle('blurred');
     }
   </script>

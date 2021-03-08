@@ -63,7 +63,7 @@
     
     <section>
       <figure class="alt-text">
-  			<img class="blurred" src="/projects/alt-text/images/0009.jpg" alt="White clouds over the ocean, floating in a bright blue sky.">
+  			<img tabindex="1" class="blurred" src="/projects/alt-text/images/0009.jpg" alt="White clouds over the ocean, floating in a bright blue sky.">
   		</figure>  
     </section>
     
@@ -76,7 +76,6 @@
 
   <script>
     document.getElementsByClassName("blurred")[0].onclick = function (e) {
-      console.log('click');
       this.classList.toggle('blurred');
     }
   </script>

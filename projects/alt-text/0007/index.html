@@ -65,7 +65,7 @@
     
     <section>
       <figure class="alt-text">
-  			<img class="blurred" src="/projects/alt-text/images/0007.jpg" alt="An empty boardwalk at night, street lamps along the beach edge, a large sign above a two-story building sign reads &#39;Dolles.&#39;">
+  			<img tabindex="1" class="blurred" src="/projects/alt-text/images/0007.jpg" alt="An empty boardwalk at night, street lamps along the beach edge, a large sign above a two-story building sign reads &#39;Dolles.&#39;">
   		</figure>  
     </section>
     
@@ -78,7 +78,6 @@
 
   <script>
     document.getElementsByClassName("blurred")[0].onclick = function (e) {
-      console.log('click');
       this.classList.toggle('blurred');
     }
   </script>

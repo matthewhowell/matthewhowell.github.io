@@ -64,7 +64,7 @@
     
     <section>
       <figure class="alt-text">
-  			<img class="blurred" src="/projects/alt-text/images/0003.jpg" alt="Thick, bright green moss covers a wooden log.">
+  			<img tabindex="1" class="blurred" src="/projects/alt-text/images/0003.jpg" alt="Thick, bright green moss covers a wooden log.">
   		</figure>  
     </section>
     
@@ -77,7 +77,6 @@
 
   <script>
     document.getElementsByClassName("blurred")[0].onclick = function (e) {
-      console.log('click');
       this.classList.toggle('blurred');
     }
   </script>
