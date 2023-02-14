@@ -1,0 +1,9 @@
+<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#705dfd">
+        <circle cx="10.666656" cy="53.33328" r="10.666656" stroke-width=".333333"/>
+        <g fill-rule="nonzero" transform="matrix(.333333 0 0 .333333 -10.666656 -10.666656)">
+        <path d="m32 128c52.664 0 96 43.336 96 96h32c0-70.219-57.781-128-128-128z"/>
+        <path d="m32 64c87.773 0 160 72.227 160 160h32c0-105.328-86.672-192-192-192z"/>
+        </g>
+        </g>
+</svg>

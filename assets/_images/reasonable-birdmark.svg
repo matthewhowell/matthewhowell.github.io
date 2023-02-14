@@ -1,0 +1,19 @@
+<svg class="reasonable-birdmark" viewBox="0 0 52 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="mark-shapes" transform="matrix(0.75,0,0,0.75,-48,-48)">
+        <g transform="matrix(1,0,0,-1,-144,1669.33)">
+            <path d="M208,1504L208,1472C225.661,1472 240,1486.34 240,1504L208,1504Z"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-106.667,-1392)">
+            <path d="M208,1504L208,1472C225.661,1472 240,1486.34 240,1504L208,1504Z"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-144,-1408)">
+            <path d="M208,1504L208,1472C225.661,1472 240,1486.34 240,1504L208,1504Z"/>
+        </g>
+        <g transform="matrix(1.33333,0,0,1.09088,-1258.67,-1032.33)">
+            <rect x="992" y="1034.32" width="24" height="58.668"/>
+        </g>
+        <g transform="matrix(1.5,0,0,1.5,-34,-318)">
+            <circle cx="76" cy="276" r="4" style="fill:rgb(235,235,235);"/>
+        </g>
+    </g>
+</svg>

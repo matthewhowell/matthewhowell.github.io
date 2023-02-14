@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Style Guide – Matthew Howell</title>
+
+<meta name="description" content="Matthew Howell is a person trying to make nice websites and–sometimes–other things.">
+<meta name="author" content="Matthew Howell">
+
+<!-- <meta property="og:type" content="article">
+<meta property="article:author" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content=""> -->
+
+<!-- <link rel="me" href="mailto:">
+<link rel="me" href="sms:"> -->
+
+<link rel=alternate title="Matthew Howell" type="application/atom+xml" href="/atom.xml">
+
+<link rel="stylesheet" href="/reasonable.css">
+<link rel="stylesheet" href="/site.css">
+    </head>
+
+    <body><div class="container">
+	    <header><nav class="cluster">
+	<a href="/"><img alt="A pixelated, stylized M H lettermark. A square containing four pieces: two small curves on the top and two small sqaures on the bottom." class="nav-logomark" src="/assets/_images/mh-mark.svg" /></a>
+  <ul class="cluster">
+	  <li><a href="/about" >About</a></li>
+<li><a href="/notes" >Notes</a></li>
+<li><a href="/photos" >Photos</a></li>
+<li><a href="/work" >Work</a></li>
+<li><a href="/reading" >Reading</a></li>
+  </ul>
+</nav></header><main>
+<article>
+
+	<header>
+		<h1 class="title">Style Guide</h1>
+	</header>
+	<hr class="light" />
+	<section class="metadata">
+		<p>Published on <time datetime="2023-02-05">February 05, 2023</time> ▪︎ Updated on <time datetime="2023-02-10">February 10, 2023</time>
+		</p>
+	</section>
+	
+	<section>
+	<p>This is the public style guide for <a href="https://www.matthewhowell.net">matthewhowell.net</a>. It will be regularly updated as additional styles for the site are standardized.</p>
+<p>The <a href="https://github.com/matthewhowell/www.matthewhowell.net/tree/master/site.css">annotated CSS<small>↗</small></a> is available for reference.</p>
+<h2 id="colors">Colors</h2>
+<section class="style-guide colors cluster">
+	<span style="border-color: var(--color-foreground)" class="color">Body Text<br />#222222</span>
+	<span style="border-color: var(--color-background)" class="color">Background</span>
+	<span style="border-color: var(--color-primary)" class="color">Purple<br />#705DFD</span>
+	<span style="border-color: var(--color-primary-light)" class="color">Light Purple<br />#EBEBFF</span>
+	<span style="border-color: var(--color-primary-dark)" class="color">Dark Purple<br />#433ED5</span>
+<!-- 	<span style="border-color: var(--color-secondary)" class="color">Teal</span>
+	<span style="border-color: var(--color-secondary-light)" class="color">Light Teal</span> -->
+</section>
+<h2 id="typography">Typography</h2>
+<section class="style-guide headers">
+	<h1>Header 1</h1>
+	<h2>Header 2</h2>
+	<h3>Header 3</h3>
+	<h4>Header 4</h4>
+	<h5>Header 5</h5>
+	<h6>Header 6</h6>
+</section>
+<h2 id="links">Links</h2>
+<section class="style-guide links">
+	<a href="#links">External Link ↗</a>
+	<br />
+	<a href="#links">Internal Link</a>
+	<br />
+	<a aria-current href="#links">Current Page</a>
+</section>
+<h2 id="elements">Elements</h2>
+<section class="style-guide elements">
+<p>headers</p>
+<p>body text</p>
+<h3 id="lists">Lists</h3>
+<h4 id="unordered-lists">Unordered Lists</h4>
+<ul>
+<li>First</li>
+<li>Second
+<ul>
+<li>Second Nested</li>
+</ul>
+</li>
+<li>Third</li>
+</ul>
+<h4 id="ordered-lists">Ordered Lists</h4>
+<ol>
+<li>First</li>
+<li>Second
+<ol>
+<li>Second Nested</li>
+</ol>
+</li>
+<li>Third</li>
+</ol>
+<h4 id="definition-lists">Definition Lists</h4>
+<dl>
+	<dt>dt Element</dt>
+	<dd>dd element</dd>
+	<dt>DT</dt>
+	<dd>dd</dd>
+	<dt>DT</dt>
+	<dd>dd</dd>
+	<dt>DT</dt>
+	<dd>dd</dd>
+</dl>
+<h3 id="asides-and-blockquotes">Asides and Blockquotes</h3>
+<aside>
+<p>Testing a aside layout.</p>
+</aside>
+<blockquote>
+<p>Testing a blockquote layout.</p>
+</blockquote>
+<h3 id="details">Details</h3>
+<details>
+	<summary><span>Summary element</span></summary>
+	<p>Details element</p>
+</details>
+<h3 id="footnotes">Footnotes</h3>
+<div class="footnote-definition" id="1">
+	<sup class="footnote-definition-label">1</sup>
+	<p>In an apartment-building-fire situation, this tin is one of a small handful of items that I would grab before tumbling down my fire escape to the safety.
+<pre><code>&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;
+And I should probably provide a few decade&#x27;s worth of (currently) available batteries.&lt;&#x2F;p&gt;
+</code></pre>
+</div>
+<h3 id="tables">Tables</h3>
+<table>
+	<caption>Caption</caption>
+	<tr>
+		<td>Test TD</td>
+		<td>Test TD</td>
+		<td>Test TD</td>
+		<td>Test TD</td>
+	</tr>
+	<tr>
+		<td>Test TD</td>
+		<td>Test TD</td>
+		<td>Test TD</td>
+		<td>Test TD</td>
+	</tr>
+	<tr>
+		<td>Test TD</td>
+		<td>Test TD</td>
+		<td>Test TD</td>
+		<td>Test TD</td>
+	</tr>
+</table>
+
+	</section>
+
+  <hr class="end-mark"/>
+  <footer>
+  </footer>
+</article>
+</main>
+    
+    <hr class="end-line" />
+    <footer>
+
+	<section>	
+		<nav class="cluster">
+			<a href="/"><img alt="A pixelated, stylized M H lettermark. A square containing four pieces: two small curves on the top and two small sqaures on the bottom." class="nav-logomark" src="/assets/_images/mh-mark.svg" /></a>
+			<ul class="cluster"><li><a href="/about" >About</a></li>
+<li><a href="/notes" >Notes</a></li>
+<li><a href="/photos" >Photos</a></li>
+<li><a href="/work" >Work</a></li>
+<li><a href="/reading" >Reading</a></li></ul>
+		</nav>
+		
+		<nav class="cluster elsewhere">
+			<strong>Elsewhere</strong>
+			<ul class="cluster">
+				<li><a href="https://www.reasonable.work">Reasonable Co ↗</a></li>
+				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon ↗</a></li>
+				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr ↗</a></li>
+				<li><a href="https://github.com/matthewhowell">Github ↗</a></li>
+			</ul>
+		</nav>
+	</section>
+	
+	<section>
+		<p>This website was made by <a href="https://www.matthewhowell.net">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, <a href="/feeds">feeds</a>, 
+		
+		 and this <a href="https://github.com/matthewhowell/www.matthewhowell.net/tree/master/templates/page.html">page's template ↗</a> is open source.
+		</p>
+			</section>
+
+	<section>	
+	</section>
+
+</footer>
+    </div>
+</body>
+
+</html>

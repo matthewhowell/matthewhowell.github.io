@@ -1,0 +1,53 @@
+
+# static asset processing
+[build.processing]
+  skip_processing = false
+
+# bundle css
+[build.processing.css]
+  bundle = true
+  minify = false
+
+# bundle js
+[build.processing.js]
+  bundle = true
+  minify = false
+
+# do not alter URLs
+[build.processing.html]
+  pretty_urls = false
+
+# do not compress images
+[build.processing.images]
+  compress = false
+  
+# headers
+[[headers]]
+
+  # set correct content type for feed.atom
+  for = "/atom.xml"
+
+  [headers.values]
+  	Content-Type = "application/atom+xml"
+
+[[headers]]
+
+  # set correct content type for feed.atom
+  for = "/notes/atom.xml"
+
+  [headers.values]
+    Content-Type = "application/atom+xml"
+
+[[headers]]
+
+  # set correct content type for feed.atom
+  for = "/photos/atom.xml"
+
+  [headers.values]
+    Content-Type = "application/atom+xml"
+
+# redirect old /projects paths to /work paths    
+[[redirects]]
+  from = "/projects/*"
+  to = "/work/:splat"
+  status = 301

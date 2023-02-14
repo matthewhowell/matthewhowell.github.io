@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+
+	<title>Matthew Howell</title>
+	<id>https://www.matthewhowell.net/atom.xml</id>
+	
+	<link href="https://www.matthewhowell.net/atom.xml" rel="self" type="application/atom+xml" />
+	<link rel="alternate" href="https:&#x2F;&#x2F;www.matthewhowell.net" />
+	
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-02-15T00:00:00+00:00</updated>
+	
+	<author>
+		<name>Matthew Howell</name>
+	</author><entry>
+			<title>A Golden Age of Websites</title>
+			<published>2023-02-05T00:00:00+00:00</published>
+			<updated>2023-02-05T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2023/a-golden-age-of-websites/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2023/a-golden-age-of-websites/</id>
+			<content type="html"><![CDATA[<p><h1 id="golden-age">Golden Age</h1>
+<h2 id="the-web-is-for-everyone">The web is for everyone</h2>
+<p>The year is 1996
+I am a 13 year old human in a two story house in southern delaware.
+Corn fields
+Chicken houses</p>
+<p>Angelfire
+FTP? Editor?</p>
+<p>Search for douglas adams hitchhikers guide gifs</p>
+<p>Update</p>
+<p>The web is for everyone. Even me.</p>
+<p>That was the moment that my life changed. From computers are cool to the Web is what I want to .</p>
+<p>A guidling principle</p>
+<h1 id="a-golden-age-of-websites">A Golden Age of Websites</h1>
+<h2 id="small-websites-are-great">Small websites are great</h2>
+<ul>
+<li>
+<p>Using complex server infrastructure makes small websites hard</p>
+</li>
+<li>
+<p>SSL free and low cost</p>
+<ul>
+<li>Let’s Encrypt</li>
+<li>Cloudflare</li>
+</ul>
+</li>
+<li>
+<p>Simple, small websites like this one have always been one of my favorite parts of the web</p>
+</li>
+<li>
+<p>Not applications, don’t really need server side logic or databases</p>
+</li>
+<li>
+<p>Simple, single purpose websites</p>
+</li>
+<li>
+<p>Small collections</p>
+</li>
+<li>
+<p>Personal writing</p>
+</li>
+<li>
+<p>Art</p>
+</li>
+<li>
+<p>Even stores</p>
+</li>
+<li>
+<p>The small web may seem less important when so much of the webs use is in “walled gardens” or more accurately locked surveillance prisons.</p>
+</li>
+<li>
+<p>Lots of treat static site generators</p>
+</li>
+<li>
+<p>Code hosting GitHub Gitlab netlify </p>
+</li>
+<li>
+<p>A maintainable, portable small website can look nice, load fast, offer rss</p>
+</li>
+<li>
+<p>Newsletter tools too</p>
+</li>
+<li>
+<p>The web is better</p>
+</li>
+</ul>
+<hr />
+<hr />
+<h2 id="layout-posttitle-moving-and-personal-websitesdate-2015-09-11-00-00-00where-bangkok-thailand">layout: post
+title: Moving and Personal Websites
+date: 2015-09-11 00:00:00
+where: Bangkok, Thailand</h2>
+<p>Goals of a personal website, your mileage may vary. As someone who has and hopes to continue to make things for the web, what am I asking of my own space here?</p>
+<ul>
+<li>Be a hub of writing, work, information, and experimentation</li>
+<li>Be a feed of activity</li>
+<li>Be a single point of information on what it is I'm up to right now (working on)</li>
+<li>Be a place for work to live: professional and personal projects</li>
+<li>Be in itself an application of my own current opinions about building websites</li>
+<li>Be a personal archive, a bookshelf</li>
+<li>Be, to some degree, a reflection of my own design philosophy and reflect a personal style and uniqueness. It should feel like me.</li>
+</ul>
+<p>or find some of my more existential <a title="What is a Personal Website?" href="/writing/2015/what-is-a-personal-website/">attempted answers over here</a>.</p>
+<p>The compass, notably, was not invented a tool for navigation, but for divining</p>
+<p>Last summer, my wife and I traded our two-bedroom apartment on the second floor of a brick row home in Queens for a two-bedroom apartment on the 40th floor of a steel tower in Bangkok.</p>
+<p>That move, entirely across the planet and tens of meters up into the air, has left us recalibrating. Our lives, in some very broad ways, are different than they were. And so, we adjust. We tinker with our routines and our behaviors.</p>
+<p>And that's part of the great promise of a relocation, right? A clean slate. A fresh start. A spotless bathroom. A new set of neighbors. A new version of ourselves,</p>
+<p>fitted to our new environment.</p>
+<p>There are a few broad changes, the obvious things that you can plan around: a new job, a new apartment, . But, there are many more tiny ones. Thousands of those atomic specifics that, like a PEN METAPHOR, sktech together our days.[^]</p>
+<pre><code>[^]: A few examples: the pitch of a stretch of sidewalk, the thickness of the air in afternoon shade, the sound an elevator emits to announce its arrival, the force required to turn a key in our front doorand the sounds of tumblers falling into place, the color of our curtains, the depth of a couch. The number and location of motorcycles. The temperature of a glass of water. The speed of an escalator. There are thousands more.
+</code></pre>
+<p>Along with all of these adjustments in our actual, meatspace lives, the move has prompted me to rethink my home on the Web, which may certainly sound silly. It has me reconsidering what exactly this website is and what it means to be. Remember when we used to call websites <em>homepages</em>?</p>
+<p>For me, and maybe for some others, these little <em>Web houses</em> can feel substantial. We spend years in them. Building, designing, tinkering, rebuilding, redesigning, neglecting and then sometimes rediscovering them. Futzing around in public, we share pieces of ourselves.</p>
+<p>I have maintained some kind of personal website, on and off, since the late 1990s. Admittedly, it's been more often off.</p>
+<p>And so we get here, to my personal site, this dusty little shelf in some far off corner of the Web.</p>
+<p>A place of my own making, but that exists for anyone who may stumble upon it. Including, my slightly future self.</p>
+<p>So, what responsibilities might this site carry for those groups of peoples.</p>
+<ul>
+<li>myself, today and in the future</li>
+<li>my family, friends, and colleagues</li>
+<li>anyone else</li>
+</ul>
+<p>What is the web?</p>
+<p>The Web is something like a magical public library. One with unlimited shelf space and unlimited copies of everything on those shelves. a universal and immediate retrieval system, 3.2 billion card holders, each of whom are welcome to store their own stuff on a library shelf.</p>
+<p>Privacy</p>
+<p>Though this website primary exists for its author, it is a bit more than just my home on the web.</p>
+<p>When you punch this URL into your web browse'n whatsit, some really wonderful stuff happens, and in the end, your browser gets a shiny copy of this website delivered to it.</p>
+<p>So what values do I hold?
+I have deep, unsettling concerns about privacy and our collective loss of it. The Internet is something of minefield.</p>
+<p>And so my own position on that grid, as a person who makes software for a living, is often conflicted.</p>
+<p>Analytics
+Stateless web</p>
+<p>Silos</p>
+<p>The excitement of new web quickly gave way to the disappointment of its permanance.</p>
+<p>Single place for all of my stuffs</p>
+<p>Personal site,</p>
+<p>Web is like a library</p>
+<p>Content everywhere, well organized address system</p>
+<p>What about this: we are responsible for our digital selves.</p>
+<p>Maybe it is a collection of values, implemented in markup. That sounds nice.</p>
+<p>Maybe a personal website in 2015 could stand for the same things that its owner stands for.</p>
+<p>Indie web camp</p>
+<p>publishers of our own hypertext</p>
+<ul>
+<li>The small web, the indie web
+<ul>
+<li>Own the domain name</li>
+<li>Own the server</li>
+</ul>
+</li>
+<li>The accesssible web
+<ul>
+<li>Mostly text</li>
+<li>Performance, fast, small</li>
+<li>Standards</li>
+<li>Don't break great things</li>
+</ul>
+</li>
+<li>The stateless web
+<ul>
+<li>No application behind it</li>
+<li>No cookies, or sessions, or logins, or</li>
+</ul>
+</li>
+<li>No analytics
+<ul>
+<li>This website is not here to traffic, so why monitor that, and in doing so, make it less private</li>
+</ul>
+</li>
+</ul>
+<p>Link to personal values, </p>
+<ol>
+<li>Accessibility</li>
+<li>Performance</li>
+<li>Privacy</li>
+<li>Independent and open</li>
+<li>Transparency</li>
+<li>Honesty</li>
+<li>Weird</li>
+<li></li>
+</ol>
+<p>Near the end of 2013, <a title="Homesteading 2014 – Frank Chimero" href="http://frankchimero.com/writing/homesteading-2014/">Frank Chimero wrote</a> down some wonderful thoughts on the his own personal site.</p>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>A New, Old Website</title>
+			<published>2023-02-05T00:00:00+00:00</published>
+			<updated>2023-02-05T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2023/a-new-old-website/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2023/a-new-old-website/</id>
+			<content type="html"><![CDATA[<p><p>Today, there is a new <a href="https://www.matthewhowell.net">matthewhowell.net</a>, something like the seventh version (though, I've been a poor steward of my own personal website archives).</p>
+<h2 id="a-new-generator">A New Generator</h2>
+<p>The primary reason for the relaunch the site is to switch from <a href="https://gohugo.io">Hugo</a> (a very popular <abbr title="Static Site Generator">SSG</abbr>) to <a href="https://www.getzola.org">Zola</a> (a less popular SSG). I used Hugo for more than 4 years, but never really felt comfortable with. It's quite powerful, but not always straightforward, particularly its <a href="https://gohugo.io/templates/introduction/">incredibly complex templating language</a>.</p>
+<p>It's also worth mentioning that <a href="https://www.11ty.dev">11ty</a> is quite nice and <a href="https://www.zachleat.com">Zack Leatherman</a> is doing <a href="https://github.com/11ty/webc">some wonderful work</a> for the Web. For me, for a personal site, 11ty is just not the right fit (because Javascript). It's difficult to quantify the enormous quality of life improvement that I get from avoiding the entire NPM/Node.js/Javascript ecosystem at the moment.</p>
+<p>So, Zola it is.</p>
+<h2 id="new-content">New Content</h2>
+<p>The new site comes with a bit of new content.
+I've added <a href="/photos">/photos</a>, redesigned the <a href="/reading">/reading</a>, included a (work-in-progress) <a href="/style-guide">public style guide</a>. The old <a href="/projects">/projects</a> section has become <a href="/work">/work</a>.</p>
+<p>I've had a personal site, of some kind since maybe 1996? There have been gaps, but</p>
+<p>This post is not a comparison between the two, though I find that for me, Zola is a much better fit.</p>
+<h2 id="fun">Fun</h2>
+<p>New colors
+New(ish) lettermark</p>
+<h2 id="inspiration">Inspiration</h2>
+<h2 id="personal-websites-as-public-memory">Personal Websites as Public Memory</h2>
+<ol>
+<li>
+<p>Today, a new website</p>
+</li>
+<li>
+<p>Really, an old website, but with a new coat of paint</p>
+</li>
+<li>
+<p>Reasons</p>
+<ol>
+<li>New SSG, zola</li>
+<li></li>
+<li>/Photos and /work</li>
+<li>More fun! Create excitement</li>
+</ol>
+</li>
+<li>
+<p>So much inspiration</p>
+<ol>
+<li>Other awesome personal sites</li>
+</ol>
+</li>
+<li>
+<p>Organization
+A personal website as a public memory
+Public archive</p>
+<pre><code>     # On Organizing a Static Personal Site
+     
+     ## Source
+     
+     Private, plaintext files
+     2 layers, zola ignore, also draft true
+     1. Book reviews
+     2. Music reviews
+     3. Personal journal entries
+     4. Drafts of public essays
+     
+     
+     ### Zola, but others
+     
+     ## Output
+     Public, plaintext files
+     
+     1. Reading list
+     2. Music list
+     3. --
+     4. Finished public essays
+     
+     ### Netlify, but others
+     
+     A personal website as a public memory
+     
+     Email as a private memory
+     
+     Website can hold buckets and be whatever you want
+     
+     Writing
+     Photography
+     Poetry
+     Journal
+     
+     Public invites discussion
+     Allows sharing ideas
+</code></pre>
+</li>
+<li>
+<p>Goal</p>
+</li>
+</ol>
+<h1 id="golden-age">Golden Age</h1>
+<h2 id="the-web-is-for-everyone">The web is for everyone</h2>
+<p>The year is 1996
+I am a 13 year old human in a two story house in southern delaware.
+Corn fields
+Chicken houses</p>
+<p>Angelfire
+FTP? Editor?</p>
+<p>Search for douglas adams hitchhikers guide gifs</p>
+<p>Update</p>
+<p>The web is for everyone. Even me.</p>
+<p>That was the moment that my life changed. From computers are cool to the Web is what I want to .</p>
+<p>A guidling principle</p>
+<h1 id="a-golden-age-of-websites">A Golden Age of Websites</h1>
+<h2 id="small-websites-are-great">Small websites are great</h2>
+<ul>
+<li>
+<p>Using complex server infrastructure makes small websites hard</p>
+</li>
+<li>
+<p>SSL free and low cost</p>
+<ul>
+<li>Let’s Encrypt</li>
+<li>Cloudflare</li>
+</ul>
+</li>
+<li>
+<p>Simple, small websites like this one have always been one of my favorite parts of the web</p>
+</li>
+<li>
+<p>Not applications, don’t really need server side logic or databases</p>
+</li>
+<li>
+<p>Simple, single purpose websites</p>
+</li>
+<li>
+<p>Small collections</p>
+</li>
+<li>
+<p>Personal writing</p>
+</li>
+<li>
+<p>Art</p>
+</li>
+<li>
+<p>Even stores</p>
+</li>
+<li>
+<p>The small web may seem less important when so much of the webs use is in “walled gardens” or more accurately locked surveillance prisons.</p>
+</li>
+<li>
+<p>Lots of treat static site generators</p>
+</li>
+<li>
+<p>Code hosting GitHub Gitlab netlify </p>
+</li>
+<li>
+<p>A maintainable, portable small website can look nice, load fast, offer rss</p>
+</li>
+<li>
+<p>Newsletter tools too</p>
+</li>
+<li>
+<p>The web is better</p>
+</li>
+</ul>
+<hr />
+<hr />
+<h2 id="layout-posttitle-moving-and-personal-websitesdate-2015-09-11-00-00-00where-bangkok-thailand">layout: post
+title: Moving and Personal Websites
+date: 2015-09-11 00:00:00
+where: Bangkok, Thailand</h2>
+<p>Goals of a personal website, your mileage may vary. As someone who has and hopes to continue to make things for the web, what am I asking of my own space here?</p>
+<ul>
+<li>Be a hub of writing, work, information, and experimentation</li>
+<li>Be a feed of activity</li>
+<li>Be a single point of information on what it is I'm up to right now (working on)</li>
+<li>Be a place for work to live: professional and personal projects</li>
+<li>Be in itself an application of my own current opinions about building websites</li>
+<li>Be a personal archive, a bookshelf</li>
+<li>Be, to some degree, a reflection of my own design philosophy and reflect a personal style and uniqueness. It should feel like me.</li>
+</ul>
+<p>or find some of my more existential <a title="What is a Personal Website?" href="/writing/2015/what-is-a-personal-website/">attempted answers over here</a>.</p>
+<p>The compass, notably, was not invented a tool for navigation, but for divining</p>
+<p>Last summer, my wife and I traded our two-bedroom apartment on the second floor of a brick row home in Queens for a two-bedroom apartment on the 40th floor of a steel tower in Bangkok.</p>
+<p>That move, entirely across the planet and tens of meters up into the air, has left us recalibrating. Our lives, in some very broad ways, are different than they were. And so, we adjust. We tinker with our routines and our behaviors.</p>
+<p>And that's part of the great promise of a relocation, right? A clean slate. A fresh start. A spotless bathroom. A new set of neighbors. A new version of ourselves,</p>
+<p>fitted to our new environment.</p>
+<p>There are a few broad changes, the obvious things that you can plan around: a new job, a new apartment, . But, there are many more tiny ones. Thousands of those atomic specifics that, like a PEN METAPHOR, sktech together our days.[^]</p>
+<pre><code>[^]: A few examples: the pitch of a stretch of sidewalk, the thickness of the air in afternoon shade, the sound an elevator emits to announce its arrival, the force required to turn a key in our front doorand the sounds of tumblers falling into place, the color of our curtains, the depth of a couch. The number and location of motorcycles. The temperature of a glass of water. The speed of an escalator. There are thousands more.
+</code></pre>
+<p>Along with all of these adjustments in our actual, meatspace lives, the move has prompted me to rethink my home on the Web, which may certainly sound silly. It has me reconsidering what exactly this website is and what it means to be. Remember when we used to call websites <em>homepages</em>?</p>
+<p>For me, and maybe for some others, these little <em>Web houses</em> can feel substantial. We spend years in them. Building, designing, tinkering, rebuilding, redesigning, neglecting and then sometimes rediscovering them. Futzing around in public, we share pieces of ourselves.</p>
+<p>I have maintained some kind of personal website, on and off, since the late 1990s. Admittedly, it's been more often off.</p>
+<p>And so we get here, to my personal site, this dusty little shelf in some far off corner of the Web.</p>
+<p>A place of my own making, but that exists for anyone who may stumble upon it. Including, my slightly future self.</p>
+<p>So, what responsibilities might this site carry for those groups of peoples.</p>
+<ul>
+<li>myself, today and in the future</li>
+<li>my family, friends, and colleagues</li>
+<li>anyone else</li>
+</ul>
+<p>What is the web?</p>
+<p>The Web is something like a magical public library. One with unlimited shelf space and unlimited copies of everything on those shelves. a universal and immediate retrieval system, 3.2 billion card holders, each of whom are welcome to store their own stuff on a library shelf.</p>
+<p>Privacy</p>
+<p>Though this website primary exists for its author, it is a bit more than just my home on the web.</p>
+<p>When you punch this URL into your web browse'n whatsit, some really wonderful stuff happens, and in the end, your browser gets a shiny copy of this website delivered to it.</p>
+<p>So what values do I hold?
+I have deep, unsettling concerns about privacy and our collective loss of it. The Internet is something of minefield.</p>
+<p>And so my own position on that grid, as a person who makes software for a living, is often conflicted.</p>
+<p>Analytics
+Stateless web</p>
+<p>Silos</p>
+<p>The excitement of new web quickly gave way to the disappointment of its permanance.</p>
+<p>Single place for all of my stuffs</p>
+<p>Personal site,</p>
+<p>Web is like a library</p>
+<p>Content everywhere, well organized address system</p>
+<p>What about this: we are responsible for our digital selves.</p>
+<p>Maybe it is a collection of values, implemented in markup. That sounds nice.</p>
+<p>Maybe a personal website in 2015 could stand for the same things that its owner stands for.</p>
+<p>Indie web camp</p>
+<p>publishers of our own hypertext</p>
+<ul>
+<li>The small web, the indie web
+<ul>
+<li>Own the domain name</li>
+<li>Own the server</li>
+</ul>
+</li>
+<li>The accesssible web
+<ul>
+<li>Mostly text</li>
+<li>Performance, fast, small</li>
+<li>Standards</li>
+<li>Don't break great things</li>
+</ul>
+</li>
+<li>The stateless web
+<ul>
+<li>No application behind it</li>
+<li>No cookies, or sessions, or logins, or</li>
+</ul>
+</li>
+<li>No analytics
+<ul>
+<li>This website is not here to traffic, so why monitor that, and in doing so, make it less private</li>
+</ul>
+</li>
+</ul>
+<p>Link to personal values, </p>
+<ol>
+<li>Accessibility</li>
+<li>Performance</li>
+<li>Privacy</li>
+<li>Independent and open</li>
+<li>Transparency</li>
+<li>Honesty</li>
+<li>Weird</li>
+<li></li>
+</ol>
+<p>Near the end of 2013, <a title="Homesteading 2014 – Frank Chimero" href="http://frankchimero.com/writing/homesteading-2014/">Frank Chimero wrote</a> down some wonderful thoughts on the his own personal site.</p>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>0005 – Train Tracks Looking North</title>
+			<published>2023-02-05T00:00:00+00:00</published>
+			<updated>2023-02-05T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/photos/0005/" type="text/html"/>
+			<id>https://www.matthewhowell.net/photos/0005/</id>
+			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0005/photo-0005.jpeg" alt="Train tracks looking north, disappearing in the distance with gray stones and green grass on either side, trees and farm buildings near the horizon." width="600px" />
+				<p><a href="https://www.matthewhowell.net/photos/0005/">View more information about the photo and download full resolution image</a>.</p><p></p>
+			]]></content>
+		</entry><entry>
+			<title>0006 – Roller Coaster Track Lights</title>
+			<published>2023-02-05T00:00:00+00:00</published>
+			<updated>2023-02-05T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/photos/0006/" type="text/html"/>
+			<id>https://www.matthewhowell.net/photos/0006/</id>
+			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0006/photo-0006.jpeg" alt="A roller coaster track, descending downward at 45 degrees, blue arrows lets along the line, in front of purple evening sky blending into the last bit of pastel orange from the setting sun." width="600px" />
+				<p><a href="https://www.matthewhowell.net/photos/0006/">View more information about the photo and download full resolution image</a>.</p><p><p>There is a theme park just off the boardwalk in Ocean City, Maryland</p>
+<p>There is a carousel</p>
+<p>There a child, unbothered, asleep, tired from beach all day grandmother, asleep in his stroller - as people scream behind him, putting their arms into the air, down the tracks.</p>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>0004 – Moss on Stairs in a Cemetery</title>
+			<published>2023-01-22T00:00:00+00:00</published>
+			<updated>2023-01-22T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/photos/0004/" type="text/html"/>
+			<id>https://www.matthewhowell.net/photos/0004/</id>
+			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0004/photo-0004.jpeg" alt="Bright green moss grows around and on top of a staircase, winding up a small hill in Okuno-in cemetery in Koyasan, Japan." width="600px" />
+				<p><a href="https://www.matthewhowell.net/photos/0004/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>0003 – A Sunrise in Rehoboth</title>
+			<published>2023-01-15T00:00:00+00:00</published>
+			<updated>2023-01-15T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/photos/0003/" type="text/html"/>
+			<id>https://www.matthewhowell.net/photos/0003/</id>
+			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0003/photo-0003.jpeg" alt="An orange sun, peaking above the clouds, rising over the beach in Rehoboth, Delaware. A shorebird stands on the sand in the light." width="600px" />
+				<p><a href="https://www.matthewhowell.net/photos/0003/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>0002 – A Butterfly Above a Pond</title>
+			<published>2023-01-08T00:00:00+00:00</published>
+			<updated>2023-01-08T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/photos/0002/" type="text/html"/>
+			<id>https://www.matthewhowell.net/photos/0002/</id>
+			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0002/photo-0002.jpeg" alt="A blue sky and a bright green tree line reflecting on the still water below, a butterfly glides across the foreground. Taken at Trap Pond State Park in Delaware." width="600px" />
+				<p><a href="https://www.matthewhowell.net/photos/0002/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>0001 – Hills Near Tortola</title>
+			<published>2023-01-01T00:00:00+00:00</published>
+			<updated>2023-01-01T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/photos/0001/" type="text/html"/>
+			<id>https://www.matthewhowell.net/photos/0001/</id>
+			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0001/photo-0001.jpeg" alt="Hills in the distance, over the water, taken from a boat in the Atlantic Ocean, near Tortola." width="600px" />
+				<p><a href="https://www.matthewhowell.net/photos/0001/">View more information about the photo and download full resolution image</a>.</p><p></p>
+			]]></content>
+		</entry><entry>
+			<title>2022 at Reasonable Company</title>
+			<published>2022-12-31T00:00:00+00:00</published>
+			<updated>2022-12-31T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2022/2022-at-reasonable-company/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2022/2022-at-reasonable-company/</id>
+			<content type="html"><![CDATA[<p><p><a href="https://www.reasonable.work">Reasonable Company</a> was formed in January of 2022. At the end of each calendar year, I will take time to revisit the company's goals, reflect on its successes and failures, and define my expectations for the next 12 months.</p>
+<h2 id="defining-reasonable-company">Defining Reasonable Company</h2>
+<p>First, each year, I want to revisit the company's purpose and definition. In 2022, I wrote: <em>Reasonable Company is the values-led design and creative practice of Matthew Howell.</em></p>
+<p>Ok. This is still both aspirational and accurate, so onward to the next year.</p>
+<h2 id="goals-from-2022">Goals from 2022</h2>
+<p>I wrote down eight goals for 2022, completing five, detailed below.</p>
+<h3 id="1-create-the-company">1. Create the company</h3>
+<p>Complete. Reasonable Company LLC was formed in January.</p>
+<ul>
+<li>The company is in good standing and financially viable for 2023.</li>
+<li>The company acquired everything that it needs at the moment (bank account, credit, payment processing, domain name, email, hosting, etc).</li>
+<li>The company brand and logo marks were designed and finished.</li>
+</ul>
+<h3 id="2-launch-the-company-website">2. Launch the company website</h3>
+<p>Complete. <a href="https://www.reasonable.work">reasonable.work</a> was launched in February. It's a small static website, generated by Zola, and hosted on Netlify.</p>
+<ul>
+<li><a href="https://shop.reasonable.work">shop.reasonable.work</a> was launched using Big Cartel to sell art prints</li>
+<li>A Ko-fi page was set up to explore sponsorship and other revenue</li>
+<li>Plausible Analytics was used for while, but ultimately abandoned for lack of need</li>
+</ul>
+<h3 id="3-release-one-open-source-project">3. Release one open-source project</h3>
+<p>Complete. <a href="https://reasonable.work/colors/">Reasonable Colors</a>, an open-source color system for building accessible, nice-looking color palettes, was released in April. However modest, this was the most successful and prominent open-source project that I've ever built.</p>
+<p>The code is available on <a href="https://github.com/matthewhowell/reasonable-colors">GitHub</a> and <a href="https://gitlab.com/matthewhowell/reasonable-colors">GitLab</a>.</p>
+<h3 id="4-find-one-open-source-project-sponsor">4. Find one open-source project sponsor</h3>
+<p>No.</p>
+<p>This didn't happen and after some initial thought, I decided against pursuing it. Until I have more time to dedicate to maintenance and can feel confident about responding to issues and pull requests, I don't think sponsorship makes sense.</p>
+<h3 id="5-release-one-piece-of-art">5. Release one piece of art</h3>
+<p>Complete. <a href="https://reasonable.work/1024-lemons/">1024 Lemons</a> was released in May.</p>
+<h3 id="6-sell-one-art-print">6. Sell one art print</h3>
+<p>Complete. As of today, Reasonable Company has sold 3, physical 1024 Lemons art prints to customers (and one digital lemon, which was generously purchased by my partner).</p>
+<p>I will mark this as the company's biggest success to date. Not to overstate the situation, but selling a piece of art is the fulfillment of a long-held creative dream.</p>
+<h3 id="7-release-one-video-game">7. Release one video game</h3>
+<p>No. </p>
+<p>But, also, kind of. I did not release a video game this year. I did finish a small video game, but it was a gift and not released publicly or sold.</p>
+<h3 id="8-sell-one-video-game-copy">8. Sell one video game copy</h3>
+<p>No.</p>
+<p>No game released, so no game to sell.</p>
+<h2 id="goals-for-2023">Goals for 2023</h2>
+<p>In 2023, Reasonable Company hopes to continue making things and slowly growing itself into a machine capable of making more things.</p>
+<ol>
+<li>Release five pieces of art</li>
+<li>Sell five art prints</li>
+<li>Release two open-source projects</li>
+<li>Release one video game</li>
+<li>Sell one video game copy</li>
+<li>Release one video game soundtrack</li>
+<li>Sell one video game soundtrack copy</li>
+<li>Release one book</li>
+</ol>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>2022 in Favorites</title>
+			<published>2022-12-31T00:00:00+00:00</published>
+			<updated>2023-01-31T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2022/2022-in-favorites/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2022/2022-in-favorites/</id>
+			<content type="html"><![CDATA[<p><p>I finished Ursula K. Le Guin's Earthsea series this year. <a href="https://bookshop.org/p/books/the-other-wind-5-ursula-k-le-guin/11351096">The Other Wind</a> was <mark>my favorite book</mark> that I read in 2022. It was published in 2001. Earthsea, I think, is my favorite series of fantasy books. It's bittersweet to finish a beloved story, knowing that it's over as soon as you turn the last page, understanding that there will be no more.</p>
+<p>I also quite liked <a href="https://bookshop.org/p/books/the-once-and-future-witches-alix-e-harrow/14467617">The Once and Future Witches</a> by Alix E. Harrow. It was published in 2020. Imagining witchcraft sitting alongside other American struggles (suffrage, civil rights, bodily autonomy, etc) made this story feel more practical than one might expect. It was also just <em>very fun</em> to read.</p>
+<p>Related: <a href="/reading">everything I read</a> in 2022.</p>
+<hr />
+<p><a href="https://thebethsnz.bandcamp.com/album/expert-in-a-dying-field">Expert In A Dying Field by The Beths</a> was <mark>my favorite record</mark> of 2022. This small, New Zealand band released a collection of huge, guitar-driven, power-pop anthems. Elizabeth Stokes lyrics are full of clever turns and keen observations. The melodies are bright. It's a fun, joyful breakup album.</p>
+<p>Also, surprising no one, I loved <a href="https://angelolsen.bandcamp.com/album/big-time">Big Time by Angel Olsen</a>, which was probably my second favorite record of the year.</p>
+<hr />
+<p><a href="https://ashorthike.com">A Short Hike</a> by <a href="https://adamgryu.com">Adam Robinson-Yu</a> was <mark>my favorite game</mark> that I played in 2022. It was published in 2019 and is available in all of the normal places, including the wonderful <a href="https://adamgryu.itch.io/a-short-hike">itch.io</a>.</p>
+<hr />
+<p>This summer our family took two trips to the Atlantic Ocean. In early August, we spent a few days in Rehoboth Beach, Delaware: a small, seaside town near where I grew up. I loved eating at the large outdoor tables at <a href="https://www.tripadvisor.com/Restaurant_Review-g34048-d555748-Reviews-Dogfish_Head_Brewings_Eats-Rehoboth_Beach_Delaware.html">Dogfish Head</a>. We had really lovely weather, managed to catch a sunrise, and I even briefly used a bodyboard in the ocean without sustaining any injuries.</p>
+<p>The real highlight, though, was taking the kids to <a href="https://funlandrehoboth.com">Funland</a>, which continues to be <em>perfect</em>.</p>
+<p>This was <mark>my favorite trip</mark> of 2022.</p>
+<hr />
+<p>Nearly by default, <a href="https://www.matthewhowell.net/notes/2022/on-collecting-music/">On Collecting Music</a> was <mark>my favorite piece of writing</mark> of 2022.</p>
+<p>Related: <a href="/notes">everything I wrote</a> in 2022.</p>
+<hr />
+<p>A <a href="/photos/0003">photo of the sun rising</a> over the beach in Rehoboth, Delaware was <mark>my favorite photograph</mark> of 2022.</p>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>Selling Lemons</title>
+			<published>2022-05-03T00:00:00+00:00</published>
+			<updated>2022-05-03T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2022/selling-lemons/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2022/selling-lemons/</id>
+			<content type="html"><![CDATA[<p><p>Today, I released <a href="https://www.reasonable.work/1024-lemons">1024 Lemons</a>, a small, citrusy generative art project bound for the public domain. Here, I'll detail how it's being sold and explain why I'm giving it away.</p>
+<h2 id="what-is-this">What is this?</h2>
+<p><em>1024 Lemons</em> is a generative art project that works like this:</p>
+<ol>
+<li>I wrote a piece of code that generated 1024 small, unique lemon illustrations</li>
+<li>1024 art prints, comprised of those illustrations, are available for purchase</li>
+<li>Each time a print is sold, one lemon illustration is released into public domain</li>
+</ol>
+<h3 id="lemon-illustrations">Lemon Illustrations</h3>
+<p>The first eight lemons look like this. The next 1016 lemons look quite similar, but no two are alike.</p>
+<div class="lemon-flex">
+	<img alt="Lemon 1" src="https://www.reasonable.work/images/1024-lemons/0001.svg" />
+	<img alt="Lemon 2" src="https://www.reasonable.work/images/1024-lemons/0002.svg" />
+	<img alt="Lemon 3" src="https://www.reasonable.work/images/1024-lemons/0003.svg" />
+	<img alt="Lemon 4" src="https://www.reasonable.work/images/1024-lemons/0004.svg" />
+	<img alt="Lemon 5" src="https://www.reasonable.work/images/1024-lemons/0005.svg" />
+	<img alt="Lemon 6" src="https://www.reasonable.work/images/1024-lemons/0006.svg" />
+	<img alt="Lemon 7" src="https://www.reasonable.work/images/1024-lemons/0007.svg" />
+	<img alt="Lemon 8" src="https://www.reasonable.work/images/1024-lemons/0008.svg" />
+</div>
+<p>The shape of each lemon is unique and was generated by an algorithm written for the project. Each illustration was constructed within certain constraints to guarantee that it was unique, lemony enough, and felt a part of the larger set.</p>
+<h3 id="art-prints">Art Prints</h3>
+<p>There are exactly 1024 <a href="https://shop.reasonable.work/product/1024-lemons">art prints for sale</a>. The lemons within the print are all unique and the prints are all identical. They all look like this.</p>
+<section class="frame">
+	<figure class="art-print">
+	<img alt="1024 Lemons art print preview" loading="lazy" width="280px" src="/assets/_notes/1024-lemons-art-print-preview-660.jpg" />
+	<figcaption><a href="/assets/_notes/1024-lemons-art-print-preview-1320.jpg">View larger preview →</a></figcaption>
+	</figure>
+</section>
+<h2 id="how-are-the-prints-being-sold">How are the prints being sold?</h2>
+<p>The <a href="https://shop.reasonable.work/product/1024-lemons">prints are available for $44</a> and ship free anywhere in the U.S.</p>
+<p>Each time a print is sold, one of the 1024 lemon illustrations will be <mark>released into the public domain</mark>. Eventually, all of the illustrations will be re-licensed into the commons. Anyone will be able to download, print, or adapt the art in whatever way they might.</p>
+<aside>
+<p><strong>What is the public domain?</strong> <a href="https://en.wikipedia.org/wiki/Public_domain">The public domain</a> (sometimes referred to as <em>the commons</em>) is comprised of "all creative work to which no exclusive intellectual property rights apply."</p>
+<p>All creative works in the public domain are free for anyone to use for any purpose. They can be downloaded, printed, adapted, remixed, altered, changed, or used in any way. Putting creative work into public domain (the commons) adds to an ever growing catalog of human culture that we can all build upon.</p>
+</aside>
+<h2 id="why-give-away-the-art">Why give away the art?</h2>
+<p>This piece of art and this project were designed as an experiment with alternative methods of funding for creative work. <mark>Can we find better ways to <em>do art</em> within capitalism?</mark></p>
+<h3 id="unlocking-the-commons">Unlocking the Commons</h3>
+<p>A few years ago, I read <a href="https://www.niemanlab.org/2019/01/unlocking-the-commons/">this article by Tim Carmody</a>, in which he describes an emerging funding model for creative work. Tim called this &quot;unlocking the commons&quot; and I'll over-simplify it as: make something, then sell it, in order to give it away.</p>
+<p>Tim detailed the <a href="https://kottke.org">wonderful Kottke.org</a>'s membership program, which was giving away access to its website content. But, couldn't this be our model for all kinds of creative work? Doesn't it <em>feel better</em> to create abundance rather than artificial, digital scarcity?</p>
+<p>An integral piece of the idea is that the supporters insist on giving away the work. It's part of the deal. Folks are buying access for themselves, and in doing so, financing open access for everyone.</p>
+<p>Let's take this idea further: in addition to giving away <em>access to a creative work</em>, could we give away <mark><em>the use of a creative work</em></mark>?</p>
+<aside><strong>Note:</strong> I think that there are 3 variations of Tim's "unlocking the commons" idea, <a href="#the-three-common-benefits">read more below ↓</a>.
+</aside>
+<p><em>1024 Lemons</em> is an experiment in <em>unlocking common use</em>. A small community of contributors can unlock these illustrations for everyone to use, for anything, forever.</p>
+<p><em>Maybe this is how we build things?</em> Artists can make art and get paid for it, while the wider culture can benefit. 1024 Lemons sets out six goals for itself.</p>
+<ol>
+<li>Produce beautiful, physical art prints</li>
+<li>Release itself into the public domain</li>
+<li>Offer contributors public acknowledgement, thanking them for their support</li>
+<li>Raise money to help mitigate climate change</li>
+<li>Raise money for <a href="https://nscphila.org">NSC, a local immigrant and refugee aid organization</a></li>
+<li>Find enough profit to fund future projects</li>
+</ol>
+<h2 id="contributors-to-the-commons">Contributors to the Commons</h2>
+<p>Each person who buys a print is helping contribute a small piece of art to the commons (the public domain). These contributors are publicly thanked (anonymously by default, by name if they wish).</p>
+<p>There is a <a href="https://www.reasonable.work/1024-lemons/public">list of publicly available lemons illustrations</a>. It notes the moment that each was released into public domain and thanks the person who made that possible.</p>
+<aside><strong>Note:</strong> This list of public lemons is also available in <a href="https://www.reasonable.work/1024-lemons/public/plaintext">plaintext</a> and <a href="https://www.reasonable.work/1024-lemons/public/json">json</a>. I'm not entirely sure why, but perhaps someone will do something interesting with it.</aside>
+<h2 id="questions">Questions</h2>
+<h3 id="how-are-the-illustrations-being-released-into-the-public-domain">How are the illustrations being released into the public domain?</h3>
+<p>The illustrations will be released into the public domain using <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">the Creative Commons CC0 license</a>. After re-licensing the illustration, it will be available to anyone in the world to use in any way.</p>
+<h3 id="have-any-been-released-yet">Have any been released yet?</h3>
+<p>Yes! You can <a href="https://www.reasonable.work/1024-lemons/public">view and download all of the public illustrations here</a>.</p>
+<h3 id="what-if-folks-don-t-want-a-print">What if folks don't want a print?</h3>
+<p>Maybe some people have no interest in acquiring a physical print, but would still like to support the project?</p>
+<p>Use the discount code <code><strong>NOPRINT</strong></code> at checkout and you will not receive a physical print. The cost of <code><strong>NOPRINT</strong></code> support is $25 (the production and shipping cost of each print is removed).</p>
+<aside>
+	<p>For $25, we still accomplish 5 of our 6 goals for the project. It's exactly the same as ordering a print, just without receiving the print.</p>
+	<ul class="checklist">
+		<li>Release art into the public domain</li>
+		<li>Offer contributors public acknowledgement</li>
+		<li>Give money to help mitigate climate change</li>
+		<li>Give money to a local immigrant and refugee aid organization</a></li>
+		<li>Pay the artist</li>
+	</ul>
+</aside>
+<h3 id="how-about-folks-that-can-t-afford-25">How about folks that can't afford $25?</h3>
+<p>Anyone who can't afford to support the project (because of a financial hardship or any other reason) can use the discount code <code><strong>7DOLLARLEMON</strong></code></p>
+<p>This code will remove the print cost and my artist revenue, dropping the cost to $7. This will still cover contributing a lemon to the public domain, the two donations, and the payment processing costs.</p>
+<aside>
+	<p>For $7, we still accomplish 4 of our 6 goals for the project. It's exactly the same as ordering a print, just without receiving the print and without financially supporting the artist.</p>
+	<ul class="checklist">
+		<li>Release art into the public domain</li>
+		<li>Offer contributors public acknowledgement</li>
+		<li>Give money to help mitigate climate change</li>
+		<li>Give money to a local immigrant and refugee aid organization</a></li>
+	</ul>
+</aside>
+<h3 id="can-we-just-do-it-for-free">Can we just do it for free?</h3>
+<p>Sure! If you'd like to support the project, but don't want to spend any money, <a href="mailto:hellos@reasonable.work">send me an email</a> and we'll do it for free.</p>
+<h3 id="are-there-any-non-financial-ways-to-support-this">Are there any non-financial ways to support this?</h3>
+<p>Yes! Sharing the project page (<a href="https://www.reasonable.work/1024-lemons">reasonable.work/1024-lemons</a>) or this post (<a href="https://www.matthewhowell.net/notes/2022/selling-lemons">matthewhowell.net/notes/2022/selling-lemons</a>) with others who might want to support it is always appreciated.</p>
+<p>Another great way to support the project is to make something with the public illustrations!</p>
+<h3 id="the-three-common-benefits">The Three Common Benefits</h3>
+<p>I think there are probably 3 ways to apply the idea of unlocking creative work: unlocking common access, unlocking common copies, and unlocking common use. Let's call these <mark>the three <em>Common Benefits</em></mark>.</p>
+<p>These models will only make sense when the unlocked benefits are cheap to replicate and scale. The creator's cost for these benefits must approach zero.</p>
+<h4 id="unlocking-common-access">Unlocking common access</h4>
+<p>Supporters pay for access to the work and unlock access for everyone. Example: a website that has a membership program, but has no paywall to read.</p>
+<h4 id="unlocking-common-copies">Unlocking common copies</h4>
+<p>Supporters pay for a copy of the work and unlock copies for everyone. Example: a book that sells copies (physical and digital), but also offers a free digital copy.</p>
+<h4 id="unlocking-common-use">Unlocking common use</h4>
+<p>Supporters pay for a use of the work and unlock use for everyone. Example: a piece of art that sells physical prints, but is released into the public domain.</p>
+<h4 id="and">And?</h4>
+<p>Maybe I missed one? Or several? Please reach out with ideas or questions: <a href="https://twitter.com/matthewhowell">@matthewhowell</a> or <a href="mailto:hellos@reasonable.work">email</a></a></p>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>On Collecting Music</title>
+			<published>2022-01-04T00:00:00+00:00</published>
+			<updated>2022-01-04T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2022/on-collecting-music/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2022/on-collecting-music/</id>
+			<content type="html"><![CDATA[<p><p>Last week, I spent $11.72 to purchase a CD and have it mailed to my house. Here, I'm writing down some thoughts on why I collect music and why, in 2022, I still buy CDs.</p>
+<p>To start, three verifiable facts about myself.</p>
+<ol>
+<li>I enjoy music. I <em>find joy in music</em>.</li>
+<li>I have small children and want to share music with them.</li>
+<li>I live a privileged life that includes a bit of disposable time and income, which I can use to do things like collect music and write about it.</li>
+</ol>
+<h2 id="ok-but-why-buy-music">Ok, but why <em>buy</em> music?</h2>
+<p>Yes, we could stream it. Our family shares an Apple Music subscription and it's fine. But, purchasing a physical CD helps me accomplish three things that streaming music does not.</p>
+<h3 id="1-to-support-the-artist">1. To Support the Artist</h3>
+<p>Buying a physical copy of music is an effective and straightforward way to support a musician.</p>
+<p>There are not always simple ways to support creative work, but buying it is usually a good bet. With direct economic support, we can reward artists for making the art that we love.</p>
+<p>Money for joy, seems a fair transaction.</p>
+<p>The economics of streaming services are <a href="https://www.rollingstone.com/music/music-features/streaming-platforms-keeping-more-money-from-artists-than-ever-817925/">not as clear</a>. They may be <a href="https://www.nytimes.com/2021/03/22/technology/streaming-music-economics.html">good for the music industry</a>, are probably <a href="https://www.nytimes.com/2021/05/07/arts/music/streaming-music-payments.html">not great for individual artists</a>, and seem especially <a href="https://www.theguardian.com/technology/askjack/2019/oct/31/best-streaming-service-mp3-pays-artists">bad for artists with smaller followings</a>.</p>
+<blockquote>
+<p><strong>Tiny thoughts on streaming:</strong>
+Streaming music subscriptions are wonderful for discovering music and for making it portable and convenient. I found an appreciation for subscription music after I stopped viewing it as an alternative to collecting, but as a complementary tool.</p>
+<p>Stream first and widely, collect sparingly.</p>
+</blockquote>
+<h3 id="2-to-own-the-music">2. To Own the Music</h3>
+<p>It's probably obvious that we do not <em>own</em> the music that we stream from Spotify, Apple Music, or wherever else. Cancel that subscription and watch the music evaporate from your phones and devices.</p>
+<p>What's not as obvious, is that we don't own the music that we <em>purchase</em> digitally, either.</p>
+<p>Purchasing and owning a digital good is precarious, at best. Often, as consumers, we make these purchases that would be better described as complex licensing agreements that can be ended, unilaterally, by the licenser.</p>
+<blockquote>
+<p><strong>Examples of poor behavior involving digital purchases:</strong>
+Amazon can <a href="https://www.engadget.com/2009-10-01-amazon-clarifies-kindle-book-deletion-policy-can-still-delete-b.html">remove &quot;your books&quot; from &quot;your Kindle,&quot;</a> Google Play Music <a href="https://techcrunch.com/2020/08/05/google-play-music-to-shut-down-starting-in-september-will-disappear-by-december/">no longer allows downloads of &quot;your music,&quot;</a> and <a href="https://www.nytimes.com/wirecutter/blog/you-dont-own-your-digital-movies/">you never really owned &quot;your movies&quot;</a> from Vudu. All of these large companies <a href="https://www.sony.com/electronics/support/articles/00070056">routinely</a> <a href="https://www.theverge.com/2019/4/2/18292177/microsoft-ebooks-refund-stops-selling-digital-books-store">lose</a> <a href="https://techcrunch.com/2017/10/02/microsoft-will-soon-shutter-its-music-store-and-streaming-service-move-users-to-spotify/">interest</a> in selling digital goods or supporting the ones they've already sold.</p>
+</blockquote>
+<p>Our shared understanding of <em>ownership</em> just doesn't transfer honestly to digital purchases.</p>
+<p>For certain records, I want more than that conditional, temporary access.</p>
+<p>Owning a physical copy of music provides privileges that streaming does not. I can listen to a CD indefinitely, with no Internet connection, and without a monthly cost. I can make a copy of it. I can sell it. I can donate it. My children can inherit it, have a quick laugh, and then donate it themselves.</p>
+<p><mark>For the records that bring me joy, I want to live with them, find them space on our shelf, and share them with my family.</mark></p>
+<h3 id="3-to-collect-artifacts">3. To Collect Artifacts</h3>
+<p>Also, owning a physical piece of music is fun!</p>
+<p>I can hold an object in my hand that was made by another person. There is an emotional heft to that connection.</p>
+<p>I love the simple, tactile ritual of opening the digipak, removing the disc, placing it on the tray, watching it disappear into the machine, hearing the mechanical whirl of motor, and waiting for the laser to assemble the song from the landscape of the plastic and push it through the speakers.</p>
+<blockquote>
+<p><strong>How CDs work, kind of:</strong>
+CDs are made by encoding music into digital data and physically pressing that data into the plastic disc. The data is arranged in a single line that begins in the center of the disc and spirals out toward the edge.</p>
+<p>To play the music back, the disc is rotated and those indentations (called <em>pits</em>) are read by a laser and a lens to reconstruct the original data. That data is then handed it off to a DAC (digital-to-analog converter), which converts it to an analog waveform, which is sent to an amplifier, and finally to a speaker.</p>
+<p>Music becomes data written onto a disc, the data is read back and becomes the music again.</p>
+<p><a href="https://en.wikipedia.org/wiki/Compact_disc">Read a lot more at Wikipedia</a></p>
+</blockquote>
+<p>And this physical experience is easily shared with my children. They regard CDs with wonder and interest that aren't present when they're poking at shapes on a screen. <mark>Humans understand physical objects.</mark></p>
+<h2 id="why-not-vinyl">Why not vinyl?</h2>
+<p>The large, round elephant in the room at this point is: why not collect vinyl records?</p>
+<p>A few years ago when I decided to return to CDs, I did spend some time considering vinyl. Below is my personal reasoning for choosing CDs and not an argument <em>against</em> vinyl.</p>
+<p>Regardless, I am happy that vinyl is finding more popularity in recent years. Yay for supporting artists, owning music, collecting artifacts, and having choices!</p>
+<h3 id="1-vinyl-records-are-less-robust-than-cds">1. Vinyl records are less robust than CDs</h3>
+<p>Vinyl records require more care and more careful handling, which just isn't possible to explain to my 3-year-old son. For us, <a href="https://blog.discogs.com/en/how-to-store-vinyl-records/">taking care of vinyl</a> doesn't seem like a good use of our energy.</p>
+<h3 id="2-cd-production-is-more-reliable">2. CD production is more reliable</h3>
+<p>Read enough reviews of vinyl records online and you will find more than a few complaints about the &quot;pressing.&quot; The <a href="https://www.yoursoundmatters.com/watch-out-for-these-faults-when-buying-new-vinyl-records/">vinyl manufacturing process seems prone to inconsistency</a> that isn't as common with CDs.</p>
+<h3 id="3-cds-are-cheaper-than-vinyl">3. CDs are cheaper than vinyl</h3>
+<p>I just paid $11.72 for a brand new CD and used CDs are easy to find and cheaper still. Most new vinyl records go for $20 to $25 and are often priced even higher.</p>
+<p>This price difference amplifies concerns about the robustness and reliability of vinyl. It also illustrates the  clear value of the next point.</p>
+<h3 id="4-cds-are-user-replaceable">4. CDs are user-replaceable</h3>
+<p>If I break or lose a CD, I can produce a new, perfect copy of it in my own home, for very little money.</p>
+<p>This is an absolutely beautiful accident of capitalism. CDs are a well-supported, high-quality digital media format that manage to retain a lot of the freedom of simpler analog formats. We were lucky to have this!</p>
+<blockquote>
+<p><strong>How CDs happened:</strong>
+Sony and Philips jointly developed the format so that they could sell CD players. Record labels embraced CDs to monetize their back catalogs. Later, personal computers and cheap hardware allowed consumers to pull high-quality music files from purchased discs and then make their own copies and mixes.</p>
+<p>In 2022, it's unlikely that a new physical music format will be developed. Even if it were, would we ever get another universal format supported by plentiful and cheap hardware, embraced by record labels, and endowed with as much freedom and utility as CDs?</p>
+<p>More thoughts on this below.</p>
+</blockquote>
+<h3 id="5-cd-players-are-cheap-and-sound-great">5. CD players are cheap and sound great</h3>
+<p>The CD player in our home was purchased a few years ago for less than the cost of a good Bluetooth speaker. It has AM and FM tuners, Bluetooth, analog input and output, and two very nice stereo speaker boxes made of real wood. It also has a large volume dial, clicky buttons for most functions, and even came with a remote.</p>
+<p>A comparable quality record player, with an amp, and a pair of bookshelf speakers would almost certainly cost quite a bit more. And it might, on occasion, need a new stylus.</p>
+<h3 id="6-cds-are-smaller">6. CDs are smaller</h3>
+<p>CDs take up less space on the shelf, and they're easier for young children to handle.</p>
+<h3 id="7-cds-offer-instant-seeking-and-other-song-navigation-features">7. CDs offer instant seeking and other song navigation features</h3>
+<p>This was a big deal when CDs were released and positioned as an improvement on cassette tapes. No more fast-forwarding.</p>
+<p>Plus, kids love to put songs on repeat. Just try to stop them.</p>
+<h3 id="why-vinyl">Why vinyl?</h3>
+<p>Vinyl is popular and it's not without reason. For folks choosing it, a few points stand out to me:</p>
+<ul>
+<li>That big, beautiful, best-in-class album art</li>
+<li>The undeniable romance of placing the record on the turntable and carefully dropping the arm</li>
+<li>That warm, weathered sound profile that many people just prefer over digital music</li>
+<li>Some folks enjoy the experience of only listening to entire albums, no skips</li>
+</ul>
+<h2 id="also-maybe-cassettes">Also, maybe cassettes!</h2>
+<p>Cassette tapes are also, oddly, <a href="https://www.inquirer.com/entertainment/music/cassette-tape-revival-philadelphia-music-20210321.html">available again</a> from a lot of independent sellers, often as a limited run or special release. This strikes me as mostly nostalgia?</p>
+<p>But, cassettes did have some nice characteristics. They are smaller and more portable than CDs. Mixtapes were really fun. And golly, <a href="https://www.theverge.com/2014/7/1/5861062/sony-walkman-at-35">that Sony Walkman was an iconic piece of design</a>.</p>
+<h2 id="an-ideal-format">An Ideal Format</h2>
+<p>I'm happy to have CDs, and they fit my needs well, but they are surely not perfect. My ideal music format might be something like a large, ultra-durable SD card. An unbreakable, game cartridge-sized music whatsit that can be packaged alongside album art and other niceties.</p>
+<p>A great, modern physical music format might have these attributes:</p>
+<ul>
+<li>Lossless music encoding</li>
+<li>Robust and durable</li>
+<li>Small and portable</li>
+<li>Unencrypted and accessible data</li>
+<li>Easy to copy, reproduce, and make your own</li>
+<li>Attractive and beautiful as an object</li>
+<li>No reliance on the Internet or a cloud service</li>
+</ul>
+<blockquote>
+<p>Wait. Am I just describing <a href="https://en.wikipedia.org/wiki/MiniDisc">Sony MiniDisc</a>? Maybe I'm sad that <a href="https://www.theverge.com/2013/2/15/3989872/status-symbols-sony-minidisc">MiniDisc never found its market</a>. Yes, I am sad about that.</p>
+</blockquote>
+<p>There are some folks working on things like this, but nothing that I found looked very promising.</p>
+<ul>
+<li>There are some neat DIY projects using a Raspberry Pi and an NFC reader. <a href="https://www.raspberrypi.com/news/who-needs-vinyl-records-when-youve-got-raspberry-pi-and-nfc/">This one</a> looks nice. But, a DIY solution isn't accessible to very many people.</li>
+<li><a href="https://www.digitaltrends.com/home-theater/senic-muse-blocks-nfc-custom-printed-music-shortcuts/">Muse Blocks</a> are NFC music cards that look nice, but they're just a link to streaming services.</li>
+<li><a href="https://www.sharetapes.com/">Sharetapes</a>, also, look like an NFC card that links to streaming services.</li>
+<li><a href="https://access.trackrhino.com/make-music-physical-again">TrackRhino</a> is an NFC card and maybe allows music file downloads, but it's linked to a cloud service.</li>
+<li><a href="http://usbmusiccards.com">USB Music Cards</a> (which really need a better name) look OK, but they're selling an analytics product along with it. &quot;Know when (day, month, year) and where (City, State, Country) your fans are listening to your music.&quot; Yuck and no, thank you.</li>
+</ul>
+<p>So, for the foreseeable future, collecting music means CDs on our shelf.</p>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>2021 in Favorites</title>
+			<published>2021-12-30T00:00:00+00:00</published>
+			<updated>2021-12-30T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2021/20211231-2021-in-favorites/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2021/20211231-2021-in-favorites/</id>
+			<content type="html"><![CDATA[<p><p><a href="https://bookshop.org/books/the-memory-police/9781101911815">The Memory Police</a> by Yōko Ogawa was <mark>my favorite book</mark> that I read in 2021. It was originally published in 1994 in Japan, but an English translation (by Stephen Snyder) was released in 2019.</p>
+<p>I think this book is a masterpiece. An allegory for fascism? Or Alzheimer's disease? Or maybe just the existential dread of a finite and temporary world? Maybe. It's also about humans taking care of each other in a hopeless situation. Whatever it is, it's beautiful and feels like a small, lovingly-crafted object.</p>
+<p>Related: <a href="/reading">everything I read</a> in 2021.</p>
+<hr />
+<p><a href="https://theweatherstation.bandcamp.com/album/ignorance">Ignorance by The Weather Station</a> was <mark>my favorite record</mark> of 2021.</p>
+<p>Here’s a quick and incomplete checklist of my musical preferences: driving percussions, piano melodies, lush string arrangements, talented female vocalists who slip into confident falsettos, and former child actresses.</p>
+<p>Well, check, check, check, check, and check. This record was such a treat to listen to this year.</p>
+<hr />
+<p>For two days, in the middle of the post-vaccine, pre-Delta summer, I decamped to a cabin in the New Jersey pine barrens to refresh four decade-old friendships with some long talks, very light hiking, and a lot of food. This was all orchestrated by my lovely, lovely wife and it was very, very appreciated.</p>
+<p>This was <mark>my favorite and only trip</mark> of 2021.</p>
+<hr />
+<p>I didn't write much this year, but I did manage to keep my weekly writing cadence for <a href="/work/alt-text">Alt Text</a> going until July. That is… not a terrible result.</p>
+<p><a href="https://www.matthewhowell.net/work/alt-text/0002/">0002 Glass and Steel</a> (or maybe <a href="https://www.matthewhowell.net/work/alt-text/0006/">0006 Hills</a>) was <mark>my favorite piece of writing</mark> of 2021.</p>
+<hr />
+<p>This photo of the treeline reflecting off the water at Trap Pond State Park is <mark>my favorite photograph</mark> of 2021.</p>
+<p>A butterfly flew past at the moment that the shutter opened. The lens gathered just enough light to see the yellow markings on its wings. Most of my photographic success relies on chance.</p>
+<p>The full resolution image is available for anyone to use <a href="https://unsplash.com/photos/UWT9whAm_5E">at Unsplash</a>.</p>
+<img src="/assets/_photos/matthew-howell-20210504-trap-pond-960.jpeg" alt="The treeline reflecting off the water at Trap Pond State Park. White clouds in the blue sky. A butterfly floats past." /></p>
+			]]></content>
+		</entry><entry>
+			<title>Personal Values</title>
+			<published>2016-02-23T00:00:00+00:00</published>
+			<updated>2016-02-23T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2016/personal-values/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2016/personal-values/</id>
+			<content type="html"><![CDATA[<p><p>A publicly accessible and occasionally refined list of personal values.</p>
+<ol>
+<li>First, be kind.</li>
+<li>Be more generous.</li>
+<li>Be honest and clear.</li>
+<li>Be reliable, earn trust.</li>
+<li>Find energy in optimism.</li>
+<li>Believe in people.</li>
+</ol>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>30</title>
+			<published>2013-05-10T00:00:00+00:00</published>
+			<updated>2013-05-10T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2013/30/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2013/30/</id>
+			<content type="html"><![CDATA[<p><p>Today is May, 10th 2013, which means that I am now thirty years old. Thanks to calendars, I saw this coming and was able to prepare myself. I even found some time over the last three decades (!) to write a few words.</p>
+<p>Presented as advice to my younger self, exactly thirty things that I (think I kind of) know:</p>
+<ol>
+<li>Try not to give unsolicited advice.</li>
+<li>Showing up on time, consistently and without fanfare, is the single best way to show another person that you respect them.</li>
+<li>People should hear nice things about themselves. Do not assume that everyone does. Give more honest compliments.</li>
+<li>If you drink beer, drink the absolute best beer available, even if that means you can afford fewer beers.</li>
+<li>Try to be the best person that you can be all the time. Maintaining different identities is a burden and it distracts you from working on your real one.</li>
+<li>Kindness, and the strength to display it in all situations, is the single most admirable quality that people can possess.</li>
+<li>If given the opportunity, people will surprise you. Leaving yourself open to these surprises is a kind of risk. Taking that risk is how you believe in people.</li>
+<li>Own fewer things. Identify possessions that you love. Take care of them, treat them well, and keep them forever.</li>
+<li>When with others, make every possible effort to be with them wholeheartedly and every possible effort to not fiddle with your mobile devices.</li>
+<li>Every photograph and video you take at a concert or other live event will probably be terrible. Just enjoy the moments, don't feel pressured to document them.</li>
+<li>Let people leave your life when they need to. Leave a light on for them in case they ever decide to return. Collect those lights and regularly remember why you keep them lit.</li>
+<li>Write more letters. Literal, pen-and-paper, had-to-buy-a-stamp-and-remember-where-your-friend-lives letters.</li>
+<li>Be a relentless champion of people you care about.</li>
+<li>When hugging, hug with two arms, while standing and applying reasonable, affectionate pressure.</li>
+<li>Take every possible precaution to ensure that you own what you make: words, art, music, photographs, and even social media updates.</li>
+<li>If you make something that you think could help someone, give it away.</li>
+<li>Go to bed an hour earlier and wake up an hour earlier. Life is nicer in the morning.</li>
+<li>Give more, smaller, unexpected, personal gifts.</li>
+<li>You will miss things. You will not live long enough to experience everything. Try to spend time with this in mind.</li>
+<li>To accomplish something difficult, make the work as easy as you can on yourself. Remove every obstacle except the work. Then do the work.</li>
+<li>When writing lists of advice, simply mine your past mistakes and failures, then try to rephrase them as folksy wisdom.</li>
+<li>There are not many tasks that you'll be doing repeatedly for as long as you're alive, carrying stuff is probably one of them. Buy a really nice bag.</li>
+<li>Other people cannot always see your intentions, they can see your actions.</li>
+<li>No matter how important the rush that you are in, there exists someone in a more important rush, possibly the person directly in front of you.</li>
+<li>Find something small, cheap, and easily reproducible that makes your day better. Make it a point to include it in life as often as possible. I suggest tea.</li>
+<li>Settle into the realization that other people can be as intelligent as you. And more intelligent. And less intelligent. But, understand that you often won't be able to tell the difference.</li>
+<li>Ask your parents more questions about themselves, answer more of your parents' questions about yourself.</li>
+<li>Unless you have finished writing a book, it's probably best not to tell anyone that you are writing a book.</li>
+<li>Seeking comfort is just fine. Seeking unending comfort can be a trap; occasionally, pursue the uncomfortable.</li>
+<li>Placing a ripe, soft avocado in a refrigerator will extend its life by two days, give or take.</li>
+<li>Once in a while, when you feel strongly about it, break a rule.</li>
+</ol>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>Shipping is a Habit</title>
+			<published>2013-03-18T00:00:00+00:00</published>
+			<updated>2013-03-18T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2013/shipping-is-a-habit/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2013/shipping-is-a-habit/</id>
+			<content type="html"><![CDATA[<p><p>Writing software is an art form. As much as it relies on engineering and science, at its heart, it is a creative pursuit.</p>
+<blockquote>
+<p>&quot;The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by the exertion of the imagination.&quot;</p>
+<p>– Fred Brooks, The Mythical Man Month</p>
+</blockquote>
+<p>Unfortunately, programming seems to be an art form that lends itself to unfinished work. We build castles in the air, but we rarely allow others to visit. We take comfort in our open projects and their obscurity. Sometimes, it can be more exciting to be working than to have worked.</p>
+<p>But, real artists ship and shipping is a conscious decision. Software does not ship itself. No one is going to discover your nearly-finished bug tracker 100 years after your death while buying your MacBook at a yard sale, launch it, and give you credit. Ship it while you're alive.</p>
+<p>We get trapped by the idea that our work can be better. That more time and work will inevitably yield better results. Of course this is true, but it will always be true. It will never be finished, but it might already be mostly finished.</p>
+<blockquote>
+<p>&quot;You guys have been working on this stuff for months now, another couple weeks isn't going to make that much of a difference. You may as well get it over with. Just make it as good as you can.&quot;</p>
+<p>– Steve Jobs, <a href="http://www.folklore.org/StoryView.py?story=Real_Artists_Ship.txt">Real Artists Ship</a></p>
+</blockquote>
+<p>So, real artists ship. This is not a new idea. What I would like to propose is that <em>shipping is a habit</em>. Real artists are habitually shipping, they cannot stop shipping, and they understand the value of shipping. Shipping, publishing, putting-private-work-into-the-public-space frees it from the tight grasp of its creator. Art becomes real at the moment that it ships, the moment that a second person sees it.</p>
+<p>It is a cycle that refreshes itself. Constructive feedback, or praise, or disagreement are all seeds of creativity's more practical cousin: iteration.</p>
+<p>Software, like many art forms, is perpetually unfinished. Pushing it out the door is the first step in the iteration process. And iteration is the only path to great work. Second drafts are refinements of first drafts.</p>
+<p>Exposing our efforts into public light is adicting. We start to value our public works more than our private ones, not for their notoriety, but for their temporary completeness. For the idea that they were, in some imperfect moment, finished. We ship to move our work off of the stack, to make room in our minds and our lives for new ideas.</p>
+<blockquote>
+<p>&quot;Shipping is the collision between your work and the outside world.&quot;</p>
+<p>– Seth Godin, <a href="http://books.google.com/books?id=dI66B5IY2X0C&amp;pg=PT97&amp;lpg=PT97&amp;dq=godin+linchpin+%22real+artists+ship%22&amp;source=bl&amp;ots=B-nIIK7AG9&amp;sig=XtKx6wpQqXPg8e0FM-0AYJGq1cQ&amp;hl=en&amp;sa=X&amp;ei=qmYET-2wMcXL0QG3ue3iBA&amp;sqi=2&amp;ved=0CB0Q6AEwAA#v=onepage&amp;q&amp;f=false">Linchpin</a></p>
+</blockquote>
+<p>So, ship something today. Launch something that is useful, but isn't perfect. Publicize something that you're only half-happy with. Show someone else a part of yourself that you aren't particularly impressed with. The goal should be to return to that work a year later and be amused by its amateurism, for having grown. Or to return to that work tomorrow, driven to improve it.</p>
+<p>Much scarier than any result of shipping, is the idea that not shipping can become a habit too. We can be seduced by the comfort of our own minds and our own opinions of the work that we do. Our own feedback is overly accommodating, we are made partial by our own memories of how difficult it can be to create something. We can be scared to invite feedback that isn't colored by the struggle of creation. But, while fear is a poor choice of motivator to stay put, it's a fantastic reason to move forward.</p>
+<p>There are very few acts more human than to make something. And when we <a href="/notes/2012/make-things-and-give-them-to-people/">share those things with others</a>, we get to grow in ways that we didn't plan.</p>
+<p>Keep building your castles in the air, but get in the habit of publishing the address.</p>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>Tins, Watches, and Emotional Assignments</title>
+			<published>2012-02-29T00:00:00+00:00</published>
+			<updated>2023-02-15T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2012/tins-watches-and-emotional-assignments/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2012/tins-watches-and-emotional-assignments/</id>
+			<content type="html"><![CDATA[<p><h2 id="update">Update ✳</h2>
+<p><small><em>2023-02-15</em></small></p>
+<p>This year, after more than a decade of service, my beloved <a href="https://www.casio.com/us/watches/casio/product.A168WA-1/">Casio A168</a> began exhibiting some odd behavior. A battery replacement didn't solve the problems and I ended up replacing it with the <a href="https://www.casio.com/us/watches/gshock/product.DW-5600E-1V/">Casio G-Shock DW5600E-1V</a>. It's a bit larger, hopefully a bit more durable, and still has its iconic, perfect electroluminescence.</p>
+<hr class="very-small" />
+<p>On the bookcase above my desk, surrounded by a dust ring of neglect, rests an old, oval, tin box that once belonged to my great grandfather. It's weathered with a beautiful patina that nearly obscures the detailed scenes etched into it, but just manages to make it look lived-in.</p>
+<p>There is a single business card in that tin. The card is simple in its design, but thorough in its description of his job: &quot;Master and Pilot for Yachts for the Atlantic Coast and Inland Waters from Maine to Florida.&quot;</p>
+<p>What a title! Sixteen words. The phone number listed on the card is a mere three digits. His first and middle name are described only in initials. Delaware is abbreviated to Del. But, that title is there fully in all of its ridiculous specificity. He must have been a proud Master and Pilot for Yachts for the Atlantic Coast and Inland Waters from Maine to Florida.</p>
+<p>I love this thing.</p>
+<p>There are very few things that I own which carry any emotional or sentimental weight to them.<sup class="footnote-reference"><a href="#1">1</a></sup> Manufactured goods are sterile in that way. So, it's much easier to develop an affection for older items. It's easier to believe they've had a life. Indifference is for things and emotions are for people. Or sometimes really, really old things that once belonged to people.</p>
+<p>On occasion, I think it's useful to deliberately assign some value to those things that we choose to let surround us. By doing so, we can take an object and make it more. We can make it our own. We can give it a life.</p>
+<p>Every day, I wear my Casio A168. Right now, it tells me that the time is 21:08. It lights up a stunning teal from the 1980's and it keeps track of leap years effortlessly. It is simple, it is ugly, and you can <a href="https://www.casio.com/us/watches/casio/product.A168WA-1">buy one for about 14 bucks</a> (<span class="color">✳</span> <em>2023 update:</em> <a href="https://www.casio.com/us/watches/casio/product.A168WA-1/">about $29</a>).</p>
+<p>Etched into the back of this mass-produced work of art are some mass-produced words. CASIO. STAINLESS STEEL BACK. WATER RESISTANT. Made in China.</p>
+<p>Fair enough.</p>
+<p>More than those words will ever convey, this little thing has been perched on my wrist for some wonderful moments of my life. I saw my sister get married in this watch. It, literally, touched my nephew the very first time that I held him. It moved to New York City with me. I once fell in love wearing it. It is the subject of the most thoughtful gift that I have ever received. And as I wrote each of these words it was with me, encouraging me from my left.</p>
+<p>I have stretched my arm past my sleeve, letting it poke out to tell me the hour, literally, hundreds of times. It intimately knows every shirt that I own. It keeps track of any changes in the circumference of my wrist.</p>
+<p>It is a personal logo, a brand, and a mark.</p>
+<p>It is a watch, but I have high hopes for its life. It will inevitably outlive me. I hope that it finds its way to a great, great grandchild of mine. And if it ever gets that far, I for damn sure better have etched even more memories into it.<sup class="footnote-reference"><a href="#2">2</a></sup> And so, it and I keep going. We keep making.</p>
+<p>It is a watch. But, I've assigned it a larger role than that. It is a flag pole, clasped to my wrist, reminding me of the time, my age, and moments in my life that I am lucky enough to want to remember. With <a href="http://en.wikipedia.org/wiki/Electroluminescence">electroluminescence</a> in case they happen at night.</p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>In an apartment-building-fire situation, this tin is one of a small handful of items that I would grab before tumbling down my fire escape to the safety.</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>And I should probably provide a few decade's worth of (currently) available batteries.</p>
+</div>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>Make Things and Give Them to People</title>
+			<published>2012-01-30T00:00:00+00:00</published>
+			<updated>2012-01-30T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2012/make-things-and-give-them-to-people/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2012/make-things-and-give-them-to-people/</id>
+			<content type="html"><![CDATA[<p><p>In 2002 Kurt Vonnegut gave a speech in southern Michigan to the graduating class of Albion College. Most of what he said that day ended up being included in his memoir, <a href="https://bookshop.org/p/books/a-man-without-a-country-kurt-vonnegut/577126">A Man Without A Country</a>, which I absolutely recommend reading. But, I'm going to pull out two phrases and one point which I think he crafted just beautifully.</p>
+<p>Indulge me and jump to about the 5:55 mark in <a href="http://www.youtube.com/watch?v=ESwSiKRs9hc">this video</a> and stick around for two minutes or so. He'll start off with a joke, but it will build the context for the two quotes that I'll pull below.</p>
+<blockquote>
+<p>So many people think that practicing an art is a way to make a living, is a good way to make a living. Practicing an art, no matter how well or badly, is a way to make your soul grow, for heaven's sake.</p>
+</blockquote>
+<p>He then gives the audience a homework assignment. He asks them to write a poem, as best they can, show it to no one and then destroy it. And here's what he expects will happen:</p>
+<blockquote>
+<p>And you will find out, you have been rewarded, big time. This came out of you! This is the act of creativity. The hell with fame, the hell with money, you created this.</p>
+</blockquote>
+<p>Looking a little closer and using the VTPE<sup class="footnote-reference"><a href="#1">1</a></sup> we can come to the conclusion that Kurt was leading us to.</p>
+<pre>
+if art = soul growth
+and making things = art
+then making things = soul growth
+</pre>
+<p>There are a lot of different ways that we can spend our time and I won't be declaring that I understand life well enough to tell anyone how to spend theirs. But, I will write that I do not believe Kurt was wrong here. You will not be disappointed in spending a few minutes, or even a few hours, making something. The reward that we get, as human beings, from <strong>making things</strong> is undeniable and universal.</p>
+<p>The best argument that I can grasp to support that universality is how much creating we all do as children. When unencumbered and encouraged, we were creating-machines. We colored any wax-able surface and constructed forts on anything fort-bearing. But, for so many of us, this making slows down as we age.</p>
+<p>I have a simple, two-step plan to remedy that:</p>
+<ol>
+<li>Make things again.</li>
+<li>Give them to people.</li>
+</ol>
+<p>The second step incentivizes the first. Our organic desire to create may wane over the years, but in that same time our connections to people have grown. We've figured out, in own ways, what friendship is, and what respect is, and what love is. And with those books on our shelves, unfinished as they may always be, we can make fantastic things.<sup class="footnote-reference"><a href="#2">2</a></sup></p>
+<p>Sometimes, after making something, if you're comfortable with it (and sometimes even if you're not), <strong>give it to someone</strong>. Because, as human as making things is, its humanity pales next to making things for another person. Giving a gift is another, perfectly wonderful way to make your soul grow. So, here's what I'm positing as an addendum to Kurt's proof:</p>
+<pre>
+if making things = soul growth
+and giving things to people = soul growth
+then making things and giving them to people = soul growth x 2
+</pre>
+<p>That's two times the soul growth for the <strong>maker-giver</strong>. Plus, the net soul gain for the <strong>receiver</strong>.<sup class="footnote-reference"><a href="#3">3</a></sup></p>
+<p>Write someone something, draw someone something, or sing someone something. Make anyone anything. But, sometimes, give it to them. Choose the something and the someone appropriately or inappropriately. Choose so that it's easy, or that it's hard, or that it's unexpected.<sup class="footnote-reference"><a href="#4">4</a></sup> You will get a reward from both the making and the giving. You will get to give a brand new part of yourself that is distinct and that was made just for another person. You will get to be reminded that you can still make new parts of yourself. All of that will be inside this <strong>thing that you made.</strong></p>
+<p>So, make things and give them to people.</p>
+<p>It's twice the soul growth. At least.</p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>Vonnegut Transitive Property of Equality</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>Like <a href="http://www.youtube.com/watch?v=i1iiiEgqgT4">this</a>, and <a href="http://pauloctavious.com/bookcollection">this</a>, and <a href="http://www.zefrank.com/chillout">this</a>, or <a href="http://itunes.apple.com/us/app/handwritten/id452771113">this</a>.</p>
+</div>
+<div class="footnote-definition" id="3"><sup class="footnote-definition-label">3</sup>
+<p>I haven't really tried to quantify this, but it's almost certainly positive.</p>
+</div>
+<div class="footnote-definition" id="4"><sup class="footnote-definition-label">4</sup>
+<p>That's my personal favorite.</p>
+</div>
+</p>
+			]]></content>
+		</entry><entry>
+			<title>Ties</title>
+			<published>2012-01-04T00:00:00+00:00</published>
+			<updated>2012-01-04T00:00:00+00:00</updated>	
+			<link rel="alternate" href="https://www.matthewhowell.net/notes/2012/ties/" type="text/html"/>
+			<id>https://www.matthewhowell.net/notes/2012/ties/</id>
+			<content type="html"><![CDATA[<p><p>When I was 12 years old, my father taught me to tie a four-in-hand knot. He gave me a hands-on lesson and a sheet of illustrated instructions from an old tie box. We disagreed on the ideal width of that knot, a preference which evidently increases with one's years, but we both understood the utility of it. It was simple. And it served a purpose.</p>
+<p>We also understood that I was, from that moment on, the tier of my own ties.</p>
+<p>That four-in-hand has accompanied me to interviews, to weddings, and to funerals. It's come with me to new cities and returned with me to old towns. It's shown up for important moments in my life and helped me show up, appropriately dressed, for important moments in the lives of people close to me. And sixteen years later, I am still recreating it, crudely, each morning before I before I go to work.</p>
+<p>I write software for a living in a windowless basement. The dress code for which is not formal.</p>
+<p>I have not found that women are unavoidably attracted to neckwear.</p>
+<p>That tie gets to leave my closet every weekday, and gets to ride on a train or a bicycle, to serve as a reminder.</p>
+<p>I spend a non-trivial amount of my time trying to improve and to update skills that I am lucky enough to be able to earn a living with. Those skills allow me to make things. They allow me to call home a city that I love. And they help me to define a curiosity which I feel grateful to know.</p>
+<p>I aspire to that same effort in the parts of my life for which I am not paid. I want to be better in what I write, and in what I say, and in how I treat people. I have days when I am so aware of all of this that it's thick in the air the moment that I wake up. But, I have days when it's not. And it's useful to build a symbol of it into my routine.</p>
+<p>That tie allows me to literally affix my aspirations to my neck with a knot. It is simple. And it serves a purpose. I put it on in the morning and it becomes a small, sometimes striped reminder that I am going to be a professional today, in everything that I do. And that I am on my own to tie the knot and to choose the width.</p>
+</p>
+			]]></content>
+		</entry>
+</feed>
