@@ -1,9 +1,0 @@
-<svg class="mh-mark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 96 72" xmlns="http://www.w3.org/2000/svg">
-	<path class="mark-background" d="m180 45h15v45h-15z" fill="#232226" transform="matrix(6.4 0 0 1.6 -1152 -72)"/>
-	<g fill="#fff">
-		<path class="mark-square-1" d="m64 16h16v16h-16z" stroke-width=".5"/>
-		<path class="mark-square-2" d="m64 40h16v16h-16z" stroke-width=".5"/>
-		<path class="mark-triangle-1" d="m2590 1890 30 80h-60z" transform="matrix(.266667 0 0 .2 -666.667 -350)"/>
-		<path class="mark-triangle-2" d="m2590 1890 30 80h-60z" transform="matrix(.266667 0 0 .2 -642.667 -350)"/>
-	</g>
-</svg>
