@@ -16,8 +16,8 @@
 			<title>A Golden Age of Websites</title>
 			<published>2023-02-05T00:00:00+00:00</published>
 			<updated>2023-02-05T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2023/a-golden-age-of-websites/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2023/a-golden-age-of-websites/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2023/a-golden-age-of-websites/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2023/a-golden-age-of-websites/</id>
 			<content type="html"><![CDATA[<p><h1 id="golden-age">Golden Age</h1>
 <h2 id="the-web-is-for-everyone">The web is for everyone</h2>
 <p>The year is 1996
@@ -186,8 +186,8 @@ Stateless web</p>
 			<title>A New, Old Website</title>
 			<published>2023-02-05T00:00:00+00:00</published>
 			<updated>2023-02-05T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2023/a-new-old-website/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2023/a-new-old-website/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2023/a-new-old-website/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2023/a-new-old-website/</id>
 			<content type="html"><![CDATA[<p><p>Today, there is a new <a href="https://www.matthewhowell.net">matthewhowell.net</a>, something like the seventh version (though, I've been a poor steward of my own personal website archives).</p>
 <h2 id="a-new-generator">A New Generator</h2>
 <p>The primary reason for the relaunch the site is to switch from <a href="https://gohugo.io">Hugo</a> (a very popular <abbr title="Static Site Generator">SSG</abbr>) to <a href="https://www.getzola.org">Zola</a> (a less popular SSG). I used Hugo for more than 4 years, but never really felt comfortable with. It's quite powerful, but not always straightforward, particularly its <a href="https://gohugo.io/templates/introduction/">incredibly complex templating language</a>.</p>
@@ -440,19 +440,19 @@ Stateless web</p>
 			<title>0005 – Train Tracks Looking North</title>
 			<published>2023-02-05T00:00:00+00:00</published>
 			<updated>2023-02-05T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/photos/0005/" type="text/html"/>
-			<id>https://www.matthewhowell.net/photos/0005/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/photos/0005/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/photos/0005/</id>
 			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0005/photo-0005.jpeg" alt="Train tracks looking north, disappearing in the distance with gray stones and green grass on either side, trees and farm buildings near the horizon." width="600px" />
-				<p><a href="https://www.matthewhowell.net/photos/0005/">View more information about the photo and download full resolution image</a>.</p><p></p>
+				<p><a href="https://matthewhowell-dev.netlify.app/photos/0005/">View more information about the photo and download full resolution image</a>.</p><p></p>
 			]]></content>
 		</entry><entry>
 			<title>0006 – Roller Coaster Track Lights</title>
 			<published>2023-02-05T00:00:00+00:00</published>
 			<updated>2023-02-05T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/photos/0006/" type="text/html"/>
-			<id>https://www.matthewhowell.net/photos/0006/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/photos/0006/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/photos/0006/</id>
 			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0006/photo-0006.jpeg" alt="A roller coaster track, descending downward at 45 degrees, blue arrows lets along the line, in front of purple evening sky blending into the last bit of pastel orange from the setting sun." width="600px" />
-				<p><a href="https://www.matthewhowell.net/photos/0006/">View more information about the photo and download full resolution image</a>.</p><p><p>There is a theme park just off the boardwalk in Ocean City, Maryland</p>
+				<p><a href="https://matthewhowell-dev.netlify.app/photos/0006/">View more information about the photo and download full resolution image</a>.</p><p><p>There is a theme park just off the boardwalk in Ocean City, Maryland</p>
 <p>There is a carousel</p>
 <p>There a child, unbothered, asleep, tired from beach all day grandmother, asleep in his stroller - as people scream behind him, putting their arms into the air, down the tracks.</p>
 </p>
@@ -461,47 +461,47 @@ Stateless web</p>
 			<title>0004 – Moss on Stairs in a Cemetery</title>
 			<published>2023-01-22T00:00:00+00:00</published>
 			<updated>2023-01-22T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/photos/0004/" type="text/html"/>
-			<id>https://www.matthewhowell.net/photos/0004/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/photos/0004/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/photos/0004/</id>
 			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0004/photo-0004.jpeg" alt="Bright green moss grows around and on top of a staircase, winding up a small hill in Okuno-in cemetery in Koyasan, Japan." width="600px" />
-				<p><a href="https://www.matthewhowell.net/photos/0004/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
+				<p><a href="https://matthewhowell-dev.netlify.app/photos/0004/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
 </p>
 			]]></content>
 		</entry><entry>
 			<title>0003 – A Sunrise in Rehoboth</title>
 			<published>2023-01-15T00:00:00+00:00</published>
 			<updated>2023-01-15T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/photos/0003/" type="text/html"/>
-			<id>https://www.matthewhowell.net/photos/0003/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/photos/0003/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/photos/0003/</id>
 			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0003/photo-0003.jpeg" alt="An orange sun, peaking above the clouds, rising over the beach in Rehoboth, Delaware. A shorebird stands on the sand in the light." width="600px" />
-				<p><a href="https://www.matthewhowell.net/photos/0003/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
+				<p><a href="https://matthewhowell-dev.netlify.app/photos/0003/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
 </p>
 			]]></content>
 		</entry><entry>
 			<title>0002 – A Butterfly Above a Pond</title>
 			<published>2023-01-08T00:00:00+00:00</published>
 			<updated>2023-01-08T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/photos/0002/" type="text/html"/>
-			<id>https://www.matthewhowell.net/photos/0002/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/photos/0002/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/photos/0002/</id>
 			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0002/photo-0002.jpeg" alt="A blue sky and a bright green tree line reflecting on the still water below, a butterfly glides across the foreground. Taken at Trap Pond State Park in Delaware." width="600px" />
-				<p><a href="https://www.matthewhowell.net/photos/0002/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
+				<p><a href="https://matthewhowell-dev.netlify.app/photos/0002/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
 </p>
 			]]></content>
 		</entry><entry>
 			<title>0001 – Hills Near Tortola</title>
 			<published>2023-01-01T00:00:00+00:00</published>
 			<updated>2023-01-01T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/photos/0001/" type="text/html"/>
-			<id>https://www.matthewhowell.net/photos/0001/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/photos/0001/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/photos/0001/</id>
 			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0001/photo-0001.jpeg" alt="Hills in the distance, over the water, taken from a boat in the Atlantic Ocean, near Tortola." width="600px" />
-				<p><a href="https://www.matthewhowell.net/photos/0001/">View more information about the photo and download full resolution image</a>.</p><p></p>
+				<p><a href="https://matthewhowell-dev.netlify.app/photos/0001/">View more information about the photo and download full resolution image</a>.</p><p></p>
 			]]></content>
 		</entry><entry>
 			<title>2022 at Reasonable Company</title>
 			<published>2022-12-31T00:00:00+00:00</published>
 			<updated>2022-12-31T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2022/2022-at-reasonable-company/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2022/2022-at-reasonable-company/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2022/2022-at-reasonable-company/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2022/2022-at-reasonable-company/</id>
 			<content type="html"><![CDATA[<p><p><a href="https://www.reasonable.work">Reasonable Company</a> was formed in January of 2022. At the end of each calendar year, I will take time to revisit the company's goals, reflect on its successes and failures, and define my expectations for the next 12 months.</p>
 <h2 id="defining-reasonable-company">Defining Reasonable Company</h2>
 <p>First, each year, I want to revisit the company's purpose and definition. In 2022, I wrote: <em>Reasonable Company is the values-led design and creative practice of Matthew Howell.</em></p>
@@ -557,8 +557,8 @@ Stateless web</p>
 			<title>2022 in Favorites</title>
 			<published>2022-12-31T00:00:00+00:00</published>
 			<updated>2023-01-31T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2022/2022-in-favorites/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2022/2022-in-favorites/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2022/2022-in-favorites/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2022/2022-in-favorites/</id>
 			<content type="html"><![CDATA[<p><p>I finished Ursula K. Le Guin's Earthsea series this year. <a href="https://bookshop.org/p/books/the-other-wind-5-ursula-k-le-guin/11351096">The Other Wind</a> was <mark>my favorite book</mark> that I read in 2022. It was published in 2001. Earthsea, I think, is my favorite series of fantasy books. It's bittersweet to finish a beloved story, knowing that it's over as soon as you turn the last page, understanding that there will be no more.</p>
 <p>I also quite liked <a href="https://bookshop.org/p/books/the-once-and-future-witches-alix-e-harrow/14467617">The Once and Future Witches</a> by Alix E. Harrow. It was published in 2020. Imagining witchcraft sitting alongside other American struggles (suffrage, civil rights, bodily autonomy, etc) made this story feel more practical than one might expect. It was also just <em>very fun</em> to read.</p>
 <p>Related: <a href="/reading">everything I read</a> in 2022.</p>
@@ -582,8 +582,8 @@ Stateless web</p>
 			<title>Selling Lemons</title>
 			<published>2022-05-03T00:00:00+00:00</published>
 			<updated>2022-05-03T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2022/selling-lemons/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2022/selling-lemons/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2022/selling-lemons/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2022/selling-lemons/</id>
 			<content type="html"><![CDATA[<p><p>Today, I released <a href="https://www.reasonable.work/1024-lemons">1024 Lemons</a>, a small, citrusy generative art project bound for the public domain. Here, I'll detail how it's being sold and explain why I'm giving it away.</p>
 <h2 id="what-is-this">What is this?</h2>
 <p><em>1024 Lemons</em> is a generative art project that works like this:</p>
@@ -695,8 +695,8 @@ Stateless web</p>
 			<title>On Collecting Music</title>
 			<published>2022-01-04T00:00:00+00:00</published>
 			<updated>2022-01-04T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2022/on-collecting-music/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2022/on-collecting-music/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2022/on-collecting-music/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2022/on-collecting-music/</id>
 			<content type="html"><![CDATA[<p><p>Last week, I spent $11.72 to purchase a CD and have it mailed to my house. Here, I'm writing down some thoughts on why I collect music and why, in 2022, I still buy CDs.</p>
 <p>To start, three verifiable facts about myself.</p>
 <ol>
@@ -809,8 +809,8 @@ Sony and Philips jointly developed the format so that they could sell CD players
 			<title>2021 in Favorites</title>
 			<published>2021-12-30T00:00:00+00:00</published>
 			<updated>2021-12-30T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2021/20211231-2021-in-favorites/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2021/20211231-2021-in-favorites/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2021/20211231-2021-in-favorites/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2021/20211231-2021-in-favorites/</id>
 			<content type="html"><![CDATA[<p><p><a href="https://bookshop.org/books/the-memory-police/9781101911815">The Memory Police</a> by Yōko Ogawa was <mark>my favorite book</mark> that I read in 2021. It was originally published in 1994 in Japan, but an English translation (by Stephen Snyder) was released in 2019.</p>
 <p>I think this book is a masterpiece. An allegory for fascism? Or Alzheimer's disease? Or maybe just the existential dread of a finite and temporary world? Maybe. It's also about humans taking care of each other in a hopeless situation. Whatever it is, it's beautiful and feels like a small, lovingly-crafted object.</p>
 <p>Related: <a href="/reading">everything I read</a> in 2021.</p>
@@ -834,8 +834,8 @@ Sony and Philips jointly developed the format so that they could sell CD players
 			<title>Personal Values</title>
 			<published>2016-02-23T00:00:00+00:00</published>
 			<updated>2016-02-23T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2016/personal-values/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2016/personal-values/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2016/personal-values/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2016/personal-values/</id>
 			<content type="html"><![CDATA[<p><p>A publicly accessible and occasionally refined list of personal values.</p>
 <ol>
 <li>First, be kind.</li>
@@ -851,8 +851,8 @@ Sony and Philips jointly developed the format so that they could sell CD players
 			<title>30</title>
 			<published>2013-05-10T00:00:00+00:00</published>
 			<updated>2013-05-10T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2013/30/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2013/30/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2013/30/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2013/30/</id>
 			<content type="html"><![CDATA[<p><p>Today is May, 10th 2013, which means that I am now thirty years old. Thanks to calendars, I saw this coming and was able to prepare myself. I even found some time over the last three decades (!) to write a few words.</p>
 <p>Presented as advice to my younger self, exactly thirty things that I (think I kind of) know:</p>
 <ol>
@@ -894,8 +894,8 @@ Sony and Philips jointly developed the format so that they could sell CD players
 			<title>Shipping is a Habit</title>
 			<published>2013-03-18T00:00:00+00:00</published>
 			<updated>2013-03-18T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2013/shipping-is-a-habit/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2013/shipping-is-a-habit/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2013/shipping-is-a-habit/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2013/shipping-is-a-habit/</id>
 			<content type="html"><![CDATA[<p><p>Writing software is an art form. As much as it relies on engineering and science, at its heart, it is a creative pursuit.</p>
 <blockquote>
 <p>&quot;The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by the exertion of the imagination.&quot;</p>
@@ -926,8 +926,8 @@ Sony and Philips jointly developed the format so that they could sell CD players
 			<title>Tins, Watches, and Emotional Assignments</title>
 			<published>2012-02-29T00:00:00+00:00</published>
 			<updated>2023-02-15T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2012/tins-watches-and-emotional-assignments/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2012/tins-watches-and-emotional-assignments/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2012/tins-watches-and-emotional-assignments/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2012/tins-watches-and-emotional-assignments/</id>
 			<content type="html"><![CDATA[<p><h2 id="update">Update ✳</h2>
 <p><small><em>2023-02-15</em></small></p>
 <p>This year, after more than a decade of service, my beloved <a href="https://www.casio.com/us/watches/casio/product.A168WA-1/">Casio A168</a> began exhibiting some odd behavior. A battery replacement didn't solve the problems and I ended up replacing it with the <a href="https://www.casio.com/us/watches/gshock/product.DW-5600E-1V/">Casio G-Shock DW5600E-1V</a>. It's a bit larger, hopefully a bit more durable, and still has its iconic, perfect electroluminescence.</p>
@@ -958,8 +958,8 @@ Sony and Philips jointly developed the format so that they could sell CD players
 			<title>Make Things and Give Them to People</title>
 			<published>2012-01-30T00:00:00+00:00</published>
 			<updated>2012-01-30T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2012/make-things-and-give-them-to-people/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2012/make-things-and-give-them-to-people/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2012/make-things-and-give-them-to-people/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2012/make-things-and-give-them-to-people/</id>
 			<content type="html"><![CDATA[<p><p>In 2002 Kurt Vonnegut gave a speech in southern Michigan to the graduating class of Albion College. Most of what he said that day ended up being included in his memoir, <a href="https://bookshop.org/p/books/a-man-without-a-country-kurt-vonnegut/577126">A Man Without A Country</a>, which I absolutely recommend reading. But, I'm going to pull out two phrases and one point which I think he crafted just beautifully.</p>
 <p>Indulge me and jump to about the 5:55 mark in <a href="http://www.youtube.com/watch?v=ESwSiKRs9hc">this video</a> and stick around for two minutes or so. He'll start off with a joke, but it will build the context for the two quotes that I'll pull below.</p>
 <blockquote>
@@ -1011,8 +1011,8 @@ then making things and giving them to people = soul growth x 2
 			<title>Ties</title>
 			<published>2012-01-04T00:00:00+00:00</published>
 			<updated>2012-01-04T00:00:00+00:00</updated>	
-			<link rel="alternate" href="https://www.matthewhowell.net/notes/2012/ties/" type="text/html"/>
-			<id>https://www.matthewhowell.net/notes/2012/ties/</id>
+			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/notes/2012/ties/" type="text/html"/>
+			<id>https://matthewhowell-dev.netlify.app/notes/2012/ties/</id>
 			<content type="html"><![CDATA[<p><p>When I was 12 years old, my father taught me to tie a four-in-hand knot. He gave me a hands-on lesson and a sheet of illustrated instructions from an old tie box. We disagreed on the ideal width of that knot, a preference which evidently increases with one's years, but we both understood the utility of it. It was simple. And it served a purpose.</p>
 <p>We also understood that I was, from that moment on, the tier of my own ties.</p>
 <p>That four-in-hand has accompanied me to interviews, to weddings, and to funerals. It's come with me to new cities and returned with me to old towns. It's shown up for important moments in my life and helped me show up, appropriately dressed, for important moments in the lives of people close to me. And sixteen years later, I am still recreating it, crudely, each morning before I before I go to work.</p>
