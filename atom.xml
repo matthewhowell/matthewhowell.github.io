@@ -452,10 +452,7 @@ Stateless web</p>
 			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/photos/0006/" type="text/html"/>
 			<id>https://matthewhowell-dev.netlify.app/photos/0006/</id>
 			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0006/photo-0006.jpeg" alt="A roller coaster track, descending downward at 45 degrees, blue arrows lets along the line, in front of purple evening sky blending into the last bit of pastel orange from the setting sun." width="600px" />
-				<p><a href="https://matthewhowell-dev.netlify.app/photos/0006/">View more information about the photo and download full resolution image</a>.</p><p><p>There is a theme park just off the boardwalk in Ocean City, Maryland</p>
-<p>There is a carousel</p>
-<p>There a child, unbothered, asleep, tired from beach all day grandmother, asleep in his stroller - as people scream behind him, putting their arms into the air, down the tracks.</p>
-</p>
+				<p><a href="https://matthewhowell-dev.netlify.app/photos/0006/">View more information about the photo and download full resolution image</a>.</p><p></p>
 			]]></content>
 		</entry><entry>
 			<title>0004 – Moss on Stairs in a Cemetery</title>
@@ -464,8 +461,7 @@ Stateless web</p>
 			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/photos/0004/" type="text/html"/>
 			<id>https://matthewhowell-dev.netlify.app/photos/0004/</id>
 			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0004/photo-0004.jpeg" alt="Bright green moss grows around and on top of a staircase, winding up a small hill in Okuno-in cemetery in Koyasan, Japan." width="600px" />
-				<p><a href="https://matthewhowell-dev.netlify.app/photos/0004/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
-</p>
+				<p><a href="https://matthewhowell-dev.netlify.app/photos/0004/">View more information about the photo and download full resolution image</a>.</p><p></p>
 			]]></content>
 		</entry><entry>
 			<title>0003 – A Sunrise in Rehoboth</title>
@@ -474,8 +470,7 @@ Stateless web</p>
 			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/photos/0003/" type="text/html"/>
 			<id>https://matthewhowell-dev.netlify.app/photos/0003/</id>
 			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0003/photo-0003.jpeg" alt="An orange sun, peaking above the clouds, rising over the beach in Rehoboth, Delaware. A shorebird stands on the sand in the light." width="600px" />
-				<p><a href="https://matthewhowell-dev.netlify.app/photos/0003/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
-</p>
+				<p><a href="https://matthewhowell-dev.netlify.app/photos/0003/">View more information about the photo and download full resolution image</a>.</p><p></p>
 			]]></content>
 		</entry><entry>
 			<title>0002 – A Butterfly Above a Pond</title>
@@ -484,8 +479,7 @@ Stateless web</p>
 			<link rel="alternate" href="https://matthewhowell-dev.netlify.app/photos/0002/" type="text/html"/>
 			<id>https://matthewhowell-dev.netlify.app/photos/0002/</id>
 			<content type="html"><![CDATA[<img src="https://www.matthewhowell.net/photos/0002/photo-0002.jpeg" alt="A blue sky and a bright green tree line reflecting on the still water below, a butterfly glides across the foreground. Taken at Trap Pond State Park in Delaware." width="600px" />
-				<p><a href="https://matthewhowell-dev.netlify.app/photos/0002/">View more information about the photo and download full resolution image</a>.</p><p><p>TODO ESSAY</p>
-</p>
+				<p><a href="https://matthewhowell-dev.netlify.app/photos/0002/">View more information about the photo and download full resolution image</a>.</p><p></p>
 			]]></content>
 		</entry><entry>
 			<title>0001 – Hills Near Tortola</title>
@@ -609,8 +603,8 @@ Stateless web</p>
 <p>There are exactly 1024 <a href="https://shop.reasonable.work/product/1024-lemons">art prints for sale</a>. The lemons within the print are all unique and the prints are all identical. They all look like this.</p>
 <section class="frame">
 	<figure class="art-print">
-	<img alt="1024 Lemons art print preview" loading="lazy" width="280px" src="/assets/_notes/1024-lemons-art-print-preview-660.jpg" />
-	<figcaption><a href="/assets/_notes/1024-lemons-art-print-preview-1320.jpg">View larger preview →</a></figcaption>
+	<img alt="1024 Lemons art print preview" loading="lazy" width="280px" src="/assets/notes/1024-lemons-art-print-preview-660.jpg" />
+	<figcaption><a href="/assets/notes/1024-lemons-art-print-preview-1320.jpg">View larger preview →</a></figcaption>
 	</figure>
 </section>
 <h2 id="how-are-the-prints-being-sold">How are the prints being sold?</h2>
@@ -828,7 +822,7 @@ Sony and Philips jointly developed the format so that they could sell CD players
 <p>This photo of the treeline reflecting off the water at Trap Pond State Park is <mark>my favorite photograph</mark> of 2021.</p>
 <p>A butterfly flew past at the moment that the shutter opened. The lens gathered just enough light to see the yellow markings on its wings. Most of my photographic success relies on chance.</p>
 <p>The full resolution image is available for anyone to use <a href="https://unsplash.com/photos/UWT9whAm_5E">at Unsplash</a>.</p>
-<img src="/assets/_photos/matthew-howell-20210504-trap-pond-960.jpeg" alt="The treeline reflecting off the water at Trap Pond State Park. White clouds in the blue sky. A butterfly floats past." /></p>
+<img src="/assets/photos/matthew-howell-20210504-trap-pond-960.jpeg" alt="The treeline reflecting off the water at Trap Pond State Park. White clouds in the blue sky. A butterfly floats past." /></p>
 			]]></content>
 		</entry><entry>
 			<title>Personal Values</title>

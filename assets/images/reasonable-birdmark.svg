@@ -13,7 +13,7 @@
             <rect x="992" y="1034.32" width="24" height="58.668"/>
         </g>
         <g transform="matrix(1.5,0,0,1.5,-34,-318)">
-            <circle cx="76" cy="276" r="4" style="fill:rgb(235,235,235);"/>
+            <circle cx="76" cy="276" r="4" style="fill:#FFFFFF;"/>
         </g>
     </g>
 </svg>
