@@ -55,12 +55,34 @@
 	<p>This is the public style guide for <a href="https://www.matthewhowell.net">matthewhowell.net</a>. It will be regularly updated, but always incomplete.</p>
 <p>The <a href="https://github.com/matthewhowell/www.matthewhowell.net/tree/master/site.css">annotated CSS ↗</a> is available for reference.</p>
 <h2 id="colors">Colors</h2>
-<section class="style-guide grid">
-	<span style="border-color: var(--color-foreground)" class="color">Body Text<br />#222222</span>
-	<span style="border-color: var(--color-background)" class="color">Background</span>
-	<span style="border-color: var(--color-primary)" class="color">Purple<br />#705DFD</span>
-	<span style="border-color: var(--color-primary-light)" class="color">Light Purple<br />#EBEBFF</span>
-	<span style="border-color: var(--color-primary-dark)" class="color">Dark Purple<br />#433ED5</span>
+<section class="style-guide">
+	<ul>
+		<li class="grid-3">
+			<div style="height: 1rem; background-color: var(--color-foreground)"></div>
+			<span>#222222</span>
+			<span>Body Text</span>
+		</li>
+		<li class="grid-3">
+			<div style="height: 1rem; background-color: var(--color-background)"></div>
+			<span>#FFFFFF</span>
+			<span>Background</span>
+		</li>
+		<li class="grid-3">
+			<div style="height: 1rem; background-color: var(--color-primary)"></div>
+			<span>#705DFD</span>
+			<span>Purple</span>
+		</li>
+		<li class="grid-3">
+			<div style="height: 1rem; background-color: var(--color-primary-light)"></div>
+			<span>#EBEBFF</span>
+			<span>Light Purple</span>
+		</li>
+		<li class="grid-3">
+			<div style="height: 1rem; background-color: var(--color-primary-dark)"></div>
+			<span>#433ED5</span>
+			<span>Dark Purple</span>
+		</li>
+	</ul>
 </section>
 <h2 id="typography">Typography</h2>
 <section class="style-guide headers">
@@ -79,10 +101,6 @@
 	<br />
 	<a aria-current href="#links">Current Page</a>
 </section>
-<h2 id="elements">Elements</h2>
-<section class="style-guide elements">
-<p>headers</p>
-<p>body text</p>
 <h2 id="lists">Lists</h2>
 <h3 id="unordered-lists">Unordered Lists</h3>
 <ul>
@@ -106,14 +124,10 @@
 </ol>
 <h3 id="definition-lists">Definition Lists</h3>
 <dl>
-	<dt>dt Element</dt>
+	<dt>dt element</dt>
 	<dd>dd element</dd>
-	<dt>DT</dt>
-	<dd>dd</dd>
-	<dt>DT</dt>
-	<dd>dd</dd>
-	<dt>DT</dt>
-	<dd>dd</dd>
+	<dt>dt element</dt>
+	<dd>dd element</dd>
 </dl>
 <h3 id="asides-and-blockquotes">Asides and Blockquotes</h3>
 <aside>
@@ -132,29 +146,6 @@
 	<sup class="footnote-definition-label">1</sup>
 	<p>Testing footnotes</p>
 </div>
-<h3 id="tables">Tables</h3>
-<table>
-	<caption>Caption</caption>
-	<tr>
-		<td>Test TD</td>
-		<td>Test TD</td>
-		<td>Test TD</td>
-		<td>Test TD</td>
-	</tr>
-	<tr>
-		<td>Test TD</td>
-		<td>Test TD</td>
-		<td>Test TD</td>
-		<td>Test TD</td>
-	</tr>
-	<tr>
-		<td>Test TD</td>
-		<td>Test TD</td>
-		<td>Test TD</td>
-		<td>Test TD</td>
-	</tr>
-</table>
-
 	</section>
 
   <hr class="end-mark"/>
