@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-prefers-color-scheme>
 
     <head>
         
@@ -10,7 +10,71 @@
 		<meta property="article:author" content="Matthew Howell">
 		<meta property="og:description" content=""><meta property="og:title" content="Reading&#x2F;2021 – Matthew Howell">
 	<meta property="og:image" content="/assets/images/matthew-howell-social.png">
-	<meta property="og:url" content="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;reading&#x2F;2021&#x2F;"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta property="og:url" content="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;reading&#x2F;2021&#x2F;"><script>
+
+	/* system_prefers_color_scheme will mirror system level setting */
+	const system_prefers_color_scheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	let currentColors = document.documentElement.getAttribute("data-prefers-color-scheme");
+			
+	// first, check local storage override	
+	if (localStorage.getItem('website_prefers_color_scheme')) {
+		setPreferredColors(localStorage.getItem('website_prefers_color_scheme'), true);
+	// next, fall back to system preference
+	} else if (system_prefers_color_scheme) {
+		setPreferredColors(system_prefers_color_scheme, false);
+	}
+	
+	window.onload = () => {
+		const set_prefers_light = document.getElementById("set_prefers_light_colors");
+		const set_prefers_dark = document.getElementById("set_prefers_dark_colors");
+		
+		updateDisplayCurrentColors();
+		set_prefers_light.onclick = function() {
+			setPreferredColors('light', true);
+		};
+				
+		set_prefers_dark.onclick = function() {
+			setPreferredColors('dark', true);
+		};
+	}
+
+
+function setPreferredColors(color_preference, set_local) {
+	document.documentElement.setAttribute('data-prefers-color-scheme', color_preference)			
+	if (set_local == true) {
+		localStorage.setItem('website_prefers_color_scheme', color_preference);	
+		updateDisplayCurrentColors();
+	} else {
+		updateDisplayCurrentColors(true);
+	}
+}
+
+function updateDisplayCurrentColors(from_preference) {
+	
+	const set_prefers_light = document.getElementById("set_prefers_light_colors");
+	const set_prefers_dark = document.getElementById("set_prefers_dark_colors");
+	const system_prefers_color_scheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	
+	let currentColors = document.documentElement.getAttribute("data-prefers-color-scheme");
+	let display_current_colors = document.getElementById("display_current_colors");
+	let current_color_text = (currentColors == 'light') ? "Using Light Colors" : "Using Dark Colors";
+	
+	if (from_preference == 'system') {
+		current_color_text = current_color_text + ' (from system preference)';
+	}
+	
+	if (!set_prefers_light || !set_prefers_dark) return;
+
+	if (currentColors == 'light') {
+		set_prefers_light.style.display = 'none';
+		set_prefers_dark.style.display = '';
+	} else { 
+		set_prefers_light.style.display = '';
+		set_prefers_dark.style.display = 'none';
+	}
+	display_current_colors.innerHTML = current_color_text;
+}
+</script><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#705DFD"><link rel=alternate title="Matthew Howell" type="application/atom+xml" href="/atom.xml"><link rel="stylesheet" href="/assets/styles/reasonable.css">
@@ -18,7 +82,7 @@
     </head>
 
     <body><div class="container">
-	    <header><nav class="cluster"><a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 104 104" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g fill="#705dfd"><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z"/><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z" transform="translate(56)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1984 -790.244)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1928 -790.244)"/></g></svg></a><ul class="cluster nav-main">
+	    <header><nav class="cluster"><a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -512 -256)"/><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -192 -256)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -512 64)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -192 64)"/></g></svg></a><ul class="cluster nav-main">
 	  <li><a href="/about" >About</a></li>
 <li><a href="/notes" >Notes</a></li>
 <li><a href="/photos" >Photos</a></li>
@@ -481,6 +545,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Harlem Shuffle</cite>
 	  	<small class="book-author" itemprop="author">Colson Whitehead</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -490,6 +555,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Pine Barrens</cite>
 	  	<small class="book-author" itemprop="author">John McPhee</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -499,6 +565,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Library Book</cite>
 	  	<small class="book-author" itemprop="author">Susan Orlean</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -508,6 +575,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Girl, Woman, Other</cite>
 	  	<small class="book-author" itemprop="author">Bernardine Evaristo</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -517,6 +585,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Imago</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -526,6 +595,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Adulthood Rites</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -535,6 +605,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Dawn</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -544,6 +615,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Memory Police</cite>
 	  	<small class="book-author" itemprop="author">Yōko Ogawa</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -553,6 +625,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The City We Became</cite>
 	  	<small class="book-author" itemprop="author">N. K. Jemisin</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -562,6 +635,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> On Earth We&#x27;re Briefly Gorgeous</cite>
 	  	<small class="book-author" itemprop="author">Ocean Vuong</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -571,6 +645,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> An Acceptable Time</cite>
 	  	<small class="book-author" itemprop="author">Madeleine L&#x27;Engle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -580,6 +655,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Many Waters</cite>
 	  	<small class="book-author" itemprop="author">Madeleine L&#x27;Engle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -589,6 +665,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> A Swiftly Tilting Planet</cite>
 	  	<small class="book-author" itemprop="author">Madeleine L&#x27;Engle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -598,6 +675,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> A Wind in the Door</cite>
 	  	<small class="book-author" itemprop="author">Madeleine L&#x27;Engle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -607,6 +685,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> A Wrinkle in Time</cite>
 	  	<small class="book-author" itemprop="author">Madeleine L&#x27;Engle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -616,6 +695,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Never Let Me Go</cite>
 	  	<small class="book-author" itemprop="author">Kazuo Ishiguro</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -625,6 +705,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Transcendent Kingdom</cite>
 	  	<small class="book-author" itemprop="author">Yaa Gyasi</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -634,6 +715,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Parable of the Talents</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -643,6 +725,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Parable of the Sower</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -652,6 +735,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Purple Hibiscus</cite>
 	  	<small class="book-author" itemprop="author">Chimamanda Ngozi Adichie</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -661,6 +745,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> An American Marriage</cite>
 	  	<small class="book-author" itemprop="author">Tayari Jones</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -670,6 +755,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Acceptance</cite>
 	  	<small class="book-author" itemprop="author">Jeff VanderMeer</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -679,6 +765,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Authority</cite>
 	  	<small class="book-author" itemprop="author">Jeff VanderMeer</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -688,6 +775,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Annihilation</cite>
 	  	<small class="book-author" itemprop="author">Jeff VanderMeer</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -704,7 +792,7 @@
 
 	<section>	
 		<nav class="cluster">
-			<a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 104 104" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g fill="#705dfd"><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z"/><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z" transform="translate(56)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1984 -790.244)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1928 -790.244)"/></g></svg></a>
+			<a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -512 -256)"/><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -192 -256)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -512 64)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -192 64)"/></g></svg></a>
 			<ul class="cluster nav-main"><li><a href="/about" >About</a></li>
 <li><a href="/notes" >Notes</a></li>
 <li><a href="/photos" >Photos</a></li>
@@ -715,16 +803,25 @@
 		<nav class="cluster nav-elsewhere">
 			<strong>Elsewhere</strong>
 			<ul class="cluster">
-				<li><a href="https://www.reasonable.work">Reasonable Co ↗</a></li>
-				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon ↗</a></li>
-				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr ↗</a></li>
-				<li><a href="https://github.com/matthewhowell">Github ↗</a></li>
+				<li><a href="https://www.reasonable.work">Reasonable Co</a></li>
+				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon</a></li>
+				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr</a></li>
+				<li><a href="https://github.com/matthewhowell">Github</a></li>
 			</ul>
 		</nav>
 	</section>
 	
 	<section>
-		<p>This website was made by <a href="https://www.matthewhowell.net">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, and <a href="/feeds">feeds</a>.
+		<p>This website was made by <a href="/">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, and <a href="/feeds">feeds</a>.
+		</p>
+	</section>
+
+	<section>
+		<p>
+			<span id="display_current_colors" class="preference-display"></span>
+			<button aria-label="auto" aria-live="polite" class="preference prefers-light-colors" id="set_prefers_light_colors">Switch to light colors</button>
+			<button aria-label="auto" aria-live="polite" class="preference prefers-dark-colors" id="set_prefers_dark_colors">Switch to dark colors</button>
+			
 		</p>
 	</section>
 

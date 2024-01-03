@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-prefers-color-scheme>
 
     <head>
         
@@ -10,7 +10,71 @@
 		<meta property="article:author" content="Matthew Howell">
 		<meta property="og:description" content=""><meta property="og:title" content="Matthew Howell is an American web generalist and–sometimes–other kind of person. – Matthew Howell">
 	<meta property="og:image" content="/assets/images/matthew-howell-social.png">
-	<meta property="og:url" content="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;about&#x2F;"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta property="og:url" content="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;about&#x2F;"><script>
+
+	/* system_prefers_color_scheme will mirror system level setting */
+	const system_prefers_color_scheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	let currentColors = document.documentElement.getAttribute("data-prefers-color-scheme");
+			
+	// first, check local storage override	
+	if (localStorage.getItem('website_prefers_color_scheme')) {
+		setPreferredColors(localStorage.getItem('website_prefers_color_scheme'), true);
+	// next, fall back to system preference
+	} else if (system_prefers_color_scheme) {
+		setPreferredColors(system_prefers_color_scheme, false);
+	}
+	
+	window.onload = () => {
+		const set_prefers_light = document.getElementById("set_prefers_light_colors");
+		const set_prefers_dark = document.getElementById("set_prefers_dark_colors");
+		
+		updateDisplayCurrentColors();
+		set_prefers_light.onclick = function() {
+			setPreferredColors('light', true);
+		};
+				
+		set_prefers_dark.onclick = function() {
+			setPreferredColors('dark', true);
+		};
+	}
+
+
+function setPreferredColors(color_preference, set_local) {
+	document.documentElement.setAttribute('data-prefers-color-scheme', color_preference)			
+	if (set_local == true) {
+		localStorage.setItem('website_prefers_color_scheme', color_preference);	
+		updateDisplayCurrentColors();
+	} else {
+		updateDisplayCurrentColors(true);
+	}
+}
+
+function updateDisplayCurrentColors(from_preference) {
+	
+	const set_prefers_light = document.getElementById("set_prefers_light_colors");
+	const set_prefers_dark = document.getElementById("set_prefers_dark_colors");
+	const system_prefers_color_scheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	
+	let currentColors = document.documentElement.getAttribute("data-prefers-color-scheme");
+	let display_current_colors = document.getElementById("display_current_colors");
+	let current_color_text = (currentColors == 'light') ? "Using Light Colors" : "Using Dark Colors";
+	
+	if (from_preference == 'system') {
+		current_color_text = current_color_text + ' (from system preference)';
+	}
+	
+	if (!set_prefers_light || !set_prefers_dark) return;
+
+	if (currentColors == 'light') {
+		set_prefers_light.style.display = 'none';
+		set_prefers_dark.style.display = '';
+	} else { 
+		set_prefers_light.style.display = '';
+		set_prefers_dark.style.display = 'none';
+	}
+	display_current_colors.innerHTML = current_color_text;
+}
+</script><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#705DFD"><link rel=alternate title="Matthew Howell" type="application/atom+xml" href="/atom.xml"><link rel="stylesheet" href="/assets/styles/reasonable.css">
@@ -18,7 +82,7 @@
     </head>
 
     <body><div class="container">
-	    <header><nav class="cluster"><a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 104 104" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g fill="#705dfd"><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z"/><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z" transform="translate(56)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1984 -790.244)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1928 -790.244)"/></g></svg></a><ul class="cluster nav-main">
+	    <header><nav class="cluster"><a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -512 -256)"/><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -192 -256)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -512 64)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -192 64)"/></g></svg></a><ul class="cluster nav-main">
 	  <li><a href="/about"  aria-current="page">About</a></li>
 <li><a href="/notes" >Notes</a></li>
 <li><a href="/photos" >Photos</a></li>
@@ -44,19 +108,19 @@
 <p>Since 2005 or so, it has been my great professional privilege to work on and around the Web. That work has shaped my career, as well as my worldview: I am a believer in the Web and everything that it could be.</p>
 <p>When gently prodded to describe myself, I'll reach for the term <mark>web generalist</mark> and I approach my work from that perspective: primarily interested in the Web and its core technologies. Most often, that work has been development, but it has also included design, teaching, and writing.</p>
 <p><mark>I am here, trying my best, to make nice websites for everyone</mark>.</p>
-<p>Today, I do that work at <a class="bird-link" href="https://www.reasonable.work"><svg class="reasonable-birdmark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 25 48" xmlns="http://www.w3.org/2000/svg"><path d="m576 1060v24c13.246 0 24-10.75 24-24zm0-4v-72c13.246 0 24 10.754 24 24v48zm28-36v-24c13.246 0 24 10.75 24 24zm-16-16.5c2.484 0 4.5 2.02 4.5 4.5s-2.016 4.5-4.5 4.5-4.5-2.02-4.5-4.5 2.016-4.5 4.5-4.5z" fill="#9b70ff" transform="matrix(.48 0 0 .48 -276.48 -472.32)"/></svg>Reasonable Company ↗</a>, my little, <a href="https://www.reasonable.work/values">values-led ↗</a> design and creative practice.</p>
+<p>Today, I do that work at <a class="bird-link" href="https://www.reasonable.work">Reasonable Company</a>, my little, <a href="https://www.reasonable.work/values">values-led</a> design and creative practice.</p>
 <h3 id="more-about-matthew">More About Matthew</h3>
 <p>Like most humans, I'm interested in lots of disparate things outside of my work. Some favorites includes: tea, trees, public libraries, public transportation, cameras, walking, open-source software, writing, gardens, parks, baking bread, language, physical books, small video games, weird video games, old video games, and pizza.</p>
 <p>I also keep a <a href="/reading">pubic reading log</a>, which might be of note.</p>
 <h3 id="contact">Contact</h3>
-<p>I'm pretty well out on for-profit social media, but I'm quite happily on <a rel="me" href="https://indieweb.social/@matthewhowell"><svg class="bird-link" height="24px" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" transform="matrix(.323262 0 0 .323262 4.0165503604 2.0000096782)"><path d="m169.446 111.27c-2.545 13.093-22.794 27.422-46.05 30.199-12.127 1.447-24.067 2.777-36.799 2.193-20.822-.954-37.252-4.97-37.252-4.97 0 2.027.125 3.957.375 5.762 2.707 20.549 20.376 21.78 37.113 22.354 16.893.578 31.935-4.165 31.935-4.165l.694 15.272s-11.816 6.345-32.865 7.512c-11.607.638-26.019-.292-42.805-4.735-36.406-9.636-42.667-48.443-43.625-87.819-.292-11.691-.112-22.715-.112-31.935 0-40.264 26.381-52.066 26.381-52.066 13.302-6.109 36.127-8.678 59.856-8.872h.583c23.729.194 46.569 2.763 59.87 8.872 0 0 26.38 11.802 26.38 52.066 0 0 .331 29.707-3.679 50.332" fill="#705DFD"/><path d="m142.008 64.062v48.753h-19.315v-47.32c0-9.975-4.197-15.038-12.592-15.038-9.282 0-13.934 6.006-13.934 17.882v25.901h-19.201v-25.901c0-11.876-4.653-17.882-13.935-17.882-8.395 0-12.592 5.063-12.592 15.038v47.32h-19.315v-48.753c0-9.964 2.537-17.882 7.633-23.74 5.255-5.858 12.137-8.861 20.68-8.861 9.884 0 17.369 3.799 22.318 11.398l4.811 8.065 4.812-8.065c4.948-7.599 12.433-11.398 22.318-11.398 8.542 0 15.424 3.003 20.68 8.861 5.095 5.858 7.632 13.776 7.632 23.74" fill="#fff"/></g></svg> Mastodon ↗</a> and you're warmly invited to walk over there and say hello. It's nice.</p>
+<p>I'm pretty well out on for-profit social media, but I'm quite happily on <a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon</a> and you're warmly invited to walk over there and say hello. It's nice.</p>
 <p>For questions, proposals, and hellos, send an email to <a href="mailto:hellos@matthewhowell.net">hellos@matthewhowell.net</a>.</p>
-<h4 id="feedback-1">Feedback 👍</h4>
-<p>Feedback is OK.</p>
+<h4 id="feedback">Feedback</h4>
+<p>Feedback is OK. 👍</p>
 <p>This website is meant to be accessible to everyone. If something is broken or causing a problem, it's almost certainly a mistake. I will always appreciate someone taking the time to make me aware of my mistakes.</p>
 <h2 id="about-this-website">About this website</h2>
-<p>This is a static website (a collection of HTML and CSS files), generated by <a href="https://getzola.org">Zola ↗</a>, hosted by <a href="https://www.netlify.com">Netlify ↗</a>, and mirrored on <a href="https://matthewhowell.github.io">GitHub Pages ↗</a>.</p>
-<p>Anonymous page-view statistics of limited accuracy are provided by <a href="https://cloudflare.io/privacy-focused-web-analytics">Cloudflare ↗</a>. Why collect anything at all? Well, it is sometimes useful to know if particular parts of the site are receiving uncommon amounts of traffic. That's all, no secret reasons.</p>
+<p>This is a static website (a collection of HTML and CSS files), generated by <a href="https://getzola.org">Zola</a>, hosted by <a href="https://www.netlify.com">Netlify</a>, and mirrored on <a href="https://matthewhowell.github.io">GitHub Pages</a>.</p>
+<p>Anonymous page-view statistics of limited accuracy are provided by <a href="https://cloudflare.io/privacy-focused-web-analytics">Cloudflare</a>. Why collect anything at all? Well, it is sometimes useful to know if particular parts of the site are receiving uncommon amounts of traffic. That's all, no secret reasons.</p>
 <h3 id="why">Why</h3>
 <p>And why does this website exist? You can read its <a title="Purpose" href="/purpose">official stated purpose</a>, but a simple answer is that <mark>making websites is fun</mark>, so why not? The Web is for everyone, even me and even you.</p>
 
@@ -73,7 +137,7 @@
 
 	<section>	
 		<nav class="cluster">
-			<a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 104 104" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g fill="#705dfd"><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z"/><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z" transform="translate(56)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1984 -790.244)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1928 -790.244)"/></g></svg></a>
+			<a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -512 -256)"/><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -192 -256)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -512 64)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -192 64)"/></g></svg></a>
 			<ul class="cluster nav-main"><li><a href="/about"  aria-current="page">About</a></li>
 <li><a href="/notes" >Notes</a></li>
 <li><a href="/photos" >Photos</a></li>
@@ -84,16 +148,25 @@
 		<nav class="cluster nav-elsewhere">
 			<strong>Elsewhere</strong>
 			<ul class="cluster">
-				<li><a href="https://www.reasonable.work">Reasonable Co ↗</a></li>
-				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon ↗</a></li>
-				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr ↗</a></li>
-				<li><a href="https://github.com/matthewhowell">Github ↗</a></li>
+				<li><a href="https://www.reasonable.work">Reasonable Co</a></li>
+				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon</a></li>
+				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr</a></li>
+				<li><a href="https://github.com/matthewhowell">Github</a></li>
 			</ul>
 		</nav>
 	</section>
 	
 	<section>
-		<p>This website was made by <a href="https://www.matthewhowell.net">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, and <a href="/feeds">feeds</a>.
+		<p>This website was made by <a href="/">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, and <a href="/feeds">feeds</a>.
+		</p>
+	</section>
+
+	<section>
+		<p>
+			<span id="display_current_colors" class="preference-display"></span>
+			<button aria-label="auto" aria-live="polite" class="preference prefers-light-colors" id="set_prefers_light_colors">Switch to light colors</button>
+			<button aria-label="auto" aria-live="polite" class="preference prefers-dark-colors" id="set_prefers_dark_colors">Switch to dark colors</button>
+			
 		</p>
 	</section>
 

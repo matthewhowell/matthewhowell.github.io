@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-prefers-color-scheme>
 
     <head>
         
@@ -10,7 +10,71 @@
 		<meta property="article:author" content="Matthew Howell">
 		<meta property="og:description" content="Positives was a small photography project from Matthew Howell that concluded in 2014."><meta property="og:title" content="Positives – Matthew Howell">
 	<meta property="og:image" content="/assets/images/matthew-howell-social.png">
-	<meta property="og:url" content="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;work&#x2F;positives&#x2F;"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta property="og:url" content="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;work&#x2F;positives&#x2F;"><script>
+
+	/* system_prefers_color_scheme will mirror system level setting */
+	const system_prefers_color_scheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	let currentColors = document.documentElement.getAttribute("data-prefers-color-scheme");
+			
+	// first, check local storage override	
+	if (localStorage.getItem('website_prefers_color_scheme')) {
+		setPreferredColors(localStorage.getItem('website_prefers_color_scheme'), true);
+	// next, fall back to system preference
+	} else if (system_prefers_color_scheme) {
+		setPreferredColors(system_prefers_color_scheme, false);
+	}
+	
+	window.onload = () => {
+		const set_prefers_light = document.getElementById("set_prefers_light_colors");
+		const set_prefers_dark = document.getElementById("set_prefers_dark_colors");
+		
+		updateDisplayCurrentColors();
+		set_prefers_light.onclick = function() {
+			setPreferredColors('light', true);
+		};
+				
+		set_prefers_dark.onclick = function() {
+			setPreferredColors('dark', true);
+		};
+	}
+
+
+function setPreferredColors(color_preference, set_local) {
+	document.documentElement.setAttribute('data-prefers-color-scheme', color_preference)			
+	if (set_local == true) {
+		localStorage.setItem('website_prefers_color_scheme', color_preference);	
+		updateDisplayCurrentColors();
+	} else {
+		updateDisplayCurrentColors(true);
+	}
+}
+
+function updateDisplayCurrentColors(from_preference) {
+	
+	const set_prefers_light = document.getElementById("set_prefers_light_colors");
+	const set_prefers_dark = document.getElementById("set_prefers_dark_colors");
+	const system_prefers_color_scheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	
+	let currentColors = document.documentElement.getAttribute("data-prefers-color-scheme");
+	let display_current_colors = document.getElementById("display_current_colors");
+	let current_color_text = (currentColors == 'light') ? "Using Light Colors" : "Using Dark Colors";
+	
+	if (from_preference == 'system') {
+		current_color_text = current_color_text + ' (from system preference)';
+	}
+	
+	if (!set_prefers_light || !set_prefers_dark) return;
+
+	if (currentColors == 'light') {
+		set_prefers_light.style.display = 'none';
+		set_prefers_dark.style.display = '';
+	} else { 
+		set_prefers_light.style.display = '';
+		set_prefers_dark.style.display = 'none';
+	}
+	display_current_colors.innerHTML = current_color_text;
+}
+</script><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#705DFD"><link rel=alternate title="Matthew Howell" type="application/atom+xml" href="/atom.xml"><link rel="stylesheet" href="/assets/styles/reasonable.css">
@@ -18,7 +82,7 @@
     </head>
 
     <body><div class="container">
-	    <header><nav class="cluster"><a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 104 104" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g fill="#705dfd"><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z"/><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z" transform="translate(56)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1984 -790.244)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1928 -790.244)"/></g></svg></a><ul class="cluster nav-main">
+	    <header><nav class="cluster"><a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -512 -256)"/><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -192 -256)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -512 64)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -192 64)"/></g></svg></a><ul class="cluster nav-main">
 	  <li><a href="/about" >About</a></li>
 <li><a href="/notes" >Notes</a></li>
 <li><a href="/photos" >Photos</a></li>
@@ -63,9 +127,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;76d3edb0b7de467c00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;b9d0aa715cedcdd800.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;76d3edb0b7de467c00.webp" alt="A monochrome Polaroid photograph of a cloudy sky over the Atlantic Ocean, a buoy floating in the distance.">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0001-coney-island.0ce202538430e3b4.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0001-coney-island.fe7dadaecadcd9b4.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0001-coney-island.0ce202538430e3b4.webp" alt="A monochrome Polaroid photograph of a cloudy sky over the Atlantic Ocean, a buoy floating in the distance.">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -83,9 +147,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;143f2ca1b2408f9000.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;f62c727df6bbd66700.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;143f2ca1b2408f9000.webp" alt="A color Polaroid photograph of a silver and black camera, a Fuji X100S, the top of camera reflecting pale yellow light, out of focus.">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0002-fuji-x100s.253f5162aadf3c7f.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0002-fuji-x100s.ee83fd999f8cf7db.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0002-fuji-x100s.253f5162aadf3c7f.webp" alt="A color Polaroid photograph of a silver and black camera, a Fuji X100S, the top of camera reflecting pale yellow light, out of focus.">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -103,9 +167,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4336fcd53cc85e5300.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;e23c9d2e2e3fade600.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4336fcd53cc85e5300.webp" alt="A color Polaroid photograph of a white, brightly lit Christmas tree, colored lights surrounding it, out of focus.">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0003-tree.bc7b065959e3fa7e.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0003-tree.1ad3d83792020272.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0003-tree.bc7b065959e3fa7e.webp" alt="A color Polaroid photograph of a white, brightly lit Christmas tree, colored lights surrounding it, out of focus.">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -123,9 +187,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;7449181590c29f5900.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;ee0e090a5965f3b100.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;7449181590c29f5900.webp" alt="A color Polaroid photograph of the neon, art deco Sunnyside sign, lit at night, on 46th Street south of Queens Boulevard.">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0004-sunnyside.a897d4a57b4cc5ee.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0004-sunnyside.c853db339aff9790.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0004-sunnyside.a897d4a57b4cc5ee.webp" alt="A color Polaroid photograph of the neon, art deco Sunnyside sign, lit at night, on 46th Street south of Queens Boulevard.">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -143,9 +207,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4b87c8cd1093e02200.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;412d25ebf8bae9e100.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4b87c8cd1093e02200.webp" alt="A color Polaroid photograph a narrow garden path, framed by green leaves.">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0005-garden-path.e4463544fa8ad9b1.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0005-garden-path.7d4f9e987f733b97.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0005-garden-path.e4463544fa8ad9b1.webp" alt="A color Polaroid photograph a narrow garden path, framed by green leaves.">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -163,9 +227,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;63a9041256ce32fd00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;14d117e2534beb3900.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;63a9041256ce32fd00.webp" alt="A color Polaroid of tree branches, nearly bare, stretching out and crossing.">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0006-trees.c7e1f25466279705.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0006-trees.dc8b96c91bc96681.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0006-trees.c7e1f25466279705.webp" alt="A color Polaroid of tree branches, nearly bare, stretching out and crossing.">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -183,9 +247,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;8b03c013a2d317ed00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;799a7e8887625a4300.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;8b03c013a2d317ed00.webp" alt="A color Polaroid photograph of a large, teak-wood palace in Bangkok, Thailand, a green tree in the foreground.">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0007-teak-palace.39724f4a27e26a6f.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0007-teak-palace.2c67d752c3ef994e.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0007-teak-palace.39724f4a27e26a6f.webp" alt="A color Polaroid photograph of a large, teak-wood palace in Bangkok, Thailand, a green tree in the foreground.">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -203,9 +267,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;c7e1953efe8a21b600.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;54b1b4f2a86079cc00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;c7e1953efe8a21b600.webp" alt="A color Polaroid photograph of a golden pagoda with a tall spire, pushing into a bright blue sky.">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0008-pagoda.604dc48c6f7f3e8a.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0008-pagoda.5f908c61941f0ef1.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0008-pagoda.604dc48c6f7f3e8a.webp" alt="A color Polaroid photograph of a golden pagoda with a tall spire, pushing into a bright blue sky.">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -223,9 +287,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;b5d94223fd8c33c400.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;65b40caadf8e1fcd00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;b5d94223fd8c33c400.webp" alt="A color Polaroid photograph an airplane, preparing for boarding, sitting on the asphalt at the airport in Seoul, South Korea.">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0009-seoul-airport.d0a6a9c486bd33e3.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0009-seoul-airport.0745ad54935f4f80.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0009-seoul-airport.d0a6a9c486bd33e3.webp" alt="A color Polaroid photograph an airplane, preparing for boarding, sitting on the asphalt at the airport in Seoul, South Korea.">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -243,9 +307,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;2970137e379f623000.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;42a6eda1c9a3f43c00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;2970137e379f623000.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0010-orchids.79491d05112088a2.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0010-orchids.a42feee43c0557df.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0010-orchids.79491d05112088a2.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -263,9 +327,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;34386ff408acf99200.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;012adffeef9495f000.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;34386ff408acf99200.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0011-jaws.32263b8ea49127dd.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0011-jaws.673013ec732a6f61.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0011-jaws.32263b8ea49127dd.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -283,9 +347,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;f339599cc694cc6e00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;473edbfed348019500.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;f339599cc694cc6e00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0012-candle.82c257678be6dab7.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0012-candle.e2907291064ec340.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0012-candle.82c257678be6dab7.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -303,9 +367,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0899768236575af500.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;428b7d1e72b012a200.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0899768236575af500.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0013-fog.3fa67cd678cc84a0.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0013-fog.2c3cc333fcf6b69e.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0013-fog.3fa67cd678cc84a0.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -323,9 +387,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;f659eb82ef84048400.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;cc49456cf8c759b000.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;f659eb82ef84048400.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0014-view.802beb135f3875f6.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0014-view.cc487e40fe3bc0f3.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0014-view.802beb135f3875f6.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -343,9 +407,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;a2e7c5041a88deac00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;345793c6782c172200.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;a2e7c5041a88deac00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0015-hotel-edison.176972014f625640.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0015-hotel-edison.39be8471210f1305.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0015-hotel-edison.176972014f625640.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -363,9 +427,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4a63f213171d5c9700.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;3ae8d201d4f1838c00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4a63f213171d5c9700.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0016-pepsi.3e133718479f48b2.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0016-pepsi.b08c0a278dc8ce91.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0016-pepsi.3e133718479f48b2.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -383,9 +447,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;a86fcdbfaeed393700.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;7b66f6e5162e290100.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;a86fcdbfaeed393700.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0017-flowers-window.1dbd65afe74626e9.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0017-flowers-window.209d42e3b50768b6.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0017-flowers-window.1dbd65afe74626e9.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -403,9 +467,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;efa57677e6a51c4d00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;1f6c858e683c1bf500.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;efa57677e6a51c4d00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0018-park-chair.7147fefc09d47463.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0018-park-chair.ae5039f4711a534f.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0018-park-chair.7147fefc09d47463.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -423,9 +487,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;fd0c782efdf5760600.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;64f735a6c6001fec00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;fd0c782efdf5760600.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0019-street-light.a5b4dbc30b6ed291.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0019-street-light.04e87bddd391f4ad.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0019-street-light.a5b4dbc30b6ed291.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -443,9 +507,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4d5b8925ba922d5900.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;42c0077be1a73c3900.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4d5b8925ba922d5900.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0020-chrysler.185a4dc7c43e4ba1.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0020-chrysler.61720851fd146f97.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0020-chrysler.185a4dc7c43e4ba1.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -463,9 +527,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;d9905da5b54db29b00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0b5bff20399647ac00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;d9905da5b54db29b00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0021-flatiron.ec48227a9902228e.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0021-flatiron.a85e9196facd2fc7.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0021-flatiron.ec48227a9902228e.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -483,9 +547,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;595001d6ffa3ced500.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;e3786738b31f3ff700.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;595001d6ffa3ced500.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0022-empire-state.936da9ccd4d8be30.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0022-empire-state.b27d7bda6a0cf5bc.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0022-empire-state.936da9ccd4d8be30.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -503,9 +567,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;c21441847003131c00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;caa5d05868a268fc00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;c21441847003131c00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0023-hudson.ab4a269542f442db.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0023-hudson.d4869d4cc4a11cf1.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0023-hudson.ab4a269542f442db.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -523,9 +587,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;bec96bc7eadb3cac00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;206c392c2d41ff0500.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;bec96bc7eadb3cac00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0024-clock.916c94bb980aa0a7.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0024-clock.b70d031447385f11.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0024-clock.916c94bb980aa0a7.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -543,9 +607,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;6003bad54327ea8500.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;1013f48625ee25ec00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;6003bad54327ea8500.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0025-steps.9b20c3a986c1d7d2.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0025-steps.6621afbf054821ab.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0025-steps.9b20c3a986c1d7d2.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -563,9 +627,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;86a8c597c5d94b7f00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;d1cc0d06bb08863700.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;86a8c597c5d94b7f00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0026-flower.d260727a5f368f5c.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0026-flower.9cdc5eb2dee937f7.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0026-flower.d260727a5f368f5c.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -583,9 +647,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;88f3b10e3725612600.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;b5195d59bc7101a200.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;88f3b10e3725612600.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0027-underneath.8822aee992d92e84.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0027-underneath.54f30f26e7f0258b.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0027-underneath.8822aee992d92e84.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -603,9 +667,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;483fa523fbd48ade00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;87e0ac3775a14c2b00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;483fa523fbd48ade00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0028-blurred-buddha.4de01af573335d7a.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0028-blurred-buddha.aade204f55e3c19d.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0028-blurred-buddha.4de01af573335d7a.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -623,9 +687,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;6b4b01eb97140a1f00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;cee5e10a2404ce5800.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;6b4b01eb97140a1f00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0029-computer.3369b3668fc20b45.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0029-computer.39e29a90e77018a0.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0029-computer.3369b3668fc20b45.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -643,9 +707,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;2aa24818007cf49100.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;fb6903760afc2bf500.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;2aa24818007cf49100.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0030-phone.75159cdaf2ee33d3.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0030-phone.f50eb6ae30b69ff7.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0030-phone.75159cdaf2ee33d3.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -663,9 +727,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;983c5f7516fa554200.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;55bf4b813db99aa100.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;983c5f7516fa554200.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0031-platform.fd528c27fc0788db.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0031-platform.ac7ef79c0100f806.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0031-platform.fd528c27fc0788db.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -683,9 +747,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4fc4ccba0be1f2b400.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0b96659a60a0672b00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4fc4ccba0be1f2b400.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0032-arch.f525f6d956eb52cf.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0032-arch.54d82918c02e7694.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0032-arch.f525f6d956eb52cf.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -703,9 +767,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;881f1f66acadacd000.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;374c07e98ba54ae800.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;881f1f66acadacd000.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0033-fixture.34427bb250a22035.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0033-fixture.e0e5648b44a0f7df.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0033-fixture.34427bb250a22035.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -723,9 +787,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;69baa1a40b579b8b00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;877fc050903fbbd600.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;69baa1a40b579b8b00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0034-coney-island-beach.b0bd52dbbf6a7c8f.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0034-coney-island-beach.feda4e17a64ef09b.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0034-coney-island-beach.b0bd52dbbf6a7c8f.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -743,9 +807,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;81163fd89ca5fba500.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;1d94e270888244ea00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;81163fd89ca5fba500.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0035-poets.dd5f645f6f5cd1c3.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0035-poets.5d3ac430b536724d.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0035-poets.dd5f645f6f5cd1c3.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -763,9 +827,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;d701d665c0272dd600.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;28907e58f7413fc400.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;d701d665c0272dd600.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0036-stories.4098c66a61c29800.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0036-stories.5b1acdb8f46a9fc0.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0036-stories.4098c66a61c29800.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -783,9 +847,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;7eff53ee3c87134400.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;74d2154bfa37e33900.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;7eff53ee3c87134400.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0037-state-house.f85ede5cc85a2f4f.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0037-state-house.c56188485ae2e43a.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0037-state-house.f85ede5cc85a2f4f.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -803,9 +867,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;f129d0d6090956d800.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;60e13eab52bc4fcb00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;f129d0d6090956d800.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0038-sun-skyline.b7f05d263a8a0612.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0038-sun-skyline.69f0c763e53df763.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0038-sun-skyline.b7f05d263a8a0612.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -823,9 +887,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;b5c9313fe9d23ab000.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;5e5e8b8ac987f06e00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;b5c9313fe9d23ab000.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0039-wonder-wheel.5e47293bb53fe09a.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0039-wonder-wheel.a6e9c372b354af72.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0039-wonder-wheel.5e47293bb53fe09a.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -843,9 +907,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;ac00fa5a09fb6a1500.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;b885acc9d7e8dde100.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;ac00fa5a09fb6a1500.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0040-pencil-mono.43cf524cade5d608.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0040-pencil-mono.96f78625a1e8c43c.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0040-pencil-mono.43cf524cade5d608.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -863,9 +927,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4249369734fcedf200.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;1c3c218986abec3900.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;4249369734fcedf200.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0041-pencil-color.dc6863ed301ecfa7.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0041-pencil-color.2fa75d0ff36ba333.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0041-pencil-color.dc6863ed301ecfa7.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -883,9 +947,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;1cce83b56de2d35000.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;8db037dbcb99fd3e00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;1cce83b56de2d35000.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0042-city-hall.4ba5e511592e2cd3.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0042-city-hall.79347259e4e1a16d.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0042-city-hall.4ba5e511592e2cd3.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -903,9 +967,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;1dcf768e5586b1e100.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;2662178a189512ce00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;1dcf768e5586b1e100.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0043-locust.fc02206aa98b67f4.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0043-locust.60e3e44e6e72585b.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0043-locust.fc02206aa98b67f4.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -923,9 +987,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;ae9c649dde54099c00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;776e61f842fe001800.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;ae9c649dde54099c00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0044-subway.263c88e070ee0804.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0044-subway.229b489b47e6f18c.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0044-subway.263c88e070ee0804.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -943,9 +1007,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;e2a1a04e909d0c0c00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;3b454f4f07c41edf00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;e2a1a04e909d0c0c00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0045-jar.68e34b6e20225f18.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0045-jar.55b63179e6e59986.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0045-jar.68e34b6e20225f18.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -963,9 +1027,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;090d71687fcc204b00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;e2569db47b40b7ff00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;090d71687fcc204b00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-attempted-orchid.1230c783e96b3303.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-attempted-orchid.93680c6a8bfa5473.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-attempted-orchid.1230c783e96b3303.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -983,9 +1047,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;ae57927b34ae7cc500.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;a04b23889c0ba5cb00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;ae57927b34ae7cc500.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-church-windows.8df07c0d79c25ccd.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-church-windows.515d952c2936bb6f.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-church-windows.8df07c0d79c25ccd.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -1003,9 +1067,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;9c2558c9c6dbc94b00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;89e7f059c82fd29c00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;9c2558c9c6dbc94b00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-dark-skyline.d0e2144357efe05d.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-dark-skyline.19328407943f0d6f.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-dark-skyline.d0e2144357efe05d.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -1023,9 +1087,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;83f8acdf1af0c3d100.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;e5cf3b961799ba9e00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;83f8acdf1af0c3d100.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-pepsi-bridge.6b789e80f481d748.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-pepsi-bridge.ae9f5d7ccb153a10.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-pepsi-bridge.6b789e80f481d748.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -1043,9 +1107,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;a9c336b3b199f6e200.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;62be6b4feced355900.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;a9c336b3b199f6e200.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-pillars.de4c0320caafe2bb.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-pillars.27cb435df39b1206.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-pillars.de4c0320caafe2bb.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -1063,9 +1127,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;671ad8c6ce10468400.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;5f4e8b2ad225909100.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;671ad8c6ce10468400.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-sunset-philadelphia.e219005165dd71ea.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-sunset-philadelphia.86a34dfe60a3ff27.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-sunset-philadelphia.e219005165dd71ea.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -1083,9 +1147,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;aa9889905a05d45e00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;8ba33dbe1d832f2600.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;aa9889905a05d45e00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-sunset.7ee975298426b4d9.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-sunset.41cdeae7b7d9ae39.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-sunset.7ee975298426b4d9.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -1103,9 +1167,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;dd970f04666ba0b300.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;610d6fa767c8d28b00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;dd970f04666ba0b300.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-temple.2449ac67294503fe.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-temple.1b643b860743a471.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-temple.2449ac67294503fe.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -1123,9 +1187,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;a56c76692976ea3d00.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;af16b29e2c33017a00.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;a56c76692976ea3d00.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-temple-tree.951c749424ee593e.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-temple-tree.156b4649dc97bf02.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-temple-tree.951c749424ee593e.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -1143,9 +1207,9 @@
         
           
           <picture>
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;272bb47a83fec52400.webp" type="image/webp">
-            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;68aacfe50f7e0a0200.jpg" type="image/jpeg">
-            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;272bb47a83fec52400.webp" alt="">	
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-tomatoes.8e7c14382281ce07.webp" type="image/webp">
+            <source srcset="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-tomatoes.a563e8182ba3affe.jpg" type="image/jpeg">
+            <img loading="lazy" src="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;processed_images&#x2F;0046-tomatoes.8e7c14382281ce07.webp" alt="">	
 <!--             style="max-width: 160px;" -->
           </picture>
         
@@ -1162,7 +1226,7 @@
 
 	<section>	
 		<nav class="cluster">
-			<a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 104 104" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g fill="#705dfd"><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z"/><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z" transform="translate(56)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1984 -790.244)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1928 -790.244)"/></g></svg></a>
+			<a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -512 -256)"/><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -192 -256)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -512 64)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -192 64)"/></g></svg></a>
 			<ul class="cluster nav-main"><li><a href="/about" >About</a></li>
 <li><a href="/notes" >Notes</a></li>
 <li><a href="/photos" >Photos</a></li>
@@ -1173,16 +1237,25 @@
 		<nav class="cluster nav-elsewhere">
 			<strong>Elsewhere</strong>
 			<ul class="cluster">
-				<li><a href="https://www.reasonable.work">Reasonable Co ↗</a></li>
-				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon ↗</a></li>
-				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr ↗</a></li>
-				<li><a href="https://github.com/matthewhowell">Github ↗</a></li>
+				<li><a href="https://www.reasonable.work">Reasonable Co</a></li>
+				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon</a></li>
+				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr</a></li>
+				<li><a href="https://github.com/matthewhowell">Github</a></li>
 			</ul>
 		</nav>
 	</section>
 	
 	<section>
-		<p>This website was made by <a href="https://www.matthewhowell.net">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, and <a href="/feeds">feeds</a>.
+		<p>This website was made by <a href="/">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, and <a href="/feeds">feeds</a>.
+		</p>
+	</section>
+
+	<section>
+		<p>
+			<span id="display_current_colors" class="preference-display"></span>
+			<button aria-label="auto" aria-live="polite" class="preference prefers-light-colors" id="set_prefers_light_colors">Switch to light colors</button>
+			<button aria-label="auto" aria-live="polite" class="preference prefers-dark-colors" id="set_prefers_dark_colors">Switch to dark colors</button>
+			
 		</p>
 	</section>
 

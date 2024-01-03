@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-prefers-color-scheme>
 
     <head>
         
@@ -9,7 +9,71 @@
 <meta name="author" content="Matthew Howell"><title>Matthew Howell is a person trying to make nice websites and–sometimes–other things. – Matthew Howell</title><meta property="og:type" content="website">
 		<meta property="og:description" content="Matthew Howell is a person trying to make nice websites and–sometimes–other things."><meta property="og:title" content="Matthew Howell is a person trying to make nice websites and–sometimes–other things. – Matthew Howell">
 	<meta property="og:image" content="/assets/images/matthew-howell-social.png">
-	<meta property="og:url" content="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta property="og:url" content="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;"><script>
+
+	/* system_prefers_color_scheme will mirror system level setting */
+	const system_prefers_color_scheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	let currentColors = document.documentElement.getAttribute("data-prefers-color-scheme");
+			
+	// first, check local storage override	
+	if (localStorage.getItem('website_prefers_color_scheme')) {
+		setPreferredColors(localStorage.getItem('website_prefers_color_scheme'), true);
+	// next, fall back to system preference
+	} else if (system_prefers_color_scheme) {
+		setPreferredColors(system_prefers_color_scheme, false);
+	}
+	
+	window.onload = () => {
+		const set_prefers_light = document.getElementById("set_prefers_light_colors");
+		const set_prefers_dark = document.getElementById("set_prefers_dark_colors");
+		
+		updateDisplayCurrentColors();
+		set_prefers_light.onclick = function() {
+			setPreferredColors('light', true);
+		};
+				
+		set_prefers_dark.onclick = function() {
+			setPreferredColors('dark', true);
+		};
+	}
+
+
+function setPreferredColors(color_preference, set_local) {
+	document.documentElement.setAttribute('data-prefers-color-scheme', color_preference)			
+	if (set_local == true) {
+		localStorage.setItem('website_prefers_color_scheme', color_preference);	
+		updateDisplayCurrentColors();
+	} else {
+		updateDisplayCurrentColors(true);
+	}
+}
+
+function updateDisplayCurrentColors(from_preference) {
+	
+	const set_prefers_light = document.getElementById("set_prefers_light_colors");
+	const set_prefers_dark = document.getElementById("set_prefers_dark_colors");
+	const system_prefers_color_scheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	
+	let currentColors = document.documentElement.getAttribute("data-prefers-color-scheme");
+	let display_current_colors = document.getElementById("display_current_colors");
+	let current_color_text = (currentColors == 'light') ? "Using Light Colors" : "Using Dark Colors";
+	
+	if (from_preference == 'system') {
+		current_color_text = current_color_text + ' (from system preference)';
+	}
+	
+	if (!set_prefers_light || !set_prefers_dark) return;
+
+	if (currentColors == 'light') {
+		set_prefers_light.style.display = 'none';
+		set_prefers_dark.style.display = '';
+	} else { 
+		set_prefers_light.style.display = '';
+		set_prefers_dark.style.display = 'none';
+	}
+	display_current_colors.innerHTML = current_color_text;
+}
+</script><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#705DFD"><link rel=alternate title="Matthew Howell" type="application/atom+xml" href="/atom.xml"><link rel="stylesheet" href="/assets/styles/reasonable.css">
@@ -17,7 +81,7 @@
     </head>
 
     <body><div class="container">
-	    <header><nav class="cluster"><a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 104 104" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g fill="#705dfd"><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z"/><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z" transform="translate(56)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1984 -790.244)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1928 -790.244)"/></g></svg></a><ul class="cluster nav-main">
+	    <header><nav class="cluster"><a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -512 -256)"/><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -192 -256)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -512 64)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -192 64)"/></g></svg></a><ul class="cluster nav-main">
 	  <li><a href="/about" >About</a></li>
 <li><a href="/notes" >Notes</a></li>
 <li><a href="/photos" >Photos</a></li>
@@ -44,17 +108,10 @@
   <section>
   <p>Hello, friend! My name is Matthew, this is my personal website, and I believe <mark>websites are amazing.</mark> This one is an attempt at some kind of <a href="/purpose">public memory</a>.</p>
 <p>There is a bit of writing collected in <a href="/notes">/notes</a>, some <a href="/photos">/photos</a>, and a catch-all accumulation of my other <a href="/work">/work</a>. There is also a <a href="/reading">/reading</a> log, and a very, very <em>(really very)</em> occasional email newsletter called <a href="/pizza">▲ Pizza</a>.</p>
-<p>For professional requests, find me at <a class="bird-link" href="https://www.reasonable.work"><svg class="reasonable-birdmark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 25 48" xmlns="http://www.w3.org/2000/svg"><path d="m576 1060v24c13.246 0 24-10.75 24-24zm0-4v-72c13.246 0 24 10.754 24 24v48zm28-36v-24c13.246 0 24 10.75 24 24zm-16-16.5c2.484 0 4.5 2.02 4.5 4.5s-2.016 4.5-4.5 4.5-4.5-2.02-4.5-4.5 2.016-4.5 4.5-4.5z" fill="#9b70ff" transform="matrix(.48 0 0 .48 -276.48 -472.32)"/></svg>Reasonable Company ↗</a>. It's my <a href="https://www.reasonable.work/values">values-led ↗</a> design and creative practice, where I attempt to do good work for humans and screens.</p>
-<p>Find more about me and this website by clicking <a href="/about">this cool /about hyperlink</a> or say hello over on <a rel="me" href="https://indieweb.social/@matthewhowell"><svg class="bird-link" height="24px" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" transform="matrix(.323262 0 0 .323262 4.0165503604 2.0000096782)"><path d="m169.446 111.27c-2.545 13.093-22.794 27.422-46.05 30.199-12.127 1.447-24.067 2.777-36.799 2.193-20.822-.954-37.252-4.97-37.252-4.97 0 2.027.125 3.957.375 5.762 2.707 20.549 20.376 21.78 37.113 22.354 16.893.578 31.935-4.165 31.935-4.165l.694 15.272s-11.816 6.345-32.865 7.512c-11.607.638-26.019-.292-42.805-4.735-36.406-9.636-42.667-48.443-43.625-87.819-.292-11.691-.112-22.715-.112-31.935 0-40.264 26.381-52.066 26.381-52.066 13.302-6.109 36.127-8.678 59.856-8.872h.583c23.729.194 46.569 2.763 59.87 8.872 0 0 26.38 11.802 26.38 52.066 0 0 .331 29.707-3.679 50.332" fill="#705DFD"/><path d="m142.008 64.062v48.753h-19.315v-47.32c0-9.975-4.197-15.038-12.592-15.038-9.282 0-13.934 6.006-13.934 17.882v25.901h-19.201v-25.901c0-11.876-4.653-17.882-13.935-17.882-8.395 0-12.592 5.063-12.592 15.038v47.32h-19.315v-48.753c0-9.964 2.537-17.882 7.633-23.74 5.255-5.858 12.137-8.861 20.68-8.861 9.884 0 17.369 3.799 22.318 11.398l4.811 8.065 4.812-8.065c4.948-7.599 12.433-11.398 22.318-11.398 8.542 0 15.424 3.003 20.68 8.861 5.095 5.858 7.632 13.776 7.632 23.74" fill="#fff"/></g></svg> Mastodon ↗</a>.</p>
-<p>And because feeds are good, there are <a class="bird-link" href="/feeds"><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-		<g fill="#705dfd">
-			<circle cx="10.666656" cy="53.33328" r="10.666656" stroke-width=".333333"/>
-			<g fill-rule="nonzero" transform="matrix(.333333 0 0 .333333 -10.666656 -10.666656)">
-			<path d="m32 128c52.664 0 96 43.336 96 96h32c0-70.219-57.781-128-128-128z"/>
-			<path d="m32 64c87.773 0 160 72.227 160 160h32c0-105.328-86.672-192-192-192z"/>
-			</g>
-			</g>
-	</svg> feeds</a>.</p>
+<p>For professional requests, find me at <a href="https://www.reasonable.work">Reasonable Company</a>, my values-led design and creative practice. There, and everywhere, I'm trying to do good work for humans and screens.</p>
+<p>Find more about me and this website by clicking <a href="/about">this cool /about hyperlink</a>.</p>
+<p>Say hello over on <a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon</a>.</p>
+<p>And because feeds are good, there are <a href="/feeds">feeds</a>.</p>
 
   </section>
   
@@ -63,6 +120,116 @@
 
 	  <ul class="date-list">
   	  
+  	  
+  
+  	  
+  	  <li><span><a href="https://www.matthewhowell.net/notes/2023/20231231-2023-in-favorites/">2023 in Favorites</a></span>
+  	  <small>
+        <a href="/notes">/Notes</a>
+        <time datetime="2023-12-31">2023 Dec</time>
+      </small>
+  	  
+  	  
+	  
+  	  
+  
+  	  
+  	  <li><span><cite>All the Lovers in the Night</cite></span>
+  	  <small>
+        <a href="/reading">/Reading</a>
+        <time datetime="2023-12-26">2023 Dec</time>
+      </small>
+  	  
+  	  
+	  
+  	  
+  
+  	  
+  	  <li><span><cite>Birnam Wood</cite></span>
+  	  <small>
+        <a href="/reading">/Reading</a>
+        <time datetime="2023-12-17">2023 Dec</time>
+      </small>
+  	  
+  	  
+	  
+  	  
+  
+  	  
+  	  <li><span><cite>Teaching a Stone to Talk</cite></span>
+  	  <small>
+        <a href="/reading">/Reading</a>
+        <time datetime="2023-11-30">2023 Nov</time>
+      </small>
+  	  
+  	  
+	  
+  	  
+  
+  	  
+  	  <li><span><cite>Stuart Little</cite></span>
+  	  <small>
+        <a href="/reading">/Reading</a>
+        <time datetime="2023-11-30">2023 Nov</time>
+      </small>
+  	  
+  	  
+	  
+  	  
+  
+  	  
+  	  <li><span><cite>The Three-Body Problem</cite></span>
+  	  <small>
+        <a href="/reading">/Reading</a>
+        <time datetime="2023-11-15">2023 Nov</time>
+      </small>
+  	  
+  	  
+	  
+  	  
+  
+  	  
+  	  <li><span><cite>How to Write an Autobiographical Novel</cite></span>
+  	  <small>
+        <a href="/reading">/Reading</a>
+        <time datetime="2023-10-27">2023 Oct</time>
+      </small>
+  	  
+  	  
+	  
+  	  
+  
+  	  
+  	  <li><span><cite>Small Things Like These</cite></span>
+  	  <small>
+        <a href="/reading">/Reading</a>
+        <time datetime="2023-10-07">2023 Oct</time>
+      </small>
+  	  
+  	  
+	  
+  	  
+  
+  	  
+  	  <li><span><cite>Beautiful World, Where Are You</cite></span>
+  	  <small>
+        <a href="/reading">/Reading</a>
+        <time datetime="2023-10-02">2023 Oct</time>
+      </small>
+  	  
+  	  
+	  
+  	  
+  
+  	  
+  	  <li><span><cite>Matrix</cite></span>
+  	  <small>
+        <a href="/reading">/Reading</a>
+        <time datetime="2023-09-25">2023 Sep</time>
+      </small>
+  	  
+  	  
+	  
   	  
   
   	  
@@ -129,116 +296,6 @@
   	  
   	  
 	  
-  	  
-  
-  	  
-  	  <li><span><cite>The Ocean at the End of the Lane</cite></span>
-  	  <small>
-        <a href="/reading">/Reading</a>
-        <time datetime="2023-07-01">2023 Jul</time>
-      </small>
-  	  
-  	  
-	  
-  	  
-  
-  	  
-  	  <li><span><cite>Interior Chinatown</cite></span>
-  	  <small>
-        <a href="/reading">/Reading</a>
-        <time datetime="2023-06-15">2023 Jun</time>
-      </small>
-  	  
-  	  
-	  
-  	  
-  
-  	  
-  	  <li><span><cite>Another Brooklyn</cite></span>
-  	  <small>
-        <a href="/reading">/Reading</a>
-        <time datetime="2023-06-15">2023 Jun</time>
-      </small>
-  	  
-  	  
-	  
-  	  
-  
-  	  
-  	  <li><span><cite>Severance</cite></span>
-  	  <small>
-        <a href="/reading">/Reading</a>
-        <time datetime="2023-06-01">2023 Jun</time>
-      </small>
-  	  
-  	  
-	  
-  	  
-  
-  	  
-  	  <li><span><cite>Our Missing Hearts</cite></span>
-  	  <small>
-        <a href="/reading">/Reading</a>
-        <time datetime="2023-06-01">2023 Jun</time>
-      </small>
-  	  
-  	  
-	  
-  	  
-  
-  	  
-  	  <li><span><a href="https://www.matthewhowell.net/notes/2023/40/">40</a></span>
-  	  <small>
-        <a href="/notes">/Notes</a>
-        <time datetime="2023-05-10">2023 May</time>
-      </small>
-  	  
-  	  
-	  
-  	  
-  
-  	  
-  	  <li><span><cite>Auē</cite></span>
-  	  <small>
-        <a href="/reading">/Reading</a>
-        <time datetime="2023-05-06">2023 May</time>
-      </small>
-  	  
-  	  
-	  
-  	  
-  
-  	  
-  	  <li><span><cite>Snow Crash</cite></span>
-  	  <small>
-        <a href="/reading">/Reading</a>
-        <time datetime="2023-04-20">2023 Apr</time>
-      </small>
-  	  
-  	  
-	  
-  	  
-  
-  	  
-  	  <li><span><cite>Laserwriter II</cite></span>
-  	  <small>
-        <a href="/reading">/Reading</a>
-        <time datetime="2023-03-26">2023 Mar</time>
-      </small>
-  	  
-  	  
-	  
-  	  
-  
-  	  
-  	  <li><span><cite>Breasts and Eggs</cite></span>
-  	  <small>
-        <a href="/reading">/Reading</a>
-        <time datetime="2023-03-15">2023 Mar</time>
-      </small>
-  	  
-  	  
-	  
 	  </ul>
   </section>
 </article>  	
@@ -250,7 +307,7 @@
 
 	<section>	
 		<nav class="cluster">
-			<a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 104 104" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g fill="#705dfd"><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z"/><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z" transform="translate(56)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1984 -790.244)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1928 -790.244)"/></g></svg></a>
+			<a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -512 -256)"/><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -192 -256)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -512 64)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -192 64)"/></g></svg></a>
 			<ul class="cluster nav-main"><li><a href="/about" >About</a></li>
 <li><a href="/notes" >Notes</a></li>
 <li><a href="/photos" >Photos</a></li>
@@ -261,16 +318,25 @@
 		<nav class="cluster nav-elsewhere">
 			<strong>Elsewhere</strong>
 			<ul class="cluster">
-				<li><a href="https://www.reasonable.work">Reasonable Co ↗</a></li>
-				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon ↗</a></li>
-				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr ↗</a></li>
-				<li><a href="https://github.com/matthewhowell">Github ↗</a></li>
+				<li><a href="https://www.reasonable.work">Reasonable Co</a></li>
+				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon</a></li>
+				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr</a></li>
+				<li><a href="https://github.com/matthewhowell">Github</a></li>
 			</ul>
 		</nav>
 	</section>
 	
 	<section>
-		<p>This website was made by <a href="https://www.matthewhowell.net">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, and <a href="/feeds">feeds</a>.
+		<p>This website was made by <a href="/">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, and <a href="/feeds">feeds</a>.
+		</p>
+	</section>
+
+	<section>
+		<p>
+			<span id="display_current_colors" class="preference-display"></span>
+			<button aria-label="auto" aria-live="polite" class="preference prefers-light-colors" id="set_prefers_light_colors">Switch to light colors</button>
+			<button aria-label="auto" aria-live="polite" class="preference prefers-dark-colors" id="set_prefers_dark_colors">Switch to dark colors</button>
+			
 		</p>
 	</section>
 

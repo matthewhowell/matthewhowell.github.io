@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-prefers-color-scheme>
 
     <head>
         
@@ -10,7 +10,71 @@
 		<meta property="article:author" content="Matthew Howell">
 		<meta property="og:description" content="Reading is an ongoing list of books that I&#x27;ve read, organized by year, in approximate chronological order."><meta property="og:title" content="Reading – Matthew Howell">
 	<meta property="og:image" content="/assets/images/matthew-howell-social.png">
-	<meta property="og:url" content="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;reading&#x2F;"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta property="og:url" content="https:&#x2F;&#x2F;www.matthewhowell.net&#x2F;reading&#x2F;"><script>
+
+	/* system_prefers_color_scheme will mirror system level setting */
+	const system_prefers_color_scheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	let currentColors = document.documentElement.getAttribute("data-prefers-color-scheme");
+			
+	// first, check local storage override	
+	if (localStorage.getItem('website_prefers_color_scheme')) {
+		setPreferredColors(localStorage.getItem('website_prefers_color_scheme'), true);
+	// next, fall back to system preference
+	} else if (system_prefers_color_scheme) {
+		setPreferredColors(system_prefers_color_scheme, false);
+	}
+	
+	window.onload = () => {
+		const set_prefers_light = document.getElementById("set_prefers_light_colors");
+		const set_prefers_dark = document.getElementById("set_prefers_dark_colors");
+		
+		updateDisplayCurrentColors();
+		set_prefers_light.onclick = function() {
+			setPreferredColors('light', true);
+		};
+				
+		set_prefers_dark.onclick = function() {
+			setPreferredColors('dark', true);
+		};
+	}
+
+
+function setPreferredColors(color_preference, set_local) {
+	document.documentElement.setAttribute('data-prefers-color-scheme', color_preference)			
+	if (set_local == true) {
+		localStorage.setItem('website_prefers_color_scheme', color_preference);	
+		updateDisplayCurrentColors();
+	} else {
+		updateDisplayCurrentColors(true);
+	}
+}
+
+function updateDisplayCurrentColors(from_preference) {
+	
+	const set_prefers_light = document.getElementById("set_prefers_light_colors");
+	const set_prefers_dark = document.getElementById("set_prefers_dark_colors");
+	const system_prefers_color_scheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	
+	let currentColors = document.documentElement.getAttribute("data-prefers-color-scheme");
+	let display_current_colors = document.getElementById("display_current_colors");
+	let current_color_text = (currentColors == 'light') ? "Using Light Colors" : "Using Dark Colors";
+	
+	if (from_preference == 'system') {
+		current_color_text = current_color_text + ' (from system preference)';
+	}
+	
+	if (!set_prefers_light || !set_prefers_dark) return;
+
+	if (currentColors == 'light') {
+		set_prefers_light.style.display = 'none';
+		set_prefers_dark.style.display = '';
+	} else { 
+		set_prefers_light.style.display = '';
+		set_prefers_dark.style.display = 'none';
+	}
+	display_current_colors.innerHTML = current_color_text;
+}
+</script><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#705DFD"><link rel=alternate title="Matthew Howell" type="application/atom+xml" href="/atom.xml"><link rel="stylesheet" href="/assets/styles/reasonable.css">
@@ -18,7 +82,7 @@
     </head>
 
     <body><div class="container">
-	    <header><nav class="cluster"><a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 104 104" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g fill="#705dfd"><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z"/><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z" transform="translate(56)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1984 -790.244)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1928 -790.244)"/></g></svg></a><ul class="cluster nav-main">
+	    <header><nav class="cluster"><a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -512 -256)"/><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -192 -256)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -512 64)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -192 64)"/></g></svg></a><ul class="cluster nav-main">
 	  <li><a href="/about" >About</a></li>
 <li><a href="/notes" >Notes</a></li>
 <li><a href="/photos" >Photos</a></li>
@@ -38,6 +102,80 @@
 <p>The list is mostly fiction, because I read mostly fiction. It intentionally omits technical/programming books because those don't seem interesting to track. And I only log books that I finish, since I can't very well rate a book that I didn't complete.</p>
 <p>This isn't really a set of recommendations, it's primarily a tool to encourage myself to read more. I love to read and books are probably my favorite objects in the world. Fiction can be nourishing, transportive, and <mark>something resembling magic.</mark></p>
 
+  	
+	
+  	
+		
+  	
+  	
+  	
+		
+  	
+	
+  	
+	
+  	
+		
+  	
+  	
+  	
+	
+  	
+	
+  	
+  	
+  	
+	
+  	
+	
+  	
+		
+  	
+  	
+  	
+	
+  	
+	
+  	
+  	
+  	
+		
+  	
+	
+  	
+	
+  	
+  	
+  	
+		
+  	
+	
+  	
+	
+  	
+		
+  	
+  	
+  	
+	
+  	
+	
+  	
+		
+  	
+  	
+  	
+	
+  	
+	
+  	
+		
+  	
+  	
+  	
+		
+  	
+	
   	
 	
   	
@@ -970,11 +1108,76 @@
 
 	
 	<h2>Statistics</h2>
-  	<p>Since 2015, I've logged <mark>111 books.</mark></p>
-  	<p>70 (about 63%) of those books were written by women and 45 (about 40%) were written by people of color. Simply keeping those statistics has helped me improve those percentages quite a bit. This reading log is a tool to help me read more and also to read more diverse authors.</p>
+  	<p>Since 2015, I've logged <mark>120 books.</mark></p>
+  	<p>76 (about 63%) of those books were written by women and 49 (about 40%) were written by people of color. Simply keeping those statistics has helped me improve those percentages quite a bit. This reading log is a tool to help me read more and also to read more diverse authors.</p>
 
 
 	<h2>Books</h2>
+		
+
+		
+  		
+		
+  	
+		
+  		
+		
+		
+
+		
+  		
+		
+  	
+		
+		
+
+		
+  	
+		
+		
+
+		
+  		
+		
+  	
+		
+		
+
+		
+  	
+		
+  		
+		
+		
+
+		
+  	
+		
+  		
+		
+		
+
+		
+  		
+		
+  	
+		
+		
+
+		
+  		
+		
+  	
+		
+		
+
+		
+  		
+		
+  	
+		
+  		
+		
 		
 
 		
@@ -1125,14 +1328,105 @@
   	
 		<h3 class="books">2023</h3>
 	<section class="metadata">
-  	<p>Yearly statistics: 21 books, 13 by women, and 9 by authors of color</p>
+  	<p>Yearly statistics: 30 books, 19 by women, and 13 by authors of color</p>
 	</section>
 	<ul>
+	<li class="book " itemprop="itemListElement" itemscope itemtype="https://schema.org/Book">
+	  <span class="rating">★★</span>
+	  <div>
+	  	<cite class="book-title" itemprop="name"> All the Lovers in the Night</cite>
+	  	<small class="book-author" itemprop="author">Mieko Kawakami</small>
+		<small></small>
+	  </div>
+	</li>
+
+	
+	<li class="book " itemprop="itemListElement" itemscope itemtype="https://schema.org/Book">
+	  <span class="rating">★★</span>
+	  <div>
+	  	<cite class="book-title" itemprop="name"> Birnam Wood</cite>
+	  	<small class="book-author" itemprop="author">Eleanor Catton</small>
+		<small></small>
+	  </div>
+	</li>
+
+	
+	<li class="book " itemprop="itemListElement" itemscope itemtype="https://schema.org/Book">
+	  <span class="rating">★★</span>
+	  <div>
+	  	<cite class="book-title" itemprop="name"> Stuart Little</cite>
+	  	<small class="book-author" itemprop="author">E. B. White</small>
+		<small><a href="https:&#x2F;&#x2F;bookshop.org&#x2F;p&#x2F;books&#x2F;stuart-little&#x2F;18859536">Bookshop</a></small>
+	  </div>
+	</li>
+
+	
+	<li class="book " itemprop="itemListElement" itemscope itemtype="https://schema.org/Book">
+	  <span class="rating">★</span>
+	  <div>
+	  	<cite class="book-title" itemprop="name"> Teaching a Stone to Talk</cite>
+	  	<small class="book-author" itemprop="author">Annie Dillard</small>
+		<small><a href="https:&#x2F;&#x2F;bookshop.org&#x2F;p&#x2F;books&#x2F;teaching-a-stone-to-talk-expeditions-and-encounters-annie-dillard&#x2F;16711715">Bookshop</a></small>
+	  </div>
+	</li>
+
+	
+	<li class="book " itemprop="itemListElement" itemscope itemtype="https://schema.org/Book">
+	  <span class="rating">★</span>
+	  <div>
+	  	<cite class="book-title" itemprop="name"> The Three-Body Problem</cite>
+	  	<small class="book-author" itemprop="author">Liu Cixin</small>
+		<small></small>
+	  </div>
+	</li>
+
+	
+	<li class="book " itemprop="itemListElement" itemscope itemtype="https://schema.org/Book">
+	  <span class="rating">★</span>
+	  <div>
+	  	<cite class="book-title" itemprop="name"> How to Write an Autobiographical Novel</cite>
+	  	<small class="book-author" itemprop="author">Alexander Chee</small>
+		<small></small>
+	  </div>
+	</li>
+
+	
+	<li class="book " itemprop="itemListElement" itemscope itemtype="https://schema.org/Book">
+	  <span class="rating">★★</span>
+	  <div>
+	  	<cite class="book-title" itemprop="name"> Small Things Like These</cite>
+	  	<small class="book-author" itemprop="author">Claire Keegan</small>
+		<small></small>
+	  </div>
+	</li>
+
+	
+	<li class="book " itemprop="itemListElement" itemscope itemtype="https://schema.org/Book">
+	  <span class="rating">★</span>
+	  <div>
+	  	<cite class="book-title" itemprop="name"> Beautiful World, Where Are You</cite>
+	  	<small class="book-author" itemprop="author">Sally Rooney</small>
+		<small></small>
+	  </div>
+	</li>
+
+	
+	<li class="book " itemprop="itemListElement" itemscope itemtype="https://schema.org/Book">
+	  <span class="rating">★★</span>
+	  <div>
+	  	<cite class="book-title" itemprop="name"> Matrix</cite>
+	  	<small class="book-author" itemprop="author">Lauren Groff</small>
+		<small></small>
+	  </div>
+	</li>
+
+	
 	<li class="book " itemprop="itemListElement" itemscope itemtype="https://schema.org/Book">
 	  <span class="rating">★</span>
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Axeman&#x27;s Carnival</cite>
 	  	<small class="book-author" itemprop="author">Catherine Chidgey</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1142,6 +1436,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Last Things</cite>
 	  	<small class="book-author" itemprop="author">Jenny Offill</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1151,6 +1446,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Conversations with Friends</cite>
 	  	<small class="book-author" itemprop="author">Sally Rooney</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1160,6 +1456,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Normal People</cite>
 	  	<small class="book-author" itemprop="author">Sally Rooney</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1169,6 +1466,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Liberation Day</cite>
 	  	<small class="book-author" itemprop="author">George Saunders</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1178,6 +1476,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Trumpet of the Swan</cite>
 	  	<small class="book-author" itemprop="author">E. B. White</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1187,6 +1486,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Ocean at the End of the Lane</cite>
 	  	<small class="book-author" itemprop="author">Neil Gaiman</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1196,6 +1496,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Another Brooklyn</cite>
 	  	<small class="book-author" itemprop="author">Jacqueline Woodson</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1205,6 +1506,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Interior Chinatown</cite>
 	  	<small class="book-author" itemprop="author">Charles Yu</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1214,6 +1516,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Our Missing Hearts</cite>
 	  	<small class="book-author" itemprop="author">Celeste Ng</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1223,6 +1526,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Severance</cite>
 	  	<small class="book-author" itemprop="author">Ling Ma</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1232,6 +1536,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Auē</cite>
 	  	<small class="book-author" itemprop="author">Becky Manawatu</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1241,6 +1546,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Snow Crash</cite>
 	  	<small class="book-author" itemprop="author">Neal Stephenson</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1250,6 +1556,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Laserwriter II</cite>
 	  	<small class="book-author" itemprop="author">Tamara Shopsin</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1259,6 +1566,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Breasts and Eggs</cite>
 	  	<small class="book-author" itemprop="author">Mieko Kawakami</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1268,6 +1576,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Heaven</cite>
 	  	<small class="book-author" itemprop="author">Mieko Kawakami</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1277,6 +1586,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Great Gatsby</cite>
 	  	<small class="book-author" itemprop="author">F. Scott Fitzgerald</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1286,6 +1596,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Kindred</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small><a href="https:&#x2F;&#x2F;bookshop.org&#x2F;p&#x2F;books&#x2F;kindred-octavia-e-butler&#x2F;11629395">Bookshop</a></small>
 	  </div>
 	</li>
 
@@ -1295,6 +1606,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Night Circus</cite>
 	  	<small class="book-author" itemprop="author">Erin Morgenstern</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1304,6 +1616,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> What I Talk About When I Talk About Running</cite>
 	  	<small class="book-author" itemprop="author">Haruki Murakami</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1313,6 +1626,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Draft No. 4</cite>
 	  	<small class="book-author" itemprop="author">John McPhee</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1453,6 +1767,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Once and Future Witches</cite>
 	  	<small class="book-author" itemprop="author">Alix E. Harrow</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1462,6 +1777,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The 7½ Deaths of Evelyn Hardcastle</cite>
 	  	<small class="book-author" itemprop="author">Stuart Turton</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1471,6 +1787,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Best American Short Stories 2021</cite>
 	  	<small class="book-author" itemprop="author">Various</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1480,6 +1797,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Tokyo Zodiac Murders</cite>
 	  	<small class="book-author" itemprop="author">Soji Shimada</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1489,6 +1807,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Office of Historical Corrections</cite>
 	  	<small class="book-author" itemprop="author">Danielle Evans</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1498,6 +1817,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Crying in H Mart</cite>
 	  	<small class="book-author" itemprop="author">Michelle Zauner</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1507,6 +1827,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> James and the Giant Peach</cite>
 	  	<small class="book-author" itemprop="author">Roald Dahl</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1516,6 +1837,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Luminaries</cite>
 	  	<small class="book-author" itemprop="author">Eleanor Catton</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1525,6 +1847,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Left Hand of Darkness</cite>
 	  	<small class="book-author" itemprop="author">Ursula K. Le Guin</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1534,6 +1857,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Tales from Earthsea</cite>
 	  	<small class="book-author" itemprop="author">Ursula K. Le Guin</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1543,6 +1867,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Garden Party</cite>
 	  	<small class="book-author" itemprop="author">Katherine Mansfield</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1552,6 +1877,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Other Wind</cite>
 	  	<small class="book-author" itemprop="author">Ursula K. Le Guin</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1561,6 +1887,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Charlotte&#x27;s Web</cite>
 	  	<small class="book-author" itemprop="author">E. B. White</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1570,6 +1897,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Housekeeper and the Professor</cite>
 	  	<small class="book-author" itemprop="author">Yōko Ogawa</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1579,6 +1907,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Sourdough</cite>
 	  	<small class="book-author" itemprop="author">Robin Sloan</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1588,6 +1917,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Mermaid from Jeju</cite>
 	  	<small class="book-author" itemprop="author">Sumi Hahn</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1597,6 +1927,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Station Eleven</cite>
 	  	<small class="book-author" itemprop="author">Emily St. John Mandel</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1606,6 +1937,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Mexican Gothic</cite>
 	  	<small class="book-author" itemprop="author">Silvia Moreno-Garcia</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1806,6 +2138,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Harlem Shuffle</cite>
 	  	<small class="book-author" itemprop="author">Colson Whitehead</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1815,6 +2148,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Pine Barrens</cite>
 	  	<small class="book-author" itemprop="author">John McPhee</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1824,6 +2158,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Library Book</cite>
 	  	<small class="book-author" itemprop="author">Susan Orlean</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1833,6 +2168,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Girl, Woman, Other</cite>
 	  	<small class="book-author" itemprop="author">Bernardine Evaristo</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1842,6 +2178,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Imago</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1851,6 +2188,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Adulthood Rites</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1860,6 +2198,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Dawn</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1869,6 +2208,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Memory Police</cite>
 	  	<small class="book-author" itemprop="author">Yōko Ogawa</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1878,6 +2218,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The City We Became</cite>
 	  	<small class="book-author" itemprop="author">N. K. Jemisin</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1887,6 +2228,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> On Earth We&#x27;re Briefly Gorgeous</cite>
 	  	<small class="book-author" itemprop="author">Ocean Vuong</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1896,6 +2238,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> An Acceptable Time</cite>
 	  	<small class="book-author" itemprop="author">Madeleine L&#x27;Engle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1905,6 +2248,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Many Waters</cite>
 	  	<small class="book-author" itemprop="author">Madeleine L&#x27;Engle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1914,6 +2258,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> A Swiftly Tilting Planet</cite>
 	  	<small class="book-author" itemprop="author">Madeleine L&#x27;Engle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1923,6 +2268,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> A Wind in the Door</cite>
 	  	<small class="book-author" itemprop="author">Madeleine L&#x27;Engle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1932,6 +2278,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> A Wrinkle in Time</cite>
 	  	<small class="book-author" itemprop="author">Madeleine L&#x27;Engle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1941,6 +2288,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Never Let Me Go</cite>
 	  	<small class="book-author" itemprop="author">Kazuo Ishiguro</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1950,6 +2298,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Transcendent Kingdom</cite>
 	  	<small class="book-author" itemprop="author">Yaa Gyasi</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1959,6 +2308,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Parable of the Talents</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1968,6 +2318,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Parable of the Sower</cite>
 	  	<small class="book-author" itemprop="author">Octavia E. Butler</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1977,6 +2328,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Purple Hibiscus</cite>
 	  	<small class="book-author" itemprop="author">Chimamanda Ngozi Adichie</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1986,6 +2338,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> An American Marriage</cite>
 	  	<small class="book-author" itemprop="author">Tayari Jones</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -1995,6 +2348,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Acceptance</cite>
 	  	<small class="book-author" itemprop="author">Jeff VanderMeer</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2004,6 +2358,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Authority</cite>
 	  	<small class="book-author" itemprop="author">Jeff VanderMeer</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2013,6 +2368,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Annihilation</cite>
 	  	<small class="book-author" itemprop="author">Jeff VanderMeer</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2129,6 +2485,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Heavens</cite>
 	  	<small class="book-author" itemprop="author">Sandra Newman</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2138,6 +2495,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Sing, Unburied, Sing</cite>
 	  	<small class="book-author" itemprop="author">Jesmyn Ward</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2147,6 +2505,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Water Dancer</cite>
 	  	<small class="book-author" itemprop="author">Ta-Nehisi Coates</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2156,6 +2515,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> There There</cite>
 	  	<small class="book-author" itemprop="author">Tommy Orange</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2165,6 +2525,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Americanah</cite>
 	  	<small class="book-author" itemprop="author">Chimamanda Ngozi Adichie</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2174,6 +2535,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Story of the Lost Child</cite>
 	  	<small class="book-author" itemprop="author">Elena Ferrante</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2183,6 +2545,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Wolf in White Van</cite>
 	  	<small class="book-author" itemprop="author">John Darnielle</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2192,6 +2555,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Tehanu</cite>
 	  	<small class="book-author" itemprop="author">Ursula K. Le Guin</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2201,6 +2565,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Farthest Shore</cite>
 	  	<small class="book-author" itemprop="author">Ursula K. Le Guin</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2210,6 +2575,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Tombs of Atuan</cite>
 	  	<small class="book-author" itemprop="author">Ursula K. Le Guin</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2219,6 +2585,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> A Wizard of Earthsea</cite>
 	  	<small class="book-author" itemprop="author">Ursula K. Le Guin</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2228,6 +2595,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Mother Night</cite>
 	  	<small class="book-author" itemprop="author">Kurt Vonnegut</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2237,6 +2605,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Underground Railroad</cite>
 	  	<small class="book-author" itemprop="author">Colson Whitehead</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2246,6 +2615,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Witch Elm</cite>
 	  	<small class="book-author" itemprop="author">Tana French</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2299,6 +2669,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Those Who Leave and Those Who Stay</cite>
 	  	<small class="book-author" itemprop="author">Elena Ferrante</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2308,6 +2679,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Story of My New Name</cite>
 	  	<small class="book-author" itemprop="author">Elena Ferrante</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2317,6 +2689,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> My Brilliant Friend</cite>
 	  	<small class="book-author" itemprop="author">Elena Ferrante</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2326,6 +2699,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Little Fires Everywhere</cite>
 	  	<small class="book-author" itemprop="author">Celeste Ng</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2335,6 +2709,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Pachinko</cite>
 	  	<small class="book-author" itemprop="author">Min Jin Lee</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2393,6 +2768,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Everything I Never Told You</cite>
 	  	<small class="book-author" itemprop="author">Celeste Ng</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2402,6 +2778,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Frankenstein</cite>
 	  	<small class="book-author" itemprop="author">Mary Shelley</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2411,6 +2788,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Lincoln in the Bardo</cite>
 	  	<small class="book-author" itemprop="author">George Saunders</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2420,6 +2798,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Until the Celebration</cite>
 	  	<small class="book-author" itemprop="author">Zilpha Keatley Snyder</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2429,6 +2808,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> And All Between</cite>
 	  	<small class="book-author" itemprop="author">Zilpha Keatley Snyder</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2438,6 +2818,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Below the Root</cite>
 	  	<small class="book-author" itemprop="author">Zilpha Keatley Snyder</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2509,6 +2890,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Colorless Tsukuru Tazaki and His Years of Pilgrimage</cite>
 	  	<small class="book-author" itemprop="author">Haruki Mirakami</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2518,6 +2900,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Dear Life</cite>
 	  	<small class="book-author" itemprop="author">Alice Munro</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2527,6 +2910,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Homegoing</cite>
 	  	<small class="book-author" itemprop="author">Yaa Gyasi</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2536,6 +2920,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Number9dream</cite>
 	  	<small class="book-author" itemprop="author">David Mitchell</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2545,6 +2930,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Slade House</cite>
 	  	<small class="book-author" itemprop="author">David Mitchell</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2554,6 +2940,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Bone Clocks</cite>
 	  	<small class="book-author" itemprop="author">David Mitchell</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2563,6 +2950,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Stories of Your Life and Others</cite>
 	  	<small class="book-author" itemprop="author">Ted Chiang</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2572,6 +2960,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Thousand Autumns of Jacob de Zoet</cite>
 	  	<small class="book-author" itemprop="author">David Mitchell</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2581,6 +2970,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Wind Up Bird Chronicles</cite>
 	  	<small class="book-author" itemprop="author">Haruki Mirakami</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2641,6 +3031,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> CivilWarLand in Bad Decline</cite>
 	  	<small class="book-author" itemprop="author">George Saunders</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2650,6 +3041,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Fox 8</cite>
 	  	<small class="book-author" itemprop="author">George Saunders</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2659,6 +3051,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Dark Matter</cite>
 	  	<small class="book-author" itemprop="author">Blake Crouch</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2668,6 +3061,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Inherent Vice</cite>
 	  	<small class="book-author" itemprop="author">Thomas Pynchon</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2677,6 +3071,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Thing Around Your Neck</cite>
 	  	<small class="book-author" itemprop="author">Chimamanda Ngozi Adichie</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2686,6 +3081,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Decagon House Murders</cite>
 	  	<small class="book-author" itemprop="author">Yukito Ayatsuji</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2695,6 +3091,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Watership Down</cite>
 	  	<small class="book-author" itemprop="author">Richard Adams</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2704,6 +3101,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Jailbird</cite>
 	  	<small class="book-author" itemprop="author">Kurt Vonnegut</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2754,6 +3152,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> And Then There Were None</cite>
 	  	<small class="book-author" itemprop="author">Agatha Christie</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2763,6 +3162,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> God Bless You, Mr. Rosewater</cite>
 	  	<small class="book-author" itemprop="author">Kurt Vonnegut</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2772,6 +3172,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Mr. Penumbra&#x27;s 24-Hour Bookstore</cite>
 	  	<small class="book-author" itemprop="author">Robin Sloan</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2781,6 +3182,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Murder on the Orient Express</cite>
 	  	<small class="book-author" itemprop="author">Agatha Christie</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2790,6 +3192,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> Tenth of December</cite>
 	  	<small class="book-author" itemprop="author">George Saunders</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2799,6 +3202,7 @@
 	  <div>
 	  	<cite class="book-title" itemprop="name"> The Murder of Roger Ackroyd</cite>
 	  	<small class="book-author" itemprop="author">Agatha Christie</small>
+		<small></small>
 	  </div>
 	</li>
 
@@ -2815,7 +3219,7 @@
 
 	<section>	
 		<nav class="cluster">
-			<a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 104 104" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g fill="#705dfd"><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z"/><path d="m8 0h-8v48h48v-16h-8v-16h-8v-8h-16v-8z" transform="translate(56)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1984 -790.244)"/><path d="m992 1034.32h24v58.668h-24z" transform="matrix(2 0 0 .818162 -1928 -790.244)"/></g></svg></a>
+			<a href="/"><svg role="img" class="nav-logomark" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg"><title>Matthew Howell</title><g><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -512 -256)"/><path d="m8 8h4v-2h-1v-1h-1v-1h-2z" transform="matrix(64 0 0 64 -192 -256)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -512 64)"/><path d="m8 8h4v-4h-4z" transform="matrix(64 0 0 64 -192 64)"/></g></svg></a>
 			<ul class="cluster nav-main"><li><a href="/about" >About</a></li>
 <li><a href="/notes" >Notes</a></li>
 <li><a href="/photos" >Photos</a></li>
@@ -2826,16 +3230,25 @@
 		<nav class="cluster nav-elsewhere">
 			<strong>Elsewhere</strong>
 			<ul class="cluster">
-				<li><a href="https://www.reasonable.work">Reasonable Co ↗</a></li>
-				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon ↗</a></li>
-				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr ↗</a></li>
-				<li><a href="https://github.com/matthewhowell">Github ↗</a></li>
+				<li><a href="https://www.reasonable.work">Reasonable Co</a></li>
+				<li><a rel="me" href="https://indieweb.social/@matthewhowell">Mastodon</a></li>
+				<li><a href="https://www.flickr.com/photos/matthewhowell/">Flickr</a></li>
+				<li><a href="https://github.com/matthewhowell">Github</a></li>
 			</ul>
 		</nav>
 	</section>
 	
 	<section>
-		<p>This website was made by <a href="https://www.matthewhowell.net">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, and <a href="/feeds">feeds</a>.
+		<p>This website was made by <a href="/">Matthew Howell</a>, a person trying to make nice websites and–<em>sometimes</em>–other things. It has a <a href="/style-guide">public style guide</a>, a <a href="/purpose">purpose</a>, and <a href="/feeds">feeds</a>.
+		</p>
+	</section>
+
+	<section>
+		<p>
+			<span id="display_current_colors" class="preference-display"></span>
+			<button aria-label="auto" aria-live="polite" class="preference prefers-light-colors" id="set_prefers_light_colors">Switch to light colors</button>
+			<button aria-label="auto" aria-live="polite" class="preference prefers-dark-colors" id="set_prefers_dark_colors">Switch to dark colors</button>
+			
 		</p>
 	</section>
 
